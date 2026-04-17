@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "name": "Astro Archana",
+    "location": "Chandigarh",
+    "phone": "9417009188",
+    "gender": "female"
+  },
+  {
+    "id": 2,
+    "name": "Astro Preet",
+    "location": "Ludhiana",
+    "phone": "7833296122",
+    "gender": "male"
+  },
+  {
+    "id": 3,
+    "name": "Astro Rma Khanna",
+    "location": "Chandigarh",
+    "phone": "8059278899",
+    "gender": "female"
+  },
+  {
+    "id": 4,
+    "name": "Astro Pooja",
+    "location": "Dehradun",
+    "phone": "9105731969",
+    "gender": "female"
+  },
+  {
+    "id": 5,
+    "name": "Astro Ram Sharma",
+    "location": "India",
+    "phone": "7009540736",
+    "gender": "male"
+  },
+  {
+    "id": 6,
+    "name": "Astro Anil Dubey",
+    "location": "Gwalior",
+    "phone": "7828278089",
+    "gender": "male"
+  },
+  {
+    "id": 7,
+    "name": "Astro Annju Bhalla",
+    "location": "India",
+    "phone": "9582076722",
+    "gender": "female"
+  },
+  {
+    "id": 8,
+    "name": "Astro Dr. Shital",
+    "location": "Hyderabad",
+    "phone": "9100428658",
+    "gender": "female"
+  },
+  {
+    "id": 9,
+    "name": "Astro Inderpreet Singh",
+    "location": "Ludhiana",
+    "phone": "9803030945",
+    "gender": "male"
+  },
+  {
+    "id": 10,
+    "name": "Astro Komal Ashra",
+    "location": "Delhi",
+    "phone": "9873294484",
+    "gender": "female"
+  },
+  {
+    "id": 11,
+    "name": "Astro Madhu Priya",
+    "location": "Zirakpur",
+    "phone": "7307031998",
+    "gender": "female"
+  },
+  {
+    "id": 12,
+    "name": "Astro Manjuu Sharma",
+    "location": "India",
+    "phone": "9312759546",
+    "gender": "female"
+  },
+  {
+    "id": 13,
+    "name": "Astro Manvindar Singh",
+    "location": "Sani",
+    "phone": "8699363033",
+    "gender": "male"
+  },
+  {
+    "id": 14,
+    "name": "Astro Mona Singh",
+    "location": "Bhopal",
+    "phone": "8717824325",
+    "gender": "female"
+  },
+  {
+    "id": 15,
+    "name": "Astro Parmjit",
+    "location": "Ludhiana",
+    "phone": "9781135960",
+    "gender": "male"
+  },
+  {
+    "id": 16,
+    "name": "Astro Pratham",
+    "location": "Mohali",
+    "phone": "9150615000",
+    "gender": "male"
+  },
+  {
+    "id": 17,
+    "name": "Astro Richa Tiwari",
+    "location": "Indore",
+    "phone": "9393284097",
+    "gender": "female"
+  },
+  {
+    "id": 18,
+    "name": "Astro Sukhvinder",
+    "location": "Zirakpur",
+    "phone": "9417233811",
+    "gender": "male"
+  },
+  {
+    "id": 19,
+    "name": "Astro Sunita Sharma",
+    "location": "ShD",
+    "phone": "9216526567",
+    "gender": "female"
+  },
+  {
+    "id": 20,
+    "name": "Astro Vikas Batra",
+    "location": "Karnal",
+    "phone": "8950687379",
+    "gender": "male"
+  },
+  {
+    "id": 21,
+    "name": "Astro Vikas",
+    "location": "Mohali",
+    "phone": "9876088066",
+    "gender": "male"
+  },
+  {
+    "id": 22,
+    "name": "Astro Vipinjeet Tiwana",
+    "location": "Agra",
+    "phone": "9149280592",
+    "gender": "male"
+  },
+  {
+    "id": 23,
+    "name": "Astro Kamal Singh",
+    "location": "Samana",
+    "phone": "9855661107",
+    "gender": "male"
+  },
+  {
+    "id": 24,
+    "name": "Astro Pushpata Jaiswal",
+    "location": "Gurugram",
+    "phone": "9810458369",
+    "gender": "female"
+  },
+  {
+    "id": 25,
+    "name": "Astro Rakhi Sharma",
+    "location": "Ujjain",
+    "phone": "9201078742",
+    "gender": "female"
+  },
+  {
+    "id": 26,
+    "name": "Astro Palmist",
+    "location": "Delhi",
+    "phone": "9211539673",
+    "gender": "male"
+  },
+  {
+    "id": 27,
+    "name": "Astro Palmist (Prinka Asodiya)",
+    "location": "Ujjain",
+    "phone": "9301799378",
+    "gender": "female"
+  }
+]

@@ -1,28 +1,225 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME — aligned with astro_app AppTheme (brand red #CE181E + gold accent)
+   ═══════════════════════════════════════════════════════════════════════════ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand (primary) */
+  --brand: #ce181e;
+  --brand-rgb: 206 24 30;
+  --brand-hover: #a81419;
+  --brand-hover-rgb: 168 20 25;
+  --brand-light: #e84248;
+  --brand-soft: #ffe8e9;
+  --brand-muted: #f5ecd4;
+  --brand-contrast: #ffffff;
+  --on-primary-container: #5c1014;
+
+  /* Gold accent (secondary in M3) */
+  --accent-gold: #c9a44a;
+  --accent-gold-rgb: 201 164 74;
+  --on-accent: #1e1b16;
+
+  --background: #f5f1f2;
+  --background-warm: #fbf7f8;
+  --foreground: #1c1b1f;
+  --foreground-muted: #5c5658;
+  --foreground-hint: #8e8688;
+  --surface: #ffffff;
+  --surface-elevated: #fffcfc;
+  --surface-container-high: #f0eaec;
+  --border: #e5dee0;
+  --outline-muted: #cec4c7;
+
+  /* Marketing hero: deep burgundy + brand (not orange) */
+  --hero-deep: #1a1214;
+  --hero-mid: #3d1a1e;
+  --hero-light: #6e2a32;
+
+  --footer-bg: #2d2a2b;
+  --nav-shadow: 0 12px 40px rgb(var(--brand-rgb) / 0.18);
 }
 
 @theme inline {
+  --font-sans: var(--font-jakarta);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--foreground-muted);
+  --color-primary: var(--brand);
+  --color-primary-hover: var(--brand-hover);
+  --color-primary-contrast: var(--brand-contrast);
+  --color-surface: var(--surface);
+  /* M3 secondaryContainer-style surfaces (gold cream) */
+  --color-accent: var(--brand-muted);
+  --color-border: var(--border);
+  --color-footer: var(--footer-bg);
+  --color-brand-muted: var(--brand-muted);
+  --color-gold: var(--accent-gold);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-slow,
+  .animate-marquee-56,
+  .animate-astro-marquee {
+    animation: none !important;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
 }
 
+/* Hero: dark burgundy band + brand red */
+.hero-banner {
+  background: linear-gradient(
+    155deg,
+    var(--hero-deep) 0%,
+    var(--hero-mid) 42%,
+    color-mix(in srgb, var(--brand) 38%, var(--hero-light)) 100%
+  );
+}
 
+.hero-radial-overlay {
+  opacity: 0.4;
+  background-image:
+    radial-gradient(
+      ellipse 80% 60% at 20% -10%,
+      rgb(var(--brand-rgb) / 0.45) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgb(var(--brand-rgb) / 0.18) 0%,
+      transparent 45%
+    );
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand) 0%,
+    var(--brand-hover) 50%,
+    color-mix(in srgb, var(--brand-light) 55%, var(--hero-deep)) 100%
+  );
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-slow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee-slow 48s linear infinite;
+}
+
+.animate-marquee-56 {
+  animation: marquee 56s linear infinite;
+}
+
+/* Top astrologers strip — duration via --astro-duration on the element */
+.animate-astro-marquee {
+  animation: marquee var(--astro-duration, 100s) linear infinite;
+}
+
+/* Swiper — Top astrologers carousel (brand arrows & dots) */
+.astro-top-swiper .swiper-button-next,
+.astro-top-swiper .swiper-button-prev {
+  color: var(--brand);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.astro-top-swiper .swiper-button-next::after,
+.astro-top-swiper .swiper-button-prev::after {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.astro-top-swiper .swiper-pagination-bullet-active {
+  background: var(--brand);
+}
+.astro-top-swiper .swiper-pagination-bullet {
+  background: var(--outline-muted);
+  opacity: 1;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.pill-chip {
+  @apply shrink-0 rounded-full border border-white/35 bg-white/15 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm;
+}
+
+.pill-nav {
+  box-shadow: var(--nav-shadow);
+}
+
+/* Filled primary — matches AppTheme ElevatedButton / FilledButton */
+.cta-btn {
+  @apply rounded-2xl px-10 py-3.5 text-base font-bold tracking-wide shadow-lg transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl active:scale-[0.99];
+  background-color: var(--brand);
+  color: var(--brand-contrast);
+  box-shadow: 0 10px 32px rgb(var(--brand-rgb) / 0.28);
+}
+.cta-btn:hover {
+  background-color: var(--brand-hover);
+}
+
+.cta-btn-gold {
+  @apply rounded-2xl px-8 py-3.5 text-base font-bold tracking-wide transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl active:scale-[0.99];
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-hover) 100%);
+  color: var(--brand-contrast);
+  box-shadow: 0 10px 36px rgb(var(--brand-rgb) / 0.32);
+}
+
+.cta-outline-light {
+  @apply rounded-2xl border-2 border-white/50 bg-white/10 px-8 py-3.5 text-base font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20;
+}
+
+.section-title {
+  @apply text-center text-2xl font-extrabold uppercase tracking-[0.08em] text-foreground/50 md:text-3xl;
+}
+
+.banner-noise {
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}

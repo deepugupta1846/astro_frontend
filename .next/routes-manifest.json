@@ -53,10 +53,40 @@
       "namedRegex": "^/admin/astrologers(?:/)?$"
     },
     {
+      "page": "/admin/bookings",
+      "regex": "^/admin/bookings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/bookings(?:/)?$"
+    },
+    {
+      "page": "/admin/kundlis",
+      "regex": "^/admin/kundlis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/kundlis(?:/)?$"
+    },
+    {
+      "page": "/admin/pujas",
+      "regex": "^/admin/pujas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/pujas(?:/)?$"
+    },
+    {
+      "page": "/admin/remedies",
+      "regex": "^/admin/remedies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/remedies(?:/)?$"
+    },
+    {
       "page": "/admin/users",
       "regex": "^/admin/users(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/admin/users(?:/)?$"
+    },
+    {
+      "page": "/book-puja",
+      "regex": "^/book\\-puja(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/book\\-puja(?:/)?$"
     },
     {
       "page": "/favicon.ico",

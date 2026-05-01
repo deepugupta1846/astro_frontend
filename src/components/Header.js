@@ -8,6 +8,7 @@ import NavLink from "./NavLink";
 const beforeLogo = [
   { href: "/#services", label: "Consult" },
   { href: "/#astrologers", label: "Astrologers" },
+  { href: "/book-puja", label: "Book a Puja" },
   { href: "/matchmaking", label: "Kundli matching" },
   { href: "/#how-it-works", label: "How it works" },
 ];

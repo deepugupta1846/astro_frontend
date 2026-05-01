@@ -31,6 +31,34 @@ function AdminUsersPage() {
     const [editId, setEditId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(emptyForm);
     const [saving, setSaving] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [kundliUser, setKundliUser] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [kundliRows, setKundliRows] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [kundliLoading, setKundliLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const filteredRows = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "AdminUsersPage.useMemo[filteredRows]": ()=>{
+            const q = search.trim().toLowerCase();
+            if (!q) return rows;
+            return rows.filter({
+                "AdminUsersPage.useMemo[filteredRows]": (u)=>{
+                    const hay = [
+                        u.id,
+                        u.name,
+                        u.email,
+                        u.phone,
+                        u.role,
+                        u.countryCode
+                    ].map({
+                        "AdminUsersPage.useMemo[filteredRows].hay": (v)=>String(v ?? "").toLowerCase()
+                    }["AdminUsersPage.useMemo[filteredRows].hay"]).join(" ");
+                    return hay.includes(q);
+                }
+            }["AdminUsersPage.useMemo[filteredRows]"]);
+        }
+    }["AdminUsersPage.useMemo[filteredRows]"], [
+        rows,
+        search
+    ]);
     const load = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "AdminUsersPage.useCallback[load]": async ()=>{
             setErr("");
@@ -109,6 +137,24 @@ function AdminUsersPage() {
             setErr(e_2.message);
         }
     }
+    async function openKundlis(user) {
+        setKundliUser(user);
+        setKundliRows([]);
+        setKundliLoading(true);
+        setErr("");
+        try {
+            const json_0 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$adminApi$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["adminFetch"])(`/api/v1/admin/users/${user.id}/kundlis`);
+            setKundliRows(json_0?.data?.kundlis || []);
+        } catch (e_3) {
+            setErr(e_3.message);
+        } finally{
+            setKundliLoading(false);
+        }
+    }
+    function closeKundlis() {
+        setKundliUser(null);
+        setKundliRows([]);
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "mx-auto max-w-6xl",
         children: [
@@ -122,7 +168,7 @@ function AdminUsersPage() {
                                 children: "Users"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/users/page.js",
-                                lineNumber: 96,
+                                lineNumber: 126,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -130,29 +176,37 @@ function AdminUsersPage() {
                                 children: "All registered accounts (customers and partners)."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/users/page.js",
-                                lineNumber: 97,
+                                lineNumber: 127,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/admin/users/page.js",
-                        lineNumber: 95,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        type: "button",
-                        onClick: ()=>load(),
-                        className: "rounded-xl border border-border bg-surface px-4 py-2 text-sm font-medium hover:bg-accent",
-                        children: "Refresh"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-wrap items-center gap-2",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                            type: "text",
+                            value: search,
+                            onChange: (e_4)=>setSearch(e_4.target.value),
+                            placeholder: "Search by name, phone, email, role...",
+                            className: "w-full min-w-[260px] rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2 sm:w-auto"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/admin/users/page.js",
+                            lineNumber: 132,
+                            columnNumber: 11
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/admin/users/page.js",
-                        lineNumber: 101,
+                        lineNumber: 131,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/admin/users/page.js",
-                lineNumber: 94,
+                lineNumber: 124,
                 columnNumber: 7
             }, this),
             err && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -161,7 +215,7 @@ function AdminUsersPage() {
                 children: err
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/users/page.js",
-                lineNumber: 106,
+                lineNumber: 136,
                 columnNumber: 15
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -178,7 +232,7 @@ function AdminUsersPage() {
                                         children: "ID"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 114,
+                                        lineNumber: 144,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -186,7 +240,7 @@ function AdminUsersPage() {
                                         children: "Phone"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 115,
+                                        lineNumber: 145,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -194,7 +248,7 @@ function AdminUsersPage() {
                                         children: "Email"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 116,
+                                        lineNumber: 146,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -202,7 +256,7 @@ function AdminUsersPage() {
                                         children: "Name"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 117,
+                                        lineNumber: 147,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -210,7 +264,7 @@ function AdminUsersPage() {
                                         children: "Role"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 118,
+                                        lineNumber: 148,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -218,7 +272,7 @@ function AdminUsersPage() {
                                         children: "Active"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 119,
+                                        lineNumber: 149,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -226,7 +280,7 @@ function AdminUsersPage() {
                                         children: "Wallet"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 120,
+                                        lineNumber: 150,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -234,18 +288,18 @@ function AdminUsersPage() {
                                         children: "Actions"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/users/page.js",
-                                        lineNumber: 121,
+                                        lineNumber: 151,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/admin/users/page.js",
-                                lineNumber: 113,
+                                lineNumber: 143,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/admin/users/page.js",
-                            lineNumber: 112,
+                            lineNumber: 142,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -256,105 +310,105 @@ function AdminUsersPage() {
                                     children: "Loading…"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 126,
+                                    lineNumber: 156,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/users/page.js",
-                                lineNumber: 125,
+                                lineNumber: 155,
                                 columnNumber: 24
-                            }, this) : rows.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                            }, this) : filteredRows.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                     colSpan: 8,
                                     className: "px-4 py-10 text-center text-muted",
                                     children: "No users found."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 130,
+                                    lineNumber: 160,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/users/page.js",
-                                lineNumber: 129,
-                                columnNumber: 43
-                            }, this) : rows.map((u)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                lineNumber: 159,
+                                columnNumber: 51
+                            }, this) : filteredRows.map((u_0)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                     className: "border-b border-border/80 last:border-0",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                             className: "px-4 py-3 font-mono text-xs",
-                                            children: u.id
+                                            children: u_0.id
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 134,
+                                            lineNumber: 164,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                             className: "px-4 py-3",
-                                            children: u.phone
+                                            children: u_0.phone
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 135,
+                                            lineNumber: 165,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                             className: "max-w-[180px] truncate px-4 py-3 text-muted",
-                                            children: u.email || "—"
+                                            children: u_0.email || "—"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 136,
+                                            lineNumber: 166,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                             className: "px-4 py-3",
-                                            children: u.name || "—"
+                                            children: u_0.name || "—"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 139,
+                                            lineNumber: 169,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                             className: "px-4 py-3",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "rounded-full bg-accent px-2 py-0.5 text-xs font-medium capitalize",
-                                                children: u.role
+                                                children: u_0.role
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/users/page.js",
-                                                lineNumber: 141,
+                                                lineNumber: 171,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 140,
+                                            lineNumber: 170,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                             className: "px-4 py-3",
-                                            children: u.isActive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            children: u_0.isActive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-emerald-700",
                                                 children: "Yes"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/users/page.js",
-                                                lineNumber: 146,
-                                                columnNumber: 35
+                                                lineNumber: 176,
+                                                columnNumber: 37
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-red-700",
                                                 children: "No"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/users/page.js",
-                                                lineNumber: 146,
-                                                columnNumber: 83
+                                                lineNumber: 176,
+                                                columnNumber: 85
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 145,
+                                            lineNumber: 175,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                             className: "px-4 py-3 font-mono text-xs",
-                                            children: u.walletBalance ?? "—"
+                                            children: u_0.walletBalance ?? "—"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 148,
+                                            lineNumber: 178,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -362,12 +416,12 @@ function AdminUsersPage() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                     type: "button",
-                                                    onClick: ()=>openEdit(u),
-                                                    className: "font-medium text-primary hover:underline",
-                                                    children: "Edit"
+                                                    onClick: ()=>openKundlis(u_0),
+                                                    className: "font-medium text-foreground hover:underline",
+                                                    children: "Kundlis"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/users/page.js",
-                                                    lineNumber: 152,
+                                                    lineNumber: 182,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -375,45 +429,63 @@ function AdminUsersPage() {
                                                     children: " · "
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/users/page.js",
-                                                    lineNumber: 155,
+                                                    lineNumber: 185,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                     type: "button",
-                                                    onClick: ()=>removeUser(u.id),
+                                                    onClick: ()=>openEdit(u_0),
+                                                    className: "font-medium text-primary hover:underline",
+                                                    children: "Edit"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/admin/users/page.js",
+                                                    lineNumber: 186,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-border",
+                                                    children: " · "
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/admin/users/page.js",
+                                                    lineNumber: 189,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    type: "button",
+                                                    onClick: ()=>removeUser(u_0.id),
                                                     className: "font-medium text-red-700 hover:underline",
                                                     children: "Delete"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/users/page.js",
-                                                    lineNumber: 156,
+                                                    lineNumber: 190,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 151,
+                                            lineNumber: 181,
                                             columnNumber: 19
                                         }, this)
                                     ]
-                                }, u.id, true, {
+                                }, u_0.id, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 133,
-                                    columnNumber: 37
+                                    lineNumber: 163,
+                                    columnNumber: 47
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/admin/users/page.js",
-                            lineNumber: 124,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/admin/users/page.js",
-                    lineNumber: 111,
+                    lineNumber: 141,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/users/page.js",
-                lineNumber: 110,
+                lineNumber: 140,
                 columnNumber: 7
             }, this),
             editId != null && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -433,7 +505,7 @@ function AdminUsersPage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/admin/users/page.js",
-                            lineNumber: 167,
+                            lineNumber: 201,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -447,19 +519,19 @@ function AdminUsersPage() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2",
                                             value: form.name,
-                                            onChange: (e_3)=>setForm((f)=>({
+                                            onChange: (e_5)=>setForm((f)=>({
                                                         ...f,
-                                                        name: e_3.target.value
+                                                        name: e_5.target.value
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 173,
+                                            lineNumber: 207,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 171,
+                                    lineNumber: 205,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -470,19 +542,19 @@ function AdminUsersPage() {
                                             type: "email",
                                             className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2",
                                             value: form.email,
-                                            onChange: (e_4)=>setForm((f_0)=>({
+                                            onChange: (e_6)=>setForm((f_0)=>({
                                                         ...f_0,
-                                                        email: e_4.target.value
+                                                        email: e_6.target.value
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 180,
+                                            lineNumber: 214,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 178,
+                                    lineNumber: 212,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -492,20 +564,20 @@ function AdminUsersPage() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2",
                                             value: form.phone,
-                                            onChange: (e_5)=>setForm((f_1)=>({
+                                            onChange: (e_7)=>setForm((f_1)=>({
                                                         ...f_1,
-                                                        phone: e_5.target.value
+                                                        phone: e_7.target.value
                                                     })),
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 187,
+                                            lineNumber: 221,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 185,
+                                    lineNumber: 219,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -515,9 +587,9 @@ function AdminUsersPage() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                             className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2",
                                             value: form.role,
-                                            onChange: (e_6)=>setForm((f_2)=>({
+                                            onChange: (e_8)=>setForm((f_2)=>({
                                                         ...f_2,
-                                                        role: e_6.target.value
+                                                        role: e_8.target.value
                                                     })),
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -525,7 +597,7 @@ function AdminUsersPage() {
                                                     children: "user"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/users/page.js",
-                                                    lineNumber: 198,
+                                                    lineNumber: 232,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -533,7 +605,7 @@ function AdminUsersPage() {
                                                     children: "astrologer"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/users/page.js",
-                                                    lineNumber: 199,
+                                                    lineNumber: 233,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -541,19 +613,19 @@ function AdminUsersPage() {
                                                     children: "admin"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/users/page.js",
-                                                    lineNumber: 200,
+                                                    lineNumber: 234,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 194,
+                                            lineNumber: 228,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 192,
+                                    lineNumber: 226,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -562,20 +634,20 @@ function AdminUsersPage() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             type: "checkbox",
                                             checked: form.isActive,
-                                            onChange: (e_7)=>setForm((f_3)=>({
+                                            onChange: (e_9)=>setForm((f_3)=>({
                                                         ...f_3,
-                                                        isActive: e_7.target.checked
+                                                        isActive: e_9.target.checked
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 204,
+                                            lineNumber: 238,
                                             columnNumber: 17
                                         }, this),
                                         "Account active"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 203,
+                                    lineNumber: 237,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -587,20 +659,20 @@ function AdminUsersPage() {
                                             step: "0.01",
                                             className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2",
                                             value: form.walletBalance,
-                                            onChange: (e_8)=>setForm((f_4)=>({
+                                            onChange: (e_10)=>setForm((f_4)=>({
                                                         ...f_4,
-                                                        walletBalance: e_8.target.value
+                                                        walletBalance: e_10.target.value
                                                     })),
                                             placeholder: "Leave empty to keep unchanged"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 212,
+                                            lineNumber: 246,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 210,
+                                    lineNumber: 244,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -612,20 +684,20 @@ function AdminUsersPage() {
                                             autoComplete: "new-password",
                                             className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2",
                                             value: form.password,
-                                            onChange: (e_9)=>setForm((f_5)=>({
+                                            onChange: (e_11)=>setForm((f_5)=>({
                                                         ...f_5,
-                                                        password: e_9.target.value
+                                                        password: e_11.target.value
                                                     })),
                                             placeholder: "Optional — only if resetting password"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 219,
+                                            lineNumber: 253,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 217,
+                                    lineNumber: 251,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -638,7 +710,7 @@ function AdminUsersPage() {
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 225,
+                                            lineNumber: 259,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -648,40 +720,224 @@ function AdminUsersPage() {
                                             children: saving ? "Saving…" : "Save"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/users/page.js",
-                                            lineNumber: 228,
+                                            lineNumber: 262,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/users/page.js",
-                                    lineNumber: 224,
+                                    lineNumber: 258,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/admin/users/page.js",
-                            lineNumber: 170,
+                            lineNumber: 204,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/admin/users/page.js",
-                    lineNumber: 166,
+                    lineNumber: 200,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/users/page.js",
-                lineNumber: 165,
+                lineNumber: 199,
                 columnNumber: 26
+            }, this),
+            kundliUser != null && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 sm:items-center",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-border bg-surface p-6 shadow-xl",
+                    role: "dialog",
+                    "aria-modal": "true",
+                    "aria-labelledby": "user-kundli-title",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center justify-between gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    id: "user-kundli-title",
+                                    className: "text-lg font-semibold text-foreground",
+                                    children: [
+                                        "Kundlis - ",
+                                        kundliUser.name || kundliUser.phone || `User #${kundliUser.id}`
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/admin/users/page.js",
+                                    lineNumber: 273,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "button",
+                                    onClick: closeKundlis,
+                                    className: "rounded-lg border border-border px-3 py-1.5 text-sm",
+                                    children: "Close"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/admin/users/page.js",
+                                    lineNumber: 276,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/admin/users/page.js",
+                            lineNumber: 272,
+                            columnNumber: 13
+                        }, this),
+                        kundliLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "mt-6 text-sm text-muted",
+                            children: "Loading kundlis…"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/admin/users/page.js",
+                            lineNumber: 281,
+                            columnNumber: 30
+                        }, this) : kundliRows.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "mt-6 text-sm text-muted",
+                            children: "No kundli uploads found."
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/admin/users/page.js",
+                            lineNumber: 281,
+                            columnNumber: 118
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "mt-4 overflow-x-auto rounded-xl border border-border",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                                className: "w-full min-w-[700px] text-left text-sm",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
+                                        className: "border-b border-border bg-accent/40 text-xs font-semibold uppercase tracking-wide text-muted",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                    className: "px-3 py-2",
+                                                    children: "Title"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/admin/users/page.js",
+                                                    lineNumber: 285,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                    className: "px-3 py-2",
+                                                    children: "File Type"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/admin/users/page.js",
+                                                    lineNumber: 286,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                    className: "px-3 py-2",
+                                                    children: "Uploaded At"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/admin/users/page.js",
+                                                    lineNumber: 287,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                    className: "px-3 py-2 text-right",
+                                                    children: "File"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/admin/users/page.js",
+                                                    lineNumber: 288,
+                                                    columnNumber: 23
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/admin/users/page.js",
+                                            lineNumber: 284,
+                                            columnNumber: 21
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/admin/users/page.js",
+                                        lineNumber: 283,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                                        children: kundliRows.map((k)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                                className: "border-b border-border/70 last:border-0",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        className: "px-3 py-2",
+                                                        children: k.title || k.originalName || "—"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/admin/users/page.js",
+                                                        lineNumber: 293,
+                                                        columnNumber: 25
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        className: "px-3 py-2 text-muted",
+                                                        children: k.fileType || "—"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/admin/users/page.js",
+                                                        lineNumber: 294,
+                                                        columnNumber: 25
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        className: "px-3 py-2 text-muted",
+                                                        children: k.createdAt ? new Date(k.createdAt).toLocaleString() : "—"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/admin/users/page.js",
+                                                        lineNumber: 295,
+                                                        columnNumber: 25
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                        className: "px-3 py-2 text-right",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                            href: k.fileUrl,
+                                                            target: "_blank",
+                                                            rel: "noreferrer",
+                                                            className: "font-medium text-primary hover:underline",
+                                                            children: "View"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/admin/users/page.js",
+                                                            lineNumber: 299,
+                                                            columnNumber: 27
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/admin/users/page.js",
+                                                        lineNumber: 298,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                ]
+                                            }, k.id, true, {
+                                                fileName: "[project]/src/app/admin/users/page.js",
+                                                lineNumber: 292,
+                                                columnNumber: 42
+                                            }, this))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/admin/users/page.js",
+                                        lineNumber: 291,
+                                        columnNumber: 19
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/admin/users/page.js",
+                                lineNumber: 282,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/admin/users/page.js",
+                            lineNumber: 281,
+                            columnNumber: 188
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/admin/users/page.js",
+                    lineNumber: 271,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/admin/users/page.js",
+                lineNumber: 270,
+                columnNumber: 30
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/admin/users/page.js",
-        lineNumber: 93,
+        lineNumber: 123,
         columnNumber: 10
     }, this);
 }
-_s(AdminUsersPage, "5DwuB2w+eVo24/Dh8IxadqsfIRg=");
+_s(AdminUsersPage, "ApnOO++GqQXfu/WOkG5Pnr3q/sU=");
 _c = AdminUsersPage;
 var _c;
 __turbopack_context__.k.register(_c, "AdminUsersPage");

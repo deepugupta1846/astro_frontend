@@ -1,4 +1,4 @@
-[00:00:20.245] Server  LOG     ✓ Ready in 16.4s
-[00:00:23.263] Server  LOG     ○ Compiling / ...
-[00:01:01.519] Server  ERROR   ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1419242902214-272b3a66e7e9?w=900&h=900&fit=crop" 404
-[00:01:01.729] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.761] Server  LOG     ✓ Ready in 1211ms
+[00:01:58.026] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:15.353] Server  LOG     ✓ Compiled in 681ms
+[00:02:18.849] Server  LOG     ✓ Compiled in 114ms

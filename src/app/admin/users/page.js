@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { adminFetch } from "@/lib/adminApi";
 
 const emptyForm = {
@@ -20,6 +20,28 @@ export default function AdminUsersPage() {
   const [editId, setEditId] = useState(null);
   const [form, setForm] = useState(emptyForm);
   const [saving, setSaving] = useState(false);
+  const [kundliUser, setKundliUser] = useState(null);
+  const [kundliRows, setKundliRows] = useState([]);
+  const [kundliLoading, setKundliLoading] = useState(false);
+  const [search, setSearch] = useState("");
+
+  const filteredRows = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return rows;
+    return rows.filter((u) => {
+      const hay = [
+        u.id,
+        u.name,
+        u.email,
+        u.phone,
+        u.role,
+        u.countryCode,
+      ]
+        .map((v) => String(v ?? "").toLowerCase())
+        .join(" ");
+      return hay.includes(q);
+    });
+  }, [rows, search]);
 
   const load = useCallback(async () => {
     setErr("");
@@ -98,6 +120,26 @@ export default function AdminUsersPage() {
     }
   }
 
+  async function openKundlis(user) {
+    setKundliUser(user);
+    setKundliRows([]);
+    setKundliLoading(true);
+    setErr("");
+    try {
+      const json = await adminFetch(`/api/v1/admin/users/${user.id}/kundlis`);
+      setKundliRows(json?.data?.kundlis || []);
+    } catch (e) {
+      setErr(e.message);
+    } finally {
+      setKundliLoading(false);
+    }
+  }
+
+  function closeKundlis() {
+    setKundliUser(null);
+    setKundliRows([]);
+  }
+
   return (
     <div className="mx-auto max-w-6xl">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -107,13 +149,15 @@ export default function AdminUsersPage() {
             All registered accounts (customers and partners).
           </p>
         </div>
-        <button
-          type="button"
-          onClick={() => load()}
-          className="rounded-xl border border-border bg-surface px-4 py-2 text-sm font-medium hover:bg-accent"
-        >
-          Refresh
-        </button>
+        <div className="flex flex-wrap items-center gap-2">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search by name, phone, email, role..."
+            className="w-full min-w-[260px] rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2 sm:w-auto"
+          />
+        </div>
       </div>
 
       {err && (
@@ -146,14 +190,14 @@ export default function AdminUsersPage() {
                   Loading…
                 </td>
               </tr>
-            ) : rows.length === 0 ? (
+            ) : filteredRows.length === 0 ? (
               <tr>
                 <td colSpan={8} className="px-4 py-10 text-center text-muted">
                   No users found.
                 </td>
               </tr>
             ) : (
-              rows.map((u) => (
+              filteredRows.map((u) => (
                 <tr
                   key={u.id}
                   className="border-b border-border/80 last:border-0"
@@ -180,6 +224,14 @@ export default function AdminUsersPage() {
                     {u.walletBalance ?? "—"}
                   </td>
                   <td className="px-4 py-3 text-right">
+                    <button
+                      type="button"
+                      onClick={() => openKundlis(u)}
+                      className="font-medium text-foreground hover:underline"
+                    >
+                      Kundlis
+                    </button>
+                    <span className="text-border"> · </span>
                     <button
                       type="button"
                       onClick={() => openEdit(u)}
@@ -317,6 +369,70 @@ export default function AdminUsersPage() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {kundliUser != null && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-4 sm:items-center">
+          <div
+            className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-border bg-surface p-6 shadow-xl"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="user-kundli-title"
+          >
+            <div className="flex items-center justify-between gap-3">
+              <h2 id="user-kundli-title" className="text-lg font-semibold text-foreground">
+                Kundlis - {kundliUser.name || kundliUser.phone || `User #${kundliUser.id}`}
+              </h2>
+              <button
+                type="button"
+                onClick={closeKundlis}
+                className="rounded-lg border border-border px-3 py-1.5 text-sm"
+              >
+                Close
+              </button>
+            </div>
+
+            {kundliLoading ? (
+              <p className="mt-6 text-sm text-muted">Loading kundlis…</p>
+            ) : kundliRows.length === 0 ? (
+              <p className="mt-6 text-sm text-muted">No kundli uploads found.</p>
+            ) : (
+              <div className="mt-4 overflow-x-auto rounded-xl border border-border">
+                <table className="w-full min-w-[700px] text-left text-sm">
+                  <thead className="border-b border-border bg-accent/40 text-xs font-semibold uppercase tracking-wide text-muted">
+                    <tr>
+                      <th className="px-3 py-2">Title</th>
+                      <th className="px-3 py-2">File Type</th>
+                      <th className="px-3 py-2">Uploaded At</th>
+                      <th className="px-3 py-2 text-right">File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {kundliRows.map((k) => (
+                      <tr key={k.id} className="border-b border-border/70 last:border-0">
+                        <td className="px-3 py-2">{k.title || k.originalName || "—"}</td>
+                        <td className="px-3 py-2 text-muted">{k.fileType || "—"}</td>
+                        <td className="px-3 py-2 text-muted">
+                          {k.createdAt ? new Date(k.createdAt).toLocaleString() : "—"}
+                        </td>
+                        <td className="px-3 py-2 text-right">
+                          <a
+                            href={k.fileUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-medium text-primary hover:underline"
+                          >
+                            View
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         </div>
       )}

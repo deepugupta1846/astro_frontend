@@ -81,12 +81,12 @@ body {
 
 /* Hero: dark burgundy band + brand red */
 .hero-banner {
-  background: linear-gradient(
+  /* background: linear-gradient(
     155deg,
     var(--hero-deep) 0%,
     var(--hero-mid) 42%,
     color-mix(in srgb, var(--brand) 38%, var(--hero-light)) 100%
-  );
+  ); */
 }
 
 .hero-radial-overlay {

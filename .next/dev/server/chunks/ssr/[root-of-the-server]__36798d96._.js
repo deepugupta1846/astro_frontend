@@ -34,8 +34,8 @@ module.exports = mod;
 ]);
 function getApiBaseUrl() {
     const raw = typeof process.env.NEXT_PUBLIC_API_BASE_URL === "string" ? process.env.NEXT_PUBLIC_API_BASE_URL.trim() : "";
-    return raw.replace(/\/$/, "") || "http://localhost:5000";
-}
+    return raw.replace(/\/$/, "") || "https://api.astropulse.live/";
+} // http://localhost:5000/
 }),
 "[project]/src/lib/adminAuth.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

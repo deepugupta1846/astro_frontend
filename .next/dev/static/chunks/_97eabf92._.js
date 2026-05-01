@@ -84,7 +84,8 @@ async function adminFetch(path, init = {}) {
     const url = `${base}${p}`;
     const token = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$adminAuth$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getStoredToken"])();
     const headers = new Headers(init.headers || {});
-    if (!headers.has("Content-Type") && init.body) {
+    const isFormData = typeof FormData !== "undefined" && init.body instanceof FormData;
+    if (!headers.has("Content-Type") && init.body && !isFormData) {
         headers.set("Content-Type", "application/json");
     }
     if (token) {
@@ -280,18 +281,30 @@ const nav = [
         label: "Users"
     },
     {
+        href: "/admin/kundlis",
+        label: "Kundlis"
+    },
+    {
         href: "/admin/astrologers",
         label: "Astrologers"
+    },
+    {
+        href: "/admin/remedies",
+        label: "Remedies"
+    },
+    {
+        href: "/admin/pujas",
+        label: "Pujas"
     }
 ];
 function AdminChrome(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(29);
-    if ($[0] !== "be3ad7764e51abe1a5c410255bcac2944c12169bf2b1680507bf31575f4a4a4e") {
+    if ($[0] !== "1512e3c1ec36d54f79a88268bbf5eb0058184d497fb73e8791a574ad5e84b206") {
         for(let $i = 0; $i < 29; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "be3ad7764e51abe1a5c410255bcac2944c12169bf2b1680507bf31575f4a4a4e";
+        $[0] = "1512e3c1ec36d54f79a88268bbf5eb0058184d497fb73e8791a574ad5e84b206";
     }
     const { children } = t0;
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
@@ -327,7 +340,7 @@ function AdminChrome(t0) {
                     children: "Astro Pulse"
                 }, void 0, false, {
                     fileName: "[project]/src/components/AdminChrome.jsx",
-                    lineNumber: 53,
+                    lineNumber: 62,
                     columnNumber: 37
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -335,13 +348,13 @@ function AdminChrome(t0) {
                     children: "Admin"
                 }, void 0, false, {
                     fileName: "[project]/src/components/AdminChrome.jsx",
-                    lineNumber: 53,
+                    lineNumber: 62,
                     columnNumber: 131
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 53,
+            lineNumber: 62,
             columnNumber: 10
         }, this);
         $[4] = t3;
@@ -359,7 +372,7 @@ function AdminChrome(t0) {
                     children: item.label
                 }, item.href, false, {
                     fileName: "[project]/src/components/AdminChrome.jsx",
-                    lineNumber: 63,
+                    lineNumber: 72,
                     columnNumber: 16
                 }, this);
             }
@@ -376,7 +389,7 @@ function AdminChrome(t0) {
             children: t4
         }, void 0, false, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 73,
+            lineNumber: 82,
             columnNumber: 10
         }, this);
         $[7] = t4;
@@ -392,7 +405,7 @@ function AdminChrome(t0) {
             children: user.email
         }, void 0, false, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 81,
+            lineNumber: 90,
             columnNumber: 25
         }, this);
         $[9] = t6;
@@ -412,13 +425,13 @@ function AdminChrome(t0) {
                     children: "Sign out"
                 }, void 0, false, {
                     fileName: "[project]/src/components/AdminChrome.jsx",
-                    lineNumber: 88,
+                    lineNumber: 97,
                     columnNumber: 72
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 88,
+            lineNumber: 97,
             columnNumber: 10
         }, this);
         $[10] = signOut;
@@ -437,7 +450,7 @@ function AdminChrome(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 96,
+            lineNumber: 105,
             columnNumber: 10
         }, this);
         $[12] = t5;
@@ -454,7 +467,7 @@ function AdminChrome(t0) {
             children: "Admin"
         }, void 0, false, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 105,
+            lineNumber: 114,
             columnNumber: 10
         }, this);
         $[15] = t9;
@@ -474,13 +487,13 @@ function AdminChrome(t0) {
                     children: "Sign out"
                 }, void 0, false, {
                     fileName: "[project]/src/components/AdminChrome.jsx",
-                    lineNumber: 112,
+                    lineNumber: 121,
                     columnNumber: 72
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 112,
+            lineNumber: 121,
             columnNumber: 11
         }, this);
         $[16] = signOut;
@@ -495,7 +508,7 @@ function AdminChrome(t0) {
             children: nav.map(_AdminChromeNavMap)
         }, void 0, false, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 120,
+            lineNumber: 129,
             columnNumber: 11
         }, this);
         $[18] = t11;
@@ -512,7 +525,7 @@ function AdminChrome(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 127,
+            lineNumber: 136,
             columnNumber: 11
         }, this);
         $[19] = t10;
@@ -527,7 +540,7 @@ function AdminChrome(t0) {
             children: children
         }, void 0, false, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 135,
+            lineNumber: 144,
             columnNumber: 11
         }, this);
         $[21] = children;
@@ -545,7 +558,7 @@ function AdminChrome(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 143,
+            lineNumber: 152,
             columnNumber: 11
         }, this);
         $[23] = t12;
@@ -565,12 +578,12 @@ function AdminChrome(t0) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/AdminChrome.jsx",
-                lineNumber: 152,
+                lineNumber: 161,
                 columnNumber: 22
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 152,
+            lineNumber: 161,
             columnNumber: 11
         }, this);
         $[26] = t14;
@@ -595,7 +608,7 @@ function _AdminChromeNavMap(item_0) {
         children: item_0.label
     }, item_0.href, false, {
         fileName: "[project]/src/components/AdminChrome.jsx",
-        lineNumber: 162,
+        lineNumber: 171,
         columnNumber: 10
     }, this);
 }

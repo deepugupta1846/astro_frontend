@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -33,24 +34,24 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="/#services" className="transition hover:text-white">
+                <Link href="/#services" className="transition hover:text-white">
                   Start a chat
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#services" className="transition hover:text-white">
+                <Link href="/#services" className="transition hover:text-white">
                   Book a call
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#services" className="transition hover:text-white">
+                <Link href="/#services" className="transition hover:text-white">
                   Categories
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/matchmaking" className="transition hover:text-white">
+                <Link href="/matchmaking" className="transition hover:text-white">
                   Kundli matching
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -60,14 +61,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="/#astrologers" className="transition hover:text-white">
+                <Link href="/#astrologers" className="transition hover:text-white">
                   Top astrologers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#astrologers" className="transition hover:text-white">
+                <Link href="/#astrologers" className="transition hover:text-white">
                   Online now
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -77,14 +78,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="/#how-it-works" className="transition hover:text-white">
+                <Link href="/#how-it-works" className="transition hover:text-white">
                   Pick an expert
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#how-it-works" className="transition hover:text-white">
+                <Link href="/#how-it-works" className="transition hover:text-white">
                   Share kundli
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -94,14 +95,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="/#why-us" className="transition hover:text-white">
+                <Link href="/#why-us" className="transition hover:text-white">
                   Verified experts
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#why-us" className="transition hover:text-white">
+                <Link href="/#why-us" className="transition hover:text-white">
                   Private &amp; secure
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -111,9 +112,9 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="/#faqs" className="transition hover:text-white">
+                <Link href="/#faqs" className="transition hover:text-white">
                   Common questions
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

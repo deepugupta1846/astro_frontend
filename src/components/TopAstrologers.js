@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
+import { useCallback, useRef } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Reveal from "./Reveal";
@@ -9,6 +10,28 @@ import Reveal from "./Reveal";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+function ChevronIcon({ dir }) {
+  const left = dir === "prev";
+  return (
+    <svg
+      className="h-5 w-5 shrink-0 md:h-[1.35rem] md:w-[1.35rem]"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      {left ? (
+        <path d="M15 18l-6-6 6-6" />
+      ) : (
+        <path d="M9 18l6-6-6-6" />
+      )}
+    </svg>
+  );
+}
 
 function StarRow({ value }) {
   return (
@@ -107,6 +130,16 @@ export default function TopAstrologers({ astrologers = [] }) {
   const list = astrologers.length ? astrologers : [];
   const reduceMotion = useReducedMotion();
   const canLoop = list.length >= 6;
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  const onSwiperBeforeInit = useCallback((swiper) => {
+    const nav = swiper.params.navigation;
+    if (nav && typeof nav === "object") {
+      nav.prevEl = prevRef.current;
+      nav.nextEl = nextRef.current;
+    }
+  }, []);
 
   return (
     <section
@@ -149,29 +182,48 @@ export default function TopAstrologers({ astrologers = [] }) {
           ))}
         </div>
       ) : (
-        <div className="astro-top-swiper relative mx-auto mt-12 max-w-6xl px-2 sm:px-4">
+        <div className="astro-top-swiper relative mx-auto mt-12 max-w-6xl px-11 sm:px-14 md:px-16">
+          <button
+            ref={prevRef}
+            type="button"
+            className="swiper-button-prev astro-swiper-nav astro-swiper-nav-prev pill-nav pointer-events-auto absolute left-0 top-[42%] z-20 flex -translate-y-1/2"
+            aria-label="Previous slides"
+          >
+            <ChevronIcon dir="prev" />
+          </button>
+          <button
+            ref={nextRef}
+            type="button"
+            className="swiper-button-next astro-swiper-nav astro-swiper-nav-next pill-nav pointer-events-auto absolute right-0 top-[42%] z-20 flex -translate-y-1/2"
+            aria-label="Next slides"
+          >
+            <ChevronIcon dir="next" />
+          </button>
+
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
-            spaceBetween={20}
+            spaceBetween={18}
             slidesPerView={1}
             breakpoints={{
               640: { slidesPerView: 2, spaceBetween: 20 },
-              1024: { slidesPerView: 3, spaceBetween: 24 },
+              1024: { slidesPerView: 3, spaceBetween: 22 },
               1280: { slidesPerView: 4, spaceBetween: 24 },
             }}
             loop={canLoop}
+            grabCursor
             autoplay={{
               delay: 4200,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            speed={600}
+            speed={650}
             pagination={{
               clickable: true,
               dynamicBullets: list.length > 8,
             }}
             navigation
-            className="!pb-12"
+            onBeforeInit={onSwiperBeforeInit}
+            className="astro-top-swiper-inner !pb-14 pt-1"
             aria-label="Top astrologers carousel"
           >
             {list.map((a, i) => (

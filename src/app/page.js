@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import ComplimentaryAstrologyServices from '../components/ComplimentaryAstrologyServices';
 import TopAstrologers from '../components/TopAstrologers';
 import HowItWorks from '../components/HowItWorks';
 import WhyChoose from '../components/WhyChoose';
@@ -15,6 +16,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
+      <ComplimentaryAstrologyServices />
       <TopAstrologers astrologers={topAstrologers} />
       <HowItWorks />
       <WhyChoose />

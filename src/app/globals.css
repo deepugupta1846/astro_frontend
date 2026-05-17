@@ -148,24 +148,96 @@ body {
   animation: marquee var(--astro-duration, 100s) linear infinite;
 }
 
-/* Swiper — Top astrologers carousel (brand arrows & dots) */
-.astro-top-swiper .swiper-button-next,
-.astro-top-swiper .swiper-button-prev {
-  color: var(--brand);
-  width: 2.5rem;
-  height: 2.5rem;
-}
-.astro-top-swiper .swiper-button-next::after,
-.astro-top-swiper .swiper-button-prev::after {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-.astro-top-swiper .swiper-pagination-bullet-active {
-  background: var(--brand);
+/* Swiper — Top astrologers carousel (custom nav + brand dots) */
+.astro-top-swiper .swiper-pagination {
+  bottom: 0.25rem !important;
 }
 .astro-top-swiper .swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
   background: var(--outline-muted);
   opacity: 1;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.astro-top-swiper .swiper-pagination-bullet-active {
+  width: 1.35rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--brand-hover),
+    var(--brand)
+  );
+  box-shadow: 0 4px 14px rgb(var(--brand-rgb) / 0.35);
+}
+.astro-top-swiper .swiper-pagination-bullet-active-main {
+  background: linear-gradient(
+    90deg,
+    var(--brand-hover),
+    var(--brand)
+  );
+}
+
+/* Override Swiper default arrow glyphs (we use inline SVG) */
+.astro-top-swiper .astro-swiper-nav.swiper-button-prev::after,
+.astro-top-swiper .astro-swiper-nav.swiper-button-next::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Floating prev/next — glass + brand accent */
+.astro-swiper-nav {
+  align-items: center;
+  justify-content: center;
+  width: 2.625rem;
+  height: 2.625rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(var(--brand-rgb) / 0.22);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  color: var(--brand);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+@media (min-width: 640px) {
+  .astro-swiper-nav {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.astro-swiper-nav:hover {
+  transform: scale(1.06);
+  border-color: rgb(var(--brand-rgb) / 0.45);
+  background: color-mix(in srgb, var(--surface) 98%, transparent);
+  color: var(--brand-hover);
+  box-shadow:
+    0 12px 28px rgb(var(--brand-rgb) / 0.18),
+    0 0 0 1px rgb(var(--brand-rgb) / 0.08);
+}
+.astro-swiper-nav:active {
+  transform: scale(0.96);
+}
+.astro-swiper-nav:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+/* Non-loop: Swiper adds .swiper-button-disabled to custom nav buttons */
+.astro-top-swiper .astro-swiper-nav.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
 }
 
 .marquee-mask {

@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,84826,o=>{"use strict";o.i(43476),o.i(71645),o.i(76110);let t=Error("Cannot find module '@ckeditor/ckeditor5-react'");throw t.code="MODULE_NOT_FOUND",t}]);

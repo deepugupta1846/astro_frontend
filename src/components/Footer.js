@@ -137,6 +137,9 @@ export default function Footer() {
             <Link href="/refund-policy" className="transition hover:text-white">
               Refund &amp; cancellation
             </Link>
+            <Link href="/contact-us" className="transition hover:text-white">
+              Contact us
+            </Link>
           </div>
           <p className="mt-6 text-center text-xs text-white/45">
             © {new Date().getFullYear()} Astro Pulse. All rights reserved.

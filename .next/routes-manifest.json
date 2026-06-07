@@ -83,10 +83,22 @@
       "namedRegex": "^/admin/users(?:/)?$"
     },
     {
+      "page": "/admin/withdrawals",
+      "regex": "^/admin/withdrawals(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/withdrawals(?:/)?$"
+    },
+    {
       "page": "/book-puja",
       "regex": "^/book\\-puja(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/book\\-puja(?:/)?$"
+    },
+    {
+      "page": "/contact-us",
+      "regex": "^/contact\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact\\-us(?:/)?$"
     },
     {
       "page": "/favicon.ico",

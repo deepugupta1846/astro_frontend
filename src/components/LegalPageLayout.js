@@ -19,24 +19,24 @@ export default function LegalPageLayout({
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="hero-banner relative overflow-hidden text-white">
+      <section className="hero-banner hero-gradient relative overflow-hidden text-white">
         <div
-          className="hero-radial-overlay pointer-events-none absolute inset-0"
+          className="hero-radial-overlay pointer-events-none absolute inset-0 opacity-60"
           aria-hidden
         />
         <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-primary">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-white/90">
             Legal
           </p>
-          <h1 className="mt-4 text-center text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
+          <h1 className="mt-4 text-center text-3xl font-extrabold leading-tight tracking-tight text-white md:text-4xl">
             {title}
           </h1>
           {description ? (
-            <p className="mx-auto mt-5 max-w-2xl text-center text-base font-medium text-white/88 md:text-lg">
+            <p className="mx-auto mt-5 max-w-2xl text-center text-base font-medium text-white/85 md:text-lg">
               {description}
             </p>
           ) : null}
-          <p className="mt-4 text-center text-xs text-white/60">
+          <p className="mt-4 text-center text-xs text-white/70">
             Last updated: {lastUpdated}
           </p>
         </div>

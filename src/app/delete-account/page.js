@@ -22,19 +22,19 @@ export default function DeleteAccountPage() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="hero-banner relative overflow-hidden text-white">
+      <section className="hero-banner hero-gradient relative overflow-hidden text-white">
         <div
-          className="hero-radial-overlay pointer-events-none absolute inset-0"
+          className="hero-radial-overlay pointer-events-none absolute inset-0 opacity-60"
           aria-hidden
         />
         <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-primary">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-white/90">
             Account &amp; privacy
           </p>
-          <h1 className="mt-4 text-center text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">
+          <h1 className="mt-4 text-center text-3xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
             Delete your account
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-center text-base font-medium text-white/88 md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-center text-base font-medium text-white/85 md:text-lg">
             Verify your phone with OTP to submit a deletion request. Our admin
             team will review and permanently remove your data.
           </p>
@@ -43,20 +43,20 @@ export default function DeleteAccountPage() {
 
       <section className="mx-auto max-w-3xl px-4 py-12 md:py-16">
         <Reveal>
-          <div className="mb-10 rounded-3xl border border-amber-200 bg-amber-50 p-6">
-            <h2 className="font-bold text-amber-950">Before you continue</h2>
+          <div className="mb-10 rounded-3xl border border-border bg-surface p-6 shadow-sm">
+            <h2 className="font-bold text-foreground">Before you continue</h2>
             <ul className="mt-4 space-y-2">
               {warnings.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-2 text-sm text-amber-900"
+                  className="flex items-start gap-2 text-sm text-muted"
                 >
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-amber-900/80">
+            <p className="mt-4 text-sm text-muted">
               Need help instead?{" "}
               <Link
                 href="/contact-us"

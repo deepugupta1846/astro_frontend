@@ -101,10 +101,28 @@
       "namedRegex": "^/matchmaking(?:/)?$"
     },
     {
+      "page": "/privacy-policy",
+      "regex": "^/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/refund-policy",
+      "regex": "^/refund\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/refund\\-policy(?:/)?$"
+    },
+    {
       "page": "/sign-in",
       "regex": "^/sign\\-in(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/sign\\-in(?:/)?$"
+    },
+    {
+      "page": "/terms-and-conditions",
+      "regex": "^/terms\\-and\\-conditions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms\\-and\\-conditions(?:/)?$"
     }
   ],
   "dataRoutes": [],

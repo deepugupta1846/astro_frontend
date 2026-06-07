@@ -33,7 +33,16 @@
     "[project]/src/app/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
+    "[project]/src/app/privacy-policy/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/refund-policy/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
     "[project]/src/app/sign-in/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/terms-and-conditions/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ]
   },

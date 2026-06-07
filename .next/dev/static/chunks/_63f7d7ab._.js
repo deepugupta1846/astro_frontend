@@ -11,8 +11,8 @@
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 function getApiBaseUrl() {
     const raw = typeof __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_BASE_URL === "string" ? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_BASE_URL.trim() : "";
-    return raw.replace(/\/$/, "") || "https://api.astropulse.live/";
-} // http://localhost:5000/
+    return raw.replace(/\/$/, "") || "http://localhost:5000";
+} // http://localhost:5000
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -291,6 +291,10 @@ const nav = [
         label: "Bookings"
     },
     {
+        href: "/admin/withdrawals",
+        label: "Withdrawals"
+    },
+    {
         href: "/admin/astrologers",
         label: "Astrologers"
     },
@@ -381,7 +385,7 @@ function AdminChrome({ children }) {
                                     children: "Astro Pulse"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                    lineNumber: 82,
+                                    lineNumber: 85,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -389,13 +393,13 @@ function AdminChrome({ children }) {
                                     children: "Admin"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                    lineNumber: 85,
+                                    lineNumber: 88,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/AdminChrome.jsx",
-                            lineNumber: 81,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -408,13 +412,13 @@ function AdminChrome({ children }) {
                                     children: item_0.label
                                 }, item_0.href, false, {
                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                    lineNumber: 90,
+                                    lineNumber: 93,
                                     columnNumber: 20
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/AdminChrome.jsx",
-                            lineNumber: 87,
+                            lineNumber: 90,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -426,7 +430,7 @@ function AdminChrome({ children }) {
                                     children: user.email
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                    lineNumber: 96,
+                                    lineNumber: 99,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -436,19 +440,19 @@ function AdminChrome({ children }) {
                                     children: "Sign out"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                    lineNumber: 99,
+                                    lineNumber: 102,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/AdminChrome.jsx",
-                            lineNumber: 95,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/AdminChrome.jsx",
-                    lineNumber: 80,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -468,7 +472,7 @@ function AdminChrome({ children }) {
                                                     children: "Admin Panel"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                    lineNumber: 109,
+                                                    lineNumber: 112,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -476,13 +480,13 @@ function AdminChrome({ children }) {
                                                     children: currentTitle
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 115,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/AdminChrome.jsx",
-                                            lineNumber: 108,
+                                            lineNumber: 111,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -504,13 +508,13 @@ function AdminChrome({ children }) {
                                                                     children: unreadCount > 9 ? "9+" : unreadCount
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                    lineNumber: 120,
+                                                                    lineNumber: 123,
                                                                     columnNumber: 41
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/AdminChrome.jsx",
-                                                            lineNumber: 118,
+                                                            lineNumber: 121,
                                                             columnNumber: 19
                                                         }, this),
                                                         notifOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -521,7 +525,7 @@ function AdminChrome({ children }) {
                                                                     children: "Notifications"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                    lineNumber: 126,
+                                                                    lineNumber: 129,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -531,14 +535,14 @@ function AdminChrome({ children }) {
                                                                         children: "Loading..."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                        lineNumber: 130,
+                                                                        lineNumber: 133,
                                                                         columnNumber: 41
                                                                     }, this) : notifRows.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                         className: "px-3 py-4 text-sm text-muted",
                                                                         children: "No notifications yet."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                        lineNumber: 130,
+                                                                        lineNumber: 133,
                                                                         columnNumber: 127
                                                                     }, this) : notifRows.map((n_1)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             className: `border-b border-border/70 px-3 py-2 last:border-0 ${n_1.isRead ? "bg-surface" : "bg-brand-soft/30"}`,
@@ -548,7 +552,7 @@ function AdminChrome({ children }) {
                                                                                     children: n_1.title || "Notification"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                                    lineNumber: 133,
+                                                                                    lineNumber: 136,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 n_1.body ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -556,7 +560,7 @@ function AdminChrome({ children }) {
                                                                                     children: n_1.body
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                                    lineNumber: 136,
+                                                                                    lineNumber: 139,
                                                                                     columnNumber: 43
                                                                                 }, this) : null,
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -564,30 +568,30 @@ function AdminChrome({ children }) {
                                                                                     children: n_1.createdAt ? new Date(n_1.createdAt).toLocaleString() : ""
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                                    lineNumber: 137,
+                                                                                    lineNumber: 140,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, n_1.id, true, {
                                                                             fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                            lineNumber: 132,
+                                                                            lineNumber: 135,
                                                                             columnNumber: 55
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                                    lineNumber: 129,
+                                                                    lineNumber: 132,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/AdminChrome.jsx",
-                                                            lineNumber: 125,
+                                                            lineNumber: 128,
                                                             columnNumber: 33
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                    lineNumber: 117,
+                                                    lineNumber: 120,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -597,19 +601,19 @@ function AdminChrome({ children }) {
                                                     children: "Sign out"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                                    lineNumber: 144,
+                                                    lineNumber: 147,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/AdminChrome.jsx",
-                                            lineNumber: 116,
+                                            lineNumber: 119,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                    lineNumber: 107,
+                                    lineNumber: 110,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -620,18 +624,18 @@ function AdminChrome({ children }) {
                                             children: item_1.label
                                         }, item_1.href, false, {
                                             fileName: "[project]/src/components/AdminChrome.jsx",
-                                            lineNumber: 150,
+                                            lineNumber: 153,
                                             columnNumber: 34
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/AdminChrome.jsx",
-                                    lineNumber: 149,
+                                    lineNumber: 152,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/AdminChrome.jsx",
-                            lineNumber: 106,
+                            lineNumber: 109,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -639,24 +643,24 @@ function AdminChrome({ children }) {
                             children: children
                         }, void 0, false, {
                             fileName: "[project]/src/components/AdminChrome.jsx",
-                            lineNumber: 155,
+                            lineNumber: 158,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/AdminChrome.jsx",
-                    lineNumber: 105,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AdminChrome.jsx",
-            lineNumber: 79,
+            lineNumber: 82,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/AdminChrome.jsx",
-        lineNumber: 78,
+        lineNumber: 81,
         columnNumber: 10
     }, this);
 }

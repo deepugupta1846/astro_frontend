@@ -12,5 +12,8 @@
   "/favicon.ico/route": "/favicon.ico",
   "/matchmaking/page": "/matchmaking",
   "/page": "/",
-  "/sign-in/page": "/sign-in"
+  "/privacy-policy/page": "/privacy-policy",
+  "/refund-policy/page": "/refund-policy",
+  "/sign-in/page": "/sign-in",
+  "/terms-and-conditions/page": "/terms-and-conditions"
 }

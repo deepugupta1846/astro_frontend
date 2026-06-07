@@ -1,6 +1,21 @@
 {
   "app": {
-    "[project]/src/app/page": [
+    "[project]/src/app/admin/astrologers/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/admin/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/admin/pujas/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/admin/remedies/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/admin/withdrawals/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/sign-in/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ]
   },

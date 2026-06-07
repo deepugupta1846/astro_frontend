@@ -122,15 +122,21 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-8">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-white/55">
-            <a href="#" className="transition hover:text-white">
-              Terms of Use
-            </a>
-            <a href="#" className="transition hover:text-white">
+            <Link
+              href="/terms-and-conditions"
+              className="transition hover:text-white"
+            >
+              Terms &amp; Conditions
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="transition hover:text-white"
+            >
               Privacy Policy
-            </a>
-            <a href="#" className="transition hover:text-white">
+            </Link>
+            <Link href="/refund-policy" className="transition hover:text-white">
               Refund &amp; cancellation
-            </a>
+            </Link>
           </div>
           <p className="mt-6 text-center text-xs text-white/45">
             © {new Date().getFullYear()} Astro Pulse. All rights reserved.

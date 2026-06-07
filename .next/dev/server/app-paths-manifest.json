@@ -1,3 +1,8 @@
 {
-  "/page": "app/page.js"
+  "/admin/astrologers/page": "app/admin/astrologers/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/pujas/page": "app/admin/pujas/page.js",
+  "/admin/remedies/page": "app/admin/remedies/page.js",
+  "/admin/withdrawals/page": "app/admin/withdrawals/page.js",
+  "/sign-in/page": "app/sign-in/page.js"
 }

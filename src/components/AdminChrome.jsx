@@ -12,6 +12,7 @@ const nav = [
   { href: "/admin/users", label: "Users" },
   { href: "/admin/kundlis", label: "Kundlis" },
   { href: "/admin/bookings", label: "Bookings" },
+  { href: "/admin/withdrawals", label: "Withdrawals" },
   { href: "/admin/astrologers", label: "Astrologers" },
   { href: "/admin/remedies", label: "Remedies" },
   { href: "/admin/pujas", label: "Pujas" },

@@ -23,7 +23,7 @@ function apiImageRemotePatterns() {
 
 const nextConfig = {
   reactCompiler: true,
-  output: "standalone",
+  // output: "standalone",
   images: {
     remotePatterns: [
       {

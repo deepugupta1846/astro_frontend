@@ -1,6 +1,7 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/admin/account-deletions/page": "app/admin/account-deletions/page.js",
   "/admin/astrologers/page": "app/admin/astrologers/page.js",
   "/admin/bookings/page": "app/admin/bookings/page.js",
   "/admin/kundlis/page": "app/admin/kundlis/page.js",
@@ -11,6 +12,7 @@
   "/admin/withdrawals/page": "app/admin/withdrawals/page.js",
   "/book-puja/page": "app/book-puja/page.js",
   "/contact-us/page": "app/contact-us/page.js",
+  "/delete-account/page": "app/delete-account/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/matchmaking/page": "app/matchmaking/page.js",
   "/page": "app/page.js",

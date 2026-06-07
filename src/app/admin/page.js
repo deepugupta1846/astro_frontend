@@ -62,6 +62,21 @@ export default function AdminHomePage() {
           </span>
         </Link>
         <Link
+          href="/admin/account-deletions"
+          className="group rounded-2xl border border-border bg-surface p-6 shadow-sm transition-colors hover:border-primary/40 hover:bg-brand-soft/50"
+        >
+          <h2 className="text-lg font-semibold text-foreground">
+            Account deletions
+          </h2>
+          <p className="mt-2 text-sm text-muted">
+            Review OTP-verified deletion requests and permanently remove user
+            data on approval.
+          </p>
+          <span className="mt-4 inline-block text-sm font-medium text-primary group-hover:underline">
+            Open deletions →
+          </span>
+        </Link>
+        <Link
           href="/admin/astrologers"
           className="group rounded-2xl border border-border bg-surface p-6 shadow-sm transition-colors hover:border-primary/40 hover:bg-brand-soft/50"
         >

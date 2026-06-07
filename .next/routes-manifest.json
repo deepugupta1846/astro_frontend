@@ -47,6 +47,12 @@
       "namedRegex": "^/admin(?:/)?$"
     },
     {
+      "page": "/admin/account-deletions",
+      "regex": "^/admin/account\\-deletions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/account\\-deletions(?:/)?$"
+    },
+    {
       "page": "/admin/astrologers",
       "regex": "^/admin/astrologers(?:/)?$",
       "routeKeys": {},
@@ -99,6 +105,12 @@
       "regex": "^/contact\\-us(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/contact\\-us(?:/)?$"
+    },
+    {
+      "page": "/delete-account",
+      "regex": "^/delete\\-account(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/delete\\-account(?:/)?$"
     },
     {
       "page": "/favicon.ico",

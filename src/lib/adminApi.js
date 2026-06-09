@@ -39,3 +39,16 @@ export async function adminFetch(path, init = {}) {
   }
   return data;
 }
+
+/** Upload image to /api/v1/upload/image (field: image). Returns public URL. */
+export async function uploadImage(file) {
+  const fd = new FormData();
+  fd.append("image", file);
+  const json = await adminFetch("/api/v1/upload/image", {
+    method: "POST",
+    body: fd,
+  });
+  const url = json?.data?.url;
+  if (!url) throw new Error("Upload did not return a URL");
+  return url;
+}

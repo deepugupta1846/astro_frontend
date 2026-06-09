@@ -20,7 +20,16 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/blogs/[slug]",
+      "regex": "^/blogs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blogs/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",
@@ -59,6 +68,12 @@
       "namedRegex": "^/admin/astrologers(?:/)?$"
     },
     {
+      "page": "/admin/astrologers/create",
+      "regex": "^/admin/astrologers/create(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/astrologers/create(?:/)?$"
+    },
+    {
       "page": "/admin/bookings",
       "regex": "^/admin/bookings(?:/)?$",
       "routeKeys": {},
@@ -95,6 +110,12 @@
       "namedRegex": "^/admin/withdrawals(?:/)?$"
     },
     {
+      "page": "/blogs",
+      "regex": "^/blogs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs(?:/)?$"
+    },
+    {
       "page": "/book-puja",
       "regex": "^/book\\-puja(?:/)?$",
       "routeKeys": {},
@@ -113,6 +134,12 @@
       "namedRegex": "^/delete\\-account(?:/)?$"
     },
     {
+      "page": "/download-app",
+      "regex": "^/download\\-app(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/download\\-app(?:/)?$"
+    },
+    {
       "page": "/favicon.ico",
       "regex": "^/favicon\\.ico(?:/)?$",
       "routeKeys": {},
@@ -123,6 +150,12 @@
       "regex": "^/matchmaking(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/matchmaking(?:/)?$"
+    },
+    {
+      "page": "/press-media",
+      "regex": "^/press\\-media(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/press\\-media(?:/)?$"
     },
     {
       "page": "/privacy-policy",

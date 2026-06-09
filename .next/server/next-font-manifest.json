@@ -6,6 +6,9 @@
     "[project]/src/app/admin/account-deletions/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
+    "[project]/src/app/admin/astrologers/create/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
     "[project]/src/app/admin/astrologers/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
@@ -30,6 +33,12 @@
     "[project]/src/app/admin/withdrawals/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
+    "[project]/src/app/blogs/[slug]/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/blogs/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
     "[project]/src/app/book-puja/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
@@ -39,10 +48,16 @@
     "[project]/src/app/delete-account/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
+    "[project]/src/app/download-app/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
     "[project]/src/app/matchmaking/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
     "[project]/src/app/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
+    "[project]/src/app/press-media/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
     "[project]/src/app/privacy-policy/page": [

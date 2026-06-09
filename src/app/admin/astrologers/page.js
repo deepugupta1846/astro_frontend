@@ -1,14 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { adminFetch } from "@/lib/adminApi";
-
-const createEmpty = {
-  name: "",
-  phone: "",
-  countryCode: "+91",
-  email: "",
-};
 
 export default function AdminAstrologersPage() {
   const [rows, setRows] = useState([]);
@@ -17,10 +11,6 @@ export default function AdminAstrologersPage() {
   const [editId, setEditId] = useState(null);
   const [form, setForm] = useState(null);
   const [saving, setSaving] = useState(false);
-  const [showCreate, setShowCreate] = useState(false);
-  const [createForm, setCreateForm] = useState(createEmpty);
-  const [creating, setCreating] = useState(false);
-
   const load = useCallback(async () => {
     setErr("");
     setLoading(true);
@@ -46,6 +36,7 @@ export default function AdminAstrologersPage() {
       countryCode: row.countryCode ?? "+91",
       email: row.email ?? "",
       bio: row.bio ?? "",
+      address: row.address ?? "",
       consultationFeePerMin:
         row.consultationFeePerMin != null
           ? String(row.consultationFeePerMin)
@@ -74,6 +65,7 @@ export default function AdminAstrologersPage() {
         countryCode: form.countryCode.trim() || "+91",
         email: form.email.trim() || null,
         bio: form.bio.trim() || null,
+        address: form.address.trim() || null,
         isVerified: form.isVerified,
         isActive: form.isActive,
         chatEnabled: form.chatEnabled,
@@ -96,30 +88,6 @@ export default function AdminAstrologersPage() {
     }
   }
 
-  async function submitCreate(e) {
-    e.preventDefault();
-    setCreating(true);
-    setErr("");
-    try {
-      await adminFetch("/api/v1/admin/astrologers", {
-        method: "POST",
-        body: JSON.stringify({
-          name: createForm.name.trim(),
-          phone: createForm.phone.trim(),
-          countryCode: createForm.countryCode.trim() || "+91",
-          email: createForm.email.trim() || undefined,
-        }),
-      });
-      setShowCreate(false);
-      setCreateForm(createEmpty);
-      await load();
-    } catch (e) {
-      setErr(e.message);
-    } finally {
-      setCreating(false);
-    }
-  }
-
   return (
     <div className="mx-auto max-w-6xl">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -130,13 +98,12 @@ export default function AdminAstrologersPage() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={() => setShowCreate((v) => !v)}
-            className="rounded-xl border border-border bg-surface px-4 py-2 text-sm font-medium hover:bg-accent"
+          <Link
+            href="/admin/astrologers/create"
+            className="rounded-xl border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90"
           >
-            {showCreate ? "Close form" : "Add astrologer"}
-          </button>
+            Create astrologer
+          </Link>
           <button
             type="button"
             onClick={() => load()}
@@ -154,73 +121,6 @@ export default function AdminAstrologersPage() {
         >
           {err}
         </p>
-      )}
-
-      {showCreate && (
-        <form
-          onSubmit={submitCreate}
-          className="mt-6 rounded-2xl border border-border bg-surface p-6 shadow-sm"
-        >
-          <h2 className="text-sm font-semibold text-foreground">
-            Quick create
-          </h2>
-          <p className="mt-1 text-xs text-muted">
-            Creates a profile row. For full KYC onboarding, use the mobile
-            astrologer registration flow or add more fields later.
-          </p>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <label className="block text-sm font-medium">
-              Name *
-              <input
-                required
-                className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
-                value={createForm.name}
-                onChange={(e) =>
-                  setCreateForm((f) => ({ ...f, name: e.target.value }))
-                }
-              />
-            </label>
-            <label className="block text-sm font-medium">
-              Phone *
-              <input
-                required
-                className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
-                value={createForm.phone}
-                onChange={(e) =>
-                  setCreateForm((f) => ({ ...f, phone: e.target.value }))
-                }
-              />
-            </label>
-            <label className="block text-sm font-medium">
-              Country code
-              <input
-                className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
-                value={createForm.countryCode}
-                onChange={(e) =>
-                  setCreateForm((f) => ({ ...f, countryCode: e.target.value }))
-                }
-              />
-            </label>
-            <label className="block text-sm font-medium">
-              Email
-              <input
-                type="email"
-                className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
-                value={createForm.email}
-                onChange={(e) =>
-                  setCreateForm((f) => ({ ...f, email: e.target.value }))
-                }
-              />
-            </label>
-          </div>
-          <button
-            type="submit"
-            disabled={creating}
-            className="cta-btn mt-4 rounded-xl px-5 py-2.5 text-sm font-semibold disabled:opacity-60"
-          >
-            {creating ? "Creating…" : "Create astrologer"}
-          </button>
-        </form>
       )}
 
       <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-surface shadow-sm">
@@ -361,6 +261,17 @@ export default function AdminAstrologersPage() {
                   value={form.bio}
                   onChange={(e) =>
                     setForm((f) => ({ ...f, bio: e.target.value }))
+                  }
+                />
+              </label>
+              <label className="block text-sm font-medium">
+                Address
+                <textarea
+                  rows={2}
+                  className="mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
+                  value={form.address}
+                  onChange={(e) =>
+                    setForm((f) => ({ ...f, address: e.target.value }))
                   }
                 />
               </label>

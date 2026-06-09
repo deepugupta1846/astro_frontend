@@ -116,6 +116,11 @@ export default function Footer() {
                   Common questions
                 </Link>
               </li>
+              <li>
+                <Link href="/download-app" className="transition hover:text-white">
+                  Download app
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -139,6 +144,12 @@ export default function Footer() {
             </Link>
             <Link href="/contact-us" className="transition hover:text-white">
               Contact us
+            </Link>
+            <Link href="/press-media" className="transition hover:text-white">
+              Press &amp; media
+            </Link>
+            <Link href="/blogs" className="transition hover:text-white">
+              Blog
             </Link>
             <Link href="/delete-account" className="transition hover:text-white">
               Delete account

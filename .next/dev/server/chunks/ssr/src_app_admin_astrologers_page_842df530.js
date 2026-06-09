@@ -7,18 +7,14 @@ __turbopack_context__.s([
     ()=>AdminAstrologersPage
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$adminApi$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/adminApi.js [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
 ;
-const createEmpty = {
-    name: "",
-    phone: "",
-    countryCode: "+91",
-    email: ""
-};
+;
 function AdminAstrologersPage() {
     const [rows, setRows] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
@@ -26,9 +22,6 @@ function AdminAstrologersPage() {
     const [editId, setEditId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [saving, setSaving] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [showCreate, setShowCreate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [createForm, setCreateForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(createEmpty);
-    const [creating, setCreating] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const load = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async ()=>{
         setErr("");
         setLoading(true);
@@ -54,6 +47,7 @@ function AdminAstrologersPage() {
             countryCode: row.countryCode ?? "+91",
             email: row.email ?? "",
             bio: row.bio ?? "",
+            address: row.address ?? "",
             consultationFeePerMin: row.consultationFeePerMin != null ? String(row.consultationFeePerMin) : "",
             isVerified: Boolean(row.isVerified),
             isActive: Boolean(row.isActive),
@@ -77,6 +71,7 @@ function AdminAstrologersPage() {
                 countryCode: form.countryCode.trim() || "+91",
                 email: form.email.trim() || null,
                 bio: form.bio.trim() || null,
+                address: form.address.trim() || null,
                 isVerified: form.isVerified,
                 isActive: form.isActive,
                 chatEnabled: form.chatEnabled,
@@ -98,29 +93,6 @@ function AdminAstrologersPage() {
             setSaving(false);
         }
     }
-    async function submitCreate(e) {
-        e.preventDefault();
-        setCreating(true);
-        setErr("");
-        try {
-            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$adminApi$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["adminFetch"])("/api/v1/admin/astrologers", {
-                method: "POST",
-                body: JSON.stringify({
-                    name: createForm.name.trim(),
-                    phone: createForm.phone.trim(),
-                    countryCode: createForm.countryCode.trim() || "+91",
-                    email: createForm.email.trim() || undefined
-                })
-            });
-            setShowCreate(false);
-            setCreateForm(createEmpty);
-            await load();
-        } catch (e) {
-            setErr(e.message);
-        } finally{
-            setCreating(false);
-        }
-    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "mx-auto max-w-6xl",
         children: [
@@ -134,7 +106,7 @@ function AdminAstrologersPage() {
                                 children: "Astrologers"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 127,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -142,26 +114,25 @@ function AdminAstrologersPage() {
                                 children: "Partner profiles, verification, and consultation settings."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 128,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                        lineNumber: 126,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-wrap gap-2",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                type: "button",
-                                onClick: ()=>setShowCreate((v)=>!v),
-                                className: "rounded-xl border border-border bg-surface px-4 py-2 text-sm font-medium hover:bg-accent",
-                                children: showCreate ? "Close form" : "Add astrologer"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/admin/astrologers/create",
+                                className: "rounded-xl border border-primary bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90",
+                                children: "Create astrologer"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 133,
+                                lineNumber: 101,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -171,19 +142,19 @@ function AdminAstrologersPage() {
                                 children: "Refresh"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 140,
+                                lineNumber: 107,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                        lineNumber: 132,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                lineNumber: 125,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             err && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -192,143 +163,7 @@ function AdminAstrologersPage() {
                 children: err
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                lineNumber: 151,
-                columnNumber: 9
-            }, this),
-            showCreate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                onSubmit: submitCreate,
-                className: "mt-6 rounded-2xl border border-border bg-surface p-6 shadow-sm",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-sm font-semibold text-foreground",
-                        children: "Quick create"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                        lineNumber: 164,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "mt-1 text-xs text-muted",
-                        children: "Creates a profile row. For full KYC onboarding, use the mobile astrologer registration flow or add more fields later."
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                        lineNumber: 167,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-4 grid gap-4 sm:grid-cols-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "block text-sm font-medium",
-                                children: [
-                                    "Name *",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        required: true,
-                                        className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm",
-                                        value: createForm.name,
-                                        onChange: (e)=>setCreateForm((f)=>({
-                                                    ...f,
-                                                    name: e.target.value
-                                                }))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 174,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 172,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "block text-sm font-medium",
-                                children: [
-                                    "Phone *",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        required: true,
-                                        className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm",
-                                        value: createForm.phone,
-                                        onChange: (e)=>setCreateForm((f)=>({
-                                                    ...f,
-                                                    phone: e.target.value
-                                                }))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 185,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 183,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "block text-sm font-medium",
-                                children: [
-                                    "Country code",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm",
-                                        value: createForm.countryCode,
-                                        onChange: (e)=>setCreateForm((f)=>({
-                                                    ...f,
-                                                    countryCode: e.target.value
-                                                }))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 196,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 194,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "block text-sm font-medium",
-                                children: [
-                                    "Email",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "email",
-                                        className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm",
-                                        value: createForm.email,
-                                        onChange: (e)=>setCreateForm((f)=>({
-                                                    ...f,
-                                                    email: e.target.value
-                                                }))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 206,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 204,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                        lineNumber: 171,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        type: "submit",
-                        disabled: creating,
-                        className: "cta-btn mt-4 rounded-xl px-5 py-2.5 text-sm font-semibold disabled:opacity-60",
-                        children: creating ? "Creating…" : "Create astrologer"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/admin/astrologers/page.js",
-                        lineNumber: 216,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/app/admin/astrologers/page.js",
-                lineNumber: 160,
+                lineNumber: 118,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -345,7 +180,7 @@ function AdminAstrologersPage() {
                                         children: "ID"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 230,
+                                        lineNumber: 130,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -353,7 +188,7 @@ function AdminAstrologersPage() {
                                         children: "Name"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 231,
+                                        lineNumber: 131,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -361,7 +196,7 @@ function AdminAstrologersPage() {
                                         children: "Phone"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 232,
+                                        lineNumber: 132,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -369,7 +204,7 @@ function AdminAstrologersPage() {
                                         children: "Email"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 233,
+                                        lineNumber: 133,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -377,7 +212,7 @@ function AdminAstrologersPage() {
                                         children: "Verified"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 234,
+                                        lineNumber: 134,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -385,7 +220,7 @@ function AdminAstrologersPage() {
                                         children: "Active"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 235,
+                                        lineNumber: 135,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -393,7 +228,7 @@ function AdminAstrologersPage() {
                                         children: "₹/min"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 236,
+                                        lineNumber: 136,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -401,18 +236,18 @@ function AdminAstrologersPage() {
                                         children: "Actions"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/astrologers/page.js",
-                                        lineNumber: 237,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 229,
+                                lineNumber: 129,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                            lineNumber: 228,
+                            lineNumber: 128,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -423,12 +258,12 @@ function AdminAstrologersPage() {
                                     children: "Loading…"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 243,
+                                    lineNumber: 143,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 242,
+                                lineNumber: 142,
                                 columnNumber: 15
                             }, this) : rows.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -437,12 +272,12 @@ function AdminAstrologersPage() {
                                     children: "No astrologers yet."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 249,
+                                    lineNumber: 149,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                lineNumber: 248,
+                                lineNumber: 148,
                                 columnNumber: 15
                             }, this) : rows.map((a)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                     className: "border-b border-border/80 last:border-0",
@@ -452,7 +287,7 @@ function AdminAstrologersPage() {
                                             children: a.id
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 259,
+                                            lineNumber: 159,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -460,7 +295,7 @@ function AdminAstrologersPage() {
                                             children: a.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 260,
+                                            lineNumber: 160,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -468,7 +303,7 @@ function AdminAstrologersPage() {
                                             children: a.phone
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 261,
+                                            lineNumber: 161,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -476,7 +311,7 @@ function AdminAstrologersPage() {
                                             children: a.email || "—"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 262,
+                                            lineNumber: 162,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -486,19 +321,19 @@ function AdminAstrologersPage() {
                                                 children: "Yes"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                lineNumber: 267,
+                                                lineNumber: 167,
                                                 columnNumber: 23
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-amber-800",
                                                 children: "No"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                lineNumber: 269,
+                                                lineNumber: 169,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 265,
+                                            lineNumber: 165,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -508,19 +343,19 @@ function AdminAstrologersPage() {
                                                 children: "Yes"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                lineNumber: 274,
+                                                lineNumber: 174,
                                                 columnNumber: 23
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-red-700",
                                                 children: "No"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                lineNumber: 276,
+                                                lineNumber: 176,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 272,
+                                            lineNumber: 172,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -528,7 +363,7 @@ function AdminAstrologersPage() {
                                             children: a.consultationFeePerMin ?? "—"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 279,
+                                            lineNumber: 179,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -540,34 +375,34 @@ function AdminAstrologersPage() {
                                                 children: "Edit"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                lineNumber: 283,
+                                                lineNumber: 183,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 282,
+                                            lineNumber: 182,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, a.id, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 255,
+                                    lineNumber: 155,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                            lineNumber: 240,
+                            lineNumber: 140,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                    lineNumber: 227,
+                    lineNumber: 127,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                lineNumber: 226,
+                lineNumber: 126,
                 columnNumber: 7
             }, this),
             editId != null && form && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -587,7 +422,7 @@ function AdminAstrologersPage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                            lineNumber: 306,
+                            lineNumber: 206,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -608,13 +443,13 @@ function AdminAstrologersPage() {
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 315,
+                                            lineNumber: 215,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 313,
+                                    lineNumber: 213,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -631,13 +466,13 @@ function AdminAstrologersPage() {
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 326,
+                                            lineNumber: 226,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 324,
+                                    lineNumber: 224,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -653,13 +488,13 @@ function AdminAstrologersPage() {
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 337,
+                                            lineNumber: 237,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 335,
+                                    lineNumber: 235,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -676,13 +511,13 @@ function AdminAstrologersPage() {
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 347,
+                                            lineNumber: 247,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 345,
+                                    lineNumber: 245,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -699,13 +534,36 @@ function AdminAstrologersPage() {
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 358,
+                                            lineNumber: 258,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 356,
+                                    lineNumber: 256,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                    className: "block text-sm font-medium",
+                                    children: [
+                                        "Address",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                            rows: 2,
+                                            className: "mt-1 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm",
+                                            value: form.address,
+                                            onChange: (e)=>setForm((f)=>({
+                                                        ...f,
+                                                        address: e.target.value
+                                                    }))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/admin/astrologers/page.js",
+                                            lineNumber: 269,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/admin/astrologers/page.js",
+                                    lineNumber: 267,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -723,13 +581,13 @@ function AdminAstrologersPage() {
                                                     }))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 369,
+                                            lineNumber: 280,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 367,
+                                    lineNumber: 278,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -747,14 +605,14 @@ function AdminAstrologersPage() {
                                                             }))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                    lineNumber: 384,
+                                                    lineNumber: 295,
                                                     columnNumber: 19
                                                 }, this),
                                                 "Verified"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 383,
+                                            lineNumber: 294,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -769,14 +627,14 @@ function AdminAstrologersPage() {
                                                             }))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                    lineNumber: 394,
+                                                    lineNumber: 305,
                                                     columnNumber: 19
                                                 }, this),
                                                 "Active"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 393,
+                                            lineNumber: 304,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -791,14 +649,14 @@ function AdminAstrologersPage() {
                                                             }))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                    lineNumber: 404,
+                                                    lineNumber: 315,
                                                     columnNumber: 19
                                                 }, this),
                                                 "Chat"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 403,
+                                            lineNumber: 314,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -813,14 +671,14 @@ function AdminAstrologersPage() {
                                                             }))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                    lineNumber: 414,
+                                                    lineNumber: 325,
                                                     columnNumber: 19
                                                 }, this),
                                                 "Call"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 413,
+                                            lineNumber: 324,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -835,20 +693,20 @@ function AdminAstrologersPage() {
                                                             }))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                                    lineNumber: 424,
+                                                    lineNumber: 335,
                                                     columnNumber: 19
                                                 }, this),
                                                 "Video"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 423,
+                                            lineNumber: 334,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 382,
+                                    lineNumber: 293,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -861,7 +719,7 @@ function AdminAstrologersPage() {
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 435,
+                                            lineNumber: 346,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -871,36 +729,36 @@ function AdminAstrologersPage() {
                                             children: saving ? "Saving…" : "Save"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                                            lineNumber: 442,
+                                            lineNumber: 353,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                                    lineNumber: 434,
+                                    lineNumber: 345,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/admin/astrologers/page.js",
-                            lineNumber: 312,
+                            lineNumber: 212,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/admin/astrologers/page.js",
-                    lineNumber: 300,
+                    lineNumber: 200,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/astrologers/page.js",
-                lineNumber: 299,
+                lineNumber: 199,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/admin/astrologers/page.js",
-        lineNumber: 124,
+        lineNumber: 92,
         columnNumber: 5
     }, this);
 }

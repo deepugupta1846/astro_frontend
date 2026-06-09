@@ -69,17 +69,28 @@ export function mapAstrologerForCard(raw) {
       ? String(raw.profileImageUrl).trim()
       : FALLBACK_FACE;
 
+  const orders =
+    total >= 10_000
+      ? `${Math.round(total / 1000)}k+ orders`
+      : `${formatConsultCount(total)} orders`;
+
+  const experienceYears =
+    expYears != null && !Number.isNaN(expYears) ? Math.round(expYears) : null;
+
   return {
     id: raw.id,
     name: raw.name ? String(raw.name) : "Astrologer",
-    title,
-    exp,
-    langs: langs || "—",
-    price,
+    specialties: specs.length ? specs.join(", ") : title,
     rating: Number.isFinite(rating) ? Math.min(5, Math.max(0, rating)) : 0,
-    chats: `${formatConsultCount(total)} consults`,
+    orders,
+    languages: langs || "—",
+    experienceYears,
+    experience:
+      experienceYears != null ? `${experienceYears} years` : "—",
+    price,
     image: url,
     online: Boolean(raw.isOnline),
+    celebrity: rating >= 4.95 || total >= 25_000,
   };
 }
 

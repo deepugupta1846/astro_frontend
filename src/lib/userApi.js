@@ -18,6 +18,46 @@ export async function sendOtp({ phone, countryCode = "+91" }) {
   return parseJson(res);
 }
 
+export async function verifyOtp({
+  phone,
+  countryCode = "+91",
+  otp,
+  signupIntent,
+}) {
+  const base = getApiBaseUrl();
+  const res = await fetch(`${base}/api/v1/user/verify-otp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      phone: phone.trim(),
+      countryCode,
+      otp: otp.trim(),
+      ...(signupIntent ? { signupIntent } : {}),
+    }),
+  });
+  return parseJson(res);
+}
+
+export async function signupUser({
+  phone,
+  countryCode = "+91",
+  name,
+  email,
+}) {
+  const base = getApiBaseUrl();
+  const res = await fetch(`${base}/api/v1/user/signup`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      phone: phone.trim(),
+      countryCode,
+      name: name?.trim(),
+      ...(email?.trim() ? { email: email.trim() } : {}),
+    }),
+  });
+  return parseJson(res);
+}
+
 export async function requestAccountDeletion({
   phone,
   countryCode = "+91",

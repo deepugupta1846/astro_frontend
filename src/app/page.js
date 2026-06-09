@@ -6,6 +6,10 @@ import HowItWorks from '../components/HowItWorks';
 import WhyChoose from '../components/WhyChoose';
 import Testimonials from '../components/Testimonials';
 import FAQs from '../components/FAQs';
+import ExpertsAndStore from '../components/ExpertsAndStore';
+import AppDownload from '../components/AppDownload';
+import PressMedia from '../components/PressMedia';
+import BlogJournal from '../components/BlogJournal';
 import Footer from '../components/Footer';
 import { getNotebookAstrologersCards } from '@/lib/notebookAstrologers';
 
@@ -21,6 +25,10 @@ export default function Home() {
       <HowItWorks />
       <WhyChoose />
       <Testimonials />
+      <ExpertsAndStore />
+      <AppDownload showViewAllLink />
+      <PressMedia showViewAllLink limit={6} />
+      <BlogJournal limit={4} />
       <FAQs />
       <Footer />
     </div>

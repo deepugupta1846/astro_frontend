@@ -144,15 +144,17 @@ function ServiceCard({ item }) {
   const { Icon } = item;
   return (
     <motion.article
-      className="flex h-full min-h-0 w-full max-w-[320px] flex-col rounded-2xl border border-border bg-surface px-6 pb-7 pt-8 text-center shadow-md shadow-foreground/5 ring-1 ring-border/80 border-b-4 border-b-gold"
+      className="flex h-full w-full flex-col rounded-2xl border border-border bg-surface px-6 pb-7 pt-8 text-center shadow-md shadow-foreground/5 ring-1 ring-border/80 border-b-4 border-b-gold"
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 380, damping: 22 }}
     >
       <div className="mx-auto flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gold text-foreground md:h-[4.25rem] md:w-[4.25rem]">
         <Icon />
       </div>
-      <h3 className="mt-5 text-lg font-bold text-foreground md:text-xl">{item.title}</h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted md:text-[0.9375rem]">
+      <h3 className="mt-5 min-h-[1.75rem] text-lg font-bold text-foreground md:min-h-[2rem] md:text-xl">
+        {item.title}
+      </h3>
+      <p className="mt-3 min-h-[6.5rem] flex-1 text-sm leading-relaxed text-muted line-clamp-4 md:min-h-[7rem] md:text-[0.9375rem]">
         {item.description}
       </p>
     </motion.article>
@@ -194,11 +196,13 @@ export default function ComplimentaryAstrologyServices() {
       </div>
 
       {reduceMotion ? (
-        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 items-stretch gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 grid max-w-6xl auto-rows-fr grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
           {list.map((item, i) => (
-            <Reveal key={item.id} delay={i * 0.04}>
+            <Reveal key={item.id} delay={i * 0.04} className="h-full">
               <div className="flex h-full justify-center">
-                <ServiceCard item={item} />
+                <div className="h-full w-full max-w-[320px]">
+                  <ServiceCard item={item} />
+                </div>
               </div>
             </Reveal>
           ))}
@@ -245,15 +249,15 @@ export default function ComplimentaryAstrologyServices() {
             }}
             navigation
             onBeforeInit={onSwiperBeforeInit}
-            className="astro-top-swiper-inner complimentary-services-swiper !pb-14 pt-1 [&_.swiper-wrapper]:!items-stretch [&_.swiper-slide]:!flex [&_.swiper-slide]:h-auto"
+            className="astro-top-swiper-inner complimentary-services-swiper !pb-14 pt-1 [&_.swiper-slide]:!flex [&_.swiper-slide]:!h-auto [&_.swiper-slide]:items-stretch [&_.swiper-wrapper]:!items-stretch"
             aria-label="Complimentary astrology services carousel"
           >
             {list.map((item, i) => (
               <SwiperSlide
                 key={item.id ?? `slide-${i}`}
-                className="box-border !flex h-auto justify-center py-1"
+                className="box-border !flex !h-auto items-stretch justify-center py-1"
               >
-                <div className="mx-auto h-full w-full max-w-[320px]">
+                <div className="flex h-full w-full max-w-[320px] items-stretch">
                   <ServiceCard item={item} />
                 </div>
               </SwiperSlide>

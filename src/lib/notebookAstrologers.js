@@ -1,22 +1,30 @@
 import notebookAstrologers from "@/data/notebookAstrologers.json";
 import { gravatarAstrologerImageUrl } from "@/lib/gravatarAstrologerAvatar";
 
-const SPECIALTIES = [
-  "Vedic",
-  "Tarot",
-  "KP",
-  "Numerology",
-  "Palmistry",
-  "Lal Kitab",
-  "Remedies",
+const SPECIALTY_SETS = [
+  ["Tarot", "Life Coach", "Numerology"],
+  ["Vedic", "Face Reading", "Life Coach"],
+  ["Vedic", "Western", "Tarot"],
+  ["Numerology", "Tarot", "Face Reading"],
+  ["Vedic", "KP", "Remedies"],
+  ["Palmistry", "Lal Kitab", "Vedic"],
+  ["Numerology", "Vedic", "Career"],
+  ["Tarot", "Psychic", "Healing"],
 ];
 
-function formatConsultCount(n) {
-  if (n == null || Number.isNaN(n)) return "0";
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-  if (n >= 10_000) return `${Math.round(n / 1000)}k`;
-  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
-  return String(Math.round(n));
+const LANGUAGE_SETS = [
+  "Hindi",
+  "English, Hindi",
+  "English, Hindi, Punjabi",
+  "Hindi, Punjabi",
+  "English, Hindi, Bengali",
+];
+
+function formatOrders(n) {
+  if (n >= 50_000) return "50k+ orders";
+  if (n >= 10_000) return "10k+ orders";
+  if (n >= 1000) return `${Math.round(n / 1000)}k+ orders`;
+  return `${n}+ orders`;
 }
 
 /**
@@ -24,30 +32,23 @@ function formatConsultCount(n) {
  * @param {number} i
  */
 function mapNotebookEntry(row, i) {
-  const spec = SPECIALTIES[i % SPECIALTIES.length];
-  const loc =
-    row.location && row.location !== "India" ? row.location : "Pan‑India";
-  const title = `${spec} · ${loc}`;
-
-  const expYears = 8 + (i % 13);
-  const fee = 15 + (i % 14);
-  const rating = Math.min(
-    4.99,
-    4.7 + ((i * 17) % 30) * 0.01
-  );
-  const totalConsults = 800 + i * 211 + (i % 7) * 97;
-
+  const specialties = SPECIALTY_SETS[i % SPECIALTY_SETS.length];
+  const experienceYears = 3 + (i % 12);
+  const fee = 28 + (i % 17) * 3;
+  const rating = Math.min(4.99, 4.88 + ((i * 13) % 12) * 0.01);
+  const totalOrders = 10_000 + i * 1847 + (i % 5) * 2100;
   const gender = row.gender === "female" ? "female" : "male";
 
   return {
     id: row.id,
-    name: row.name,
-    title,
-    exp: `${expYears}+ yrs`,
-    langs: "Hindi, English",
-    price: `₹${fee}/min`,
+    name: row.name.replace(/^Astro\s+/i, ""),
+    specialties: specialties.join(", "),
     rating,
-    chats: `${formatConsultCount(totalConsults)} consults`,
+    orders: formatOrders(totalOrders),
+    languages: LANGUAGE_SETS[i % LANGUAGE_SETS.length],
+    experienceYears,
+    experience: `${experienceYears} years`,
+    price: `₹${fee}/min`,
     image: gravatarAstrologerImageUrl({
       id: row.id,
       name: row.name,
@@ -55,10 +56,11 @@ function mapNotebookEntry(row, i) {
       gender,
     }),
     online: i % 4 !== 2,
+    celebrity: i % 6 === 0 || rating >= 4.97,
   };
 }
 
-/** Cards for the home “Top astrologers” grid from `notebookAstrologers.json`. */
+/** Cards for the home “Top astrologers” section from `notebookAstrologers.json`. */
 export function getNotebookAstrologersCards() {
   return notebookAstrologers.map((row, i) => mapNotebookEntry(row, i));
 }

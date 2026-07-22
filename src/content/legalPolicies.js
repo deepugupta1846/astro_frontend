@@ -1,6 +1,6 @@
 /** Shared policy copy for Astro Pulse legal pages */
 
-export const LEGAL_LAST_UPDATED = "3 June 2026";
+export const LEGAL_LAST_UPDATED = "22 July 2026";
 export const LEGAL_CONTACT_EMAIL = "support@astropulse.in";
 
 export const termsSections = [
@@ -148,25 +148,35 @@ export const privacySections = [
     ],
   },
   {
-    title: "9. Children",
+    title: "9. Delete account",
+    paragraphs: [
+      "You may request permanent deletion of your Astro Pulse account at any time through our Delete Account page (astropulse.in/delete-account) or by contacting support.",
+      "To submit a request online, verify your registered mobile number with a one-time password (OTP). You may optionally share a reason for leaving. Active consultations must be ended before you submit a request.",
+      "Once submitted, your account is temporarily deactivated and you cannot log in while the request is pending. Our team reviews the request and permanently deletes personal data associated with your account, including profile details, birth and kundli data, consultation history, and wallet balance.",
+      "Certain records (such as payment or tax-related transaction references) may be retained for as long as required by law, fraud prevention, or dispute resolution, even after account deletion. Aggregated or anonymised data that cannot identify you may also be retained.",
+      "If you change your mind before the request is processed, contact us at the email below. After deletion is completed, the account cannot be restored and you would need to register again to use the Platform.",
+    ],
+  },
+  {
+    title: "10. Children",
     paragraphs: [
       "The Platform is not directed at children under 18. We do not knowingly collect personal data from minors for paid consultations. If you believe a minor has provided data, contact us for deletion.",
     ],
   },
   {
-    title: "10. Cookies and website analytics",
+    title: "11. Cookies and website analytics",
     paragraphs: [
       "Our website may use cookies and similar technologies for session management, preferences, and aggregated analytics. You can control cookies through your browser settings.",
     ],
   },
   {
-    title: "11. International users",
+    title: "12. International users",
     paragraphs: [
       "Data may be processed on servers located in India or with service providers that comply with applicable cross-border transfer requirements.",
     ],
   },
   {
-    title: "12. Updates and contact",
+    title: "13. Updates and contact",
     paragraphs: [
       "We may update this Privacy Policy periodically. The “Last updated” date at the top reflects the latest version.",
       `For privacy-related questions or grievances, contact: ${LEGAL_CONTACT_EMAIL}.`,

@@ -5,7 +5,9 @@ import Footer from "./Footer";
 const legalLinks = [
   { href: "/terms-and-conditions", label: "Terms & Conditions" },
   { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/data-deletion-policy", label: "Data Deletion" },
   { href: "/refund-policy", label: "Refund & Cancellation" },
+  { href: "/delete-account", label: "Delete Account" },
 ];
 
 export default function LegalPageLayout({

@@ -1,6 +1,6 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/delete-account/page.js")
-R.c("server/chunks/ssr/[root-of-the-server]__0fdfcb13._.js")
 R.c("server/chunks/ssr/_571fa0cc._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__94792f35._.js")
 R.c("server/chunks/ssr/_0efddc1b._.js")
 R.c("server/chunks/ssr/_ee6d40a1._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__4f4ef5d0._.js")

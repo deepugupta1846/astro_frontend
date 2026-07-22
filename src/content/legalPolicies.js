@@ -144,17 +144,18 @@ export const privacySections = [
     title: "8. Your rights",
     paragraphs: [
       "Depending on applicable law, you may request access, correction, deletion, or portability of your personal data, and object to certain processing.",
-      "To exercise these rights, email us at the address below from your registered email or phone. We may verify your identity before responding.",
+      "To exercise these rights, email us at the address below from your registered email or phone, or use the Delete Account page / in-app Delete account option described below. We may verify your identity before responding.",
     ],
   },
   {
     title: "9. Delete account",
     paragraphs: [
-      "You may request permanent deletion of your Astro Pulse account at any time through our Delete Account page (astropulse.in/delete-account) or by contacting support.",
-      "To submit a request online, verify your registered mobile number with a one-time password (OTP). You may optionally share a reason for leaving. Active consultations must be ended before you submit a request.",
-      "Once submitted, your account is temporarily deactivated and you cannot log in while the request is pending. Our team reviews the request and permanently deletes personal data associated with your account, including profile details, birth and kundli data, consultation history, and wallet balance.",
-      "Certain records (such as payment or tax-related transaction references) may be retained for as long as required by law, fraud prevention, or dispute resolution, even after account deletion. Aggregated or anonymised data that cannot identify you may also be retained.",
-      "If you change your mind before the request is processed, contact us at the email below. After deletion is completed, the account cannot be restored and you would need to register again to use the Platform.",
+      "If you create an Astro Pulse account, you can request permanent deletion of that account and associated personal data at any time. Full details are in our Data Deletion Policy (/data-deletion-policy).",
+      "How to request deletion: (1) On this website, open the Delete Account page at /delete-account and verify your registered mobile number with OTP; or (2) In the Astro Pulse mobile app, go to Profile or the side menu and choose Delete account, then complete OTP verification; or (3) Email support from your registered contact details.",
+      "You may optionally share a reason for leaving. End any active consultations before submitting a request.",
+      "After you submit a request, your account is temporarily deactivated and you cannot log in while the request is pending. Freezing or deactivation alone is not the final outcome: once approved, we permanently delete personal data tied to the account, including profile details, birth and kundli data, consultation history, chat/call metadata we control, and wallet balance.",
+      "We may retain limited records where required by law or for legitimate purposes such as tax, payment disputes, fraud prevention, or security (for example, payment gateway transaction references). Aggregated or anonymised data that cannot identify you may also be retained. We will not keep your account in a frozen state as a substitute for deletion.",
+      "If you change your mind before the request is processed, contact us at the email below. After deletion is completed, the account cannot be restored; you would need to register again to use the Platform.",
     ],
   },
   {
@@ -180,6 +181,88 @@ export const privacySections = [
     paragraphs: [
       "We may update this Privacy Policy periodically. The “Last updated” date at the top reflects the latest version.",
       `For privacy-related questions or grievances, contact: ${LEGAL_CONTACT_EMAIL}.`,
+    ],
+  },
+];
+
+export const dataDeletionSections = [
+  {
+    title: "1. Purpose",
+    paragraphs: [
+      "This Data Deletion Policy explains how users of Astro Pulse can request deletion of their account and associated personal data, what we delete, what we may retain, and how long the process usually takes.",
+      "It applies to our website, mobile applications, and related Astro Pulse services. It should be read together with our Privacy Policy.",
+    ],
+  },
+  {
+    title: "2. Who can request deletion",
+    paragraphs: [
+      "Any registered user who created an account on Astro Pulse (for example, with a mobile number) may request deletion of that account and the personal data linked to it.",
+      "If you believe a minor’s data was submitted, or you need help as a legal guardian or authorised representative, contact us at the email below with proof of authority where reasonably required.",
+    ],
+  },
+  {
+    title: "3. How to request account deletion",
+    paragraphs: [
+      "Website (no app login required): open the Delete Account page at /delete-account, enter your registered mobile number, verify with a one-time password (OTP), and submit the request. You may optionally add a reason.",
+      "Mobile app: open Profile or the side menu, choose Delete account, verify with OTP, and submit the request.",
+      "Email: write to support from your registered email or phone number stating that you want your account deleted. We may ask for OTP or other verification before processing.",
+      "End any active chat or call consultations before submitting. Incomplete requests or unverified identities may be delayed or declined until we can confirm the account owner.",
+    ],
+  },
+  {
+    title: "4. Deleting specific data without closing the account",
+    paragraphs: [
+      "You may ask us to correct or remove certain profile or birth-chart details while keeping your account, where technically feasible and not needed to provide an ongoing service you still use.",
+      "Email us with the data you want removed (for example, a specific kundli profile). We will confirm what can be deleted versus what must remain for an active account (such as payment history for open disputes).",
+    ],
+  },
+  {
+    title: "5. What happens after you submit a request",
+    paragraphs: [
+      "Your account is temporarily deactivated. You will not be able to log in while the request is pending.",
+      "Temporary deactivation or “freezing” is not the final outcome. Once the request is approved, we permanently delete personal data associated with the account as described below.",
+      "Our team reviews the request (including identity verification and any open sessions or fraud checks). You may contact support before processing completes if you wish to cancel the request.",
+    ],
+  },
+  {
+    title: "6. Data we delete",
+    paragraphs: [
+      "When account deletion is completed, we delete or irreversibly anonymise personal data we control that is linked to your account, including:",
+      "Account and profile information (name, mobile number, email, profile photo, preferences).",
+      "Birth and chart data (date, time, and place of birth; kundli and matchmaking inputs and results you generated).",
+      "Consultation-related content and metadata we store (chat/call history and session records associated with your user ID), subject to any limited retention noted in section 7.",
+      "Wallet balance and in-app promotional credits tied to the account.",
+      "Device and push-notification tokens linked to the account.",
+    ],
+  },
+  {
+    title: "7. Data we may retain",
+    paragraphs: [
+      "We do not keep your account in a frozen state as a substitute for deletion. However, we may retain limited information where necessary for legal, tax, accounting, fraud prevention, security, or dispute-resolution purposes. Examples include payment gateway transaction references, invoices, refund records, and records of abuse or chargebacks.",
+      "Such retained data is restricted to what is reasonably needed, kept only for as long as required for that purpose or by applicable law, and is not used to market to you.",
+      "Aggregated or anonymised statistics that cannot reasonably identify you may be retained for analytics and product improvement.",
+      "Astrologers may retain limited consultation notes they created as independent service providers only where needed for their own compliance; we instruct processors and partners under our control to delete or anonymise personal data in line with this policy.",
+    ],
+  },
+  {
+    title: "8. Timeline",
+    paragraphs: [
+      "We aim to acknowledge deletion requests within a few business days and to complete approved account deletions within a reasonable period, typically within thirty (30) days of a verified request, unless a longer period is required by law, an open dispute, or technical constraints.",
+      "Backup systems may take additional time to clear residual copies; those copies are isolated from production use and overwritten on the normal backup cycle.",
+    ],
+  },
+  {
+    title: "9. Effects of deletion",
+    paragraphs: [
+      "After deletion is completed, you will lose access to your account, wallet balance, consultation history, and saved kundli data. This action cannot be undone.",
+      "To use Astro Pulse again, you must register a new account. Previous wallet balance and history will not be restored.",
+    ],
+  },
+  {
+    title: "10. Contact and complaints",
+    paragraphs: [
+      `For data deletion requests, cancellations of a pending request, or privacy grievances, contact: ${LEGAL_CONTACT_EMAIL}.`,
+      "You may also use the Contact Us page on our website. We may update this policy from time to time; the “Last updated” date on this page reflects the current version.",
     ],
   },
 ];

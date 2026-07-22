@@ -384,22 +384,39 @@ function Footer() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                     className: "space-y-2 text-sm text-white/60",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "/#faqs",
-                                            className: "transition hover:text-white",
-                                            children: "Common questions"
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/#faqs",
+                                                className: "transition hover:text-white",
+                                                children: "Common questions"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Footer.js",
+                                                lineNumber: 115,
+                                                columnNumber: 17
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.js",
-                                            lineNumber: 115,
-                                            columnNumber: 17
+                                            lineNumber: 114,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/download-app",
+                                                className: "transition hover:text-white",
+                                                children: "Download app"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Footer.js",
+                                                lineNumber: 120,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/Footer.js",
+                                            lineNumber: 119,
+                                            columnNumber: 15
                                         }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Footer.js",
-                                        lineNumber: 114,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/src/components/Footer.js",
                                     lineNumber: 113,
                                     columnNumber: 13
@@ -428,7 +445,7 @@ function Footer() {
                                     children: "Terms & Conditions"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 125,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -437,7 +454,16 @@ function Footer() {
                                     children: "Privacy Policy"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 131,
+                                    lineNumber: 136,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/data-deletion-policy",
+                                    className: "transition hover:text-white",
+                                    children: "Data deletion"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Footer.js",
+                                    lineNumber: 142,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -446,7 +472,7 @@ function Footer() {
                                     children: "Refund & cancellation"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 137,
+                                    lineNumber: 148,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -455,7 +481,25 @@ function Footer() {
                                     children: "Contact us"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 140,
+                                    lineNumber: 151,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/press-media",
+                                    className: "transition hover:text-white",
+                                    children: "Press & media"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Footer.js",
+                                    lineNumber: 154,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/blogs",
+                                    className: "transition hover:text-white",
+                                    children: "Blog"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Footer.js",
+                                    lineNumber: 157,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -464,13 +508,13 @@ function Footer() {
                                     children: "Delete account"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 143,
+                                    lineNumber: 160,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.js",
-                            lineNumber: 124,
+                            lineNumber: 129,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -482,13 +526,13 @@ function Footer() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.js",
-                            lineNumber: 147,
+                            lineNumber: 164,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Footer.js",
-                    lineNumber: 123,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this)
             ]
@@ -529,8 +573,16 @@ const legalLinks = [
         label: "Privacy Policy"
     },
     {
+        href: "/data-deletion-policy",
+        label: "Data Deletion"
+    },
+    {
         href: "/refund-policy",
         label: "Refund & Cancellation"
+    },
+    {
+        href: "/delete-account",
+        label: "Delete Account"
     }
 ];
 function LegalPageLayout({ title, description, lastUpdated = "June 2026", currentPath, children }) {
@@ -539,7 +591,7 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/components/LegalPageLayout.js",
-                lineNumber: 20,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -550,7 +602,7 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
                         "aria-hidden": true
                     }, void 0, false, {
                         fileName: "[project]/src/components/LegalPageLayout.js",
-                        lineNumber: 23,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -561,7 +613,7 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
                                 children: "Legal"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LegalPageLayout.js",
-                                lineNumber: 28,
+                                lineNumber: 30,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -569,7 +621,7 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
                                 children: title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LegalPageLayout.js",
-                                lineNumber: 31,
+                                lineNumber: 33,
                                 columnNumber: 11
                             }, this),
                             description ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -577,7 +629,7 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
                                 children: description
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LegalPageLayout.js",
-                                lineNumber: 35,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, this) : null,
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -588,19 +640,19 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/LegalPageLayout.js",
-                                lineNumber: 39,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/LegalPageLayout.js",
-                        lineNumber: 27,
+                        lineNumber: 29,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/LegalPageLayout.js",
-                lineNumber: 22,
+                lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -618,13 +670,13 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
                                 children: link.label
                             }, link.href, false, {
                                 fileName: "[project]/src/components/LegalPageLayout.js",
-                                lineNumber: 53,
+                                lineNumber: 55,
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/src/components/LegalPageLayout.js",
-                        lineNumber: 46,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -632,24 +684,24 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/src/components/LegalPageLayout.js",
-                        lineNumber: 69,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/LegalPageLayout.js",
-                lineNumber: 45,
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Footer$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/components/LegalPageLayout.js",
-                lineNumber: 74,
+                lineNumber: 76,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/LegalPageLayout.js",
-        lineNumber: 19,
+        lineNumber: 21,
         columnNumber: 5
     }, this);
 }
@@ -662,6 +714,8 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
     ()=>LEGAL_CONTACT_EMAIL,
     "LEGAL_LAST_UPDATED",
     ()=>LEGAL_LAST_UPDATED,
+    "dataDeletionSections",
+    ()=>dataDeletionSections,
     "privacySections",
     ()=>privacySections,
     "refundSections",
@@ -669,7 +723,7 @@ function LegalPageLayout({ title, description, lastUpdated = "June 2026", curren
     "termsSections",
     ()=>termsSections
 ]);
-const LEGAL_LAST_UPDATED = "3 June 2026";
+const LEGAL_LAST_UPDATED = "22 July 2026";
 const LEGAL_CONTACT_EMAIL = "support@astropulse.in";
 const termsSections = [
     {
@@ -811,32 +865,124 @@ const privacySections = [
         title: "8. Your rights",
         paragraphs: [
             "Depending on applicable law, you may request access, correction, deletion, or portability of your personal data, and object to certain processing.",
-            "To exercise these rights, email us at the address below from your registered email or phone. We may verify your identity before responding."
+            "To exercise these rights, email us at the address below from your registered email or phone, or use the Delete Account page / in-app Delete account option described below. We may verify your identity before responding."
         ]
     },
     {
-        title: "9. Children",
+        title: "9. Delete account",
+        paragraphs: [
+            "If you create an Astro Pulse account, you can request permanent deletion of that account and associated personal data at any time. Full details are in our Data Deletion Policy (/data-deletion-policy).",
+            "How to request deletion: (1) On this website, open the Delete Account page at /delete-account and verify your registered mobile number with OTP; or (2) In the Astro Pulse mobile app, go to Profile or the side menu and choose Delete account, then complete OTP verification; or (3) Email support from your registered contact details.",
+            "You may optionally share a reason for leaving. End any active consultations before submitting a request.",
+            "After you submit a request, your account is temporarily deactivated and you cannot log in while the request is pending. Freezing or deactivation alone is not the final outcome: once approved, we permanently delete personal data tied to the account, including profile details, birth and kundli data, consultation history, chat/call metadata we control, and wallet balance.",
+            "We may retain limited records where required by law or for legitimate purposes such as tax, payment disputes, fraud prevention, or security (for example, payment gateway transaction references). Aggregated or anonymised data that cannot identify you may also be retained. We will not keep your account in a frozen state as a substitute for deletion.",
+            "If you change your mind before the request is processed, contact us at the email below. After deletion is completed, the account cannot be restored; you would need to register again to use the Platform."
+        ]
+    },
+    {
+        title: "10. Children",
         paragraphs: [
             "The Platform is not directed at children under 18. We do not knowingly collect personal data from minors for paid consultations. If you believe a minor has provided data, contact us for deletion."
         ]
     },
     {
-        title: "10. Cookies and website analytics",
+        title: "11. Cookies and website analytics",
         paragraphs: [
             "Our website may use cookies and similar technologies for session management, preferences, and aggregated analytics. You can control cookies through your browser settings."
         ]
     },
     {
-        title: "11. International users",
+        title: "12. International users",
         paragraphs: [
             "Data may be processed on servers located in India or with service providers that comply with applicable cross-border transfer requirements."
         ]
     },
     {
-        title: "12. Updates and contact",
+        title: "13. Updates and contact",
         paragraphs: [
             "We may update this Privacy Policy periodically. The “Last updated” date at the top reflects the latest version.",
             `For privacy-related questions or grievances, contact: ${LEGAL_CONTACT_EMAIL}.`
+        ]
+    }
+];
+const dataDeletionSections = [
+    {
+        title: "1. Purpose",
+        paragraphs: [
+            "This Data Deletion Policy explains how users of Astro Pulse can request deletion of their account and associated personal data, what we delete, what we may retain, and how long the process usually takes.",
+            "It applies to our website, mobile applications, and related Astro Pulse services. It should be read together with our Privacy Policy."
+        ]
+    },
+    {
+        title: "2. Who can request deletion",
+        paragraphs: [
+            "Any registered user who created an account on Astro Pulse (for example, with a mobile number) may request deletion of that account and the personal data linked to it.",
+            "If you believe a minor’s data was submitted, or you need help as a legal guardian or authorised representative, contact us at the email below with proof of authority where reasonably required."
+        ]
+    },
+    {
+        title: "3. How to request account deletion",
+        paragraphs: [
+            "Website (no app login required): open the Delete Account page at /delete-account, enter your registered mobile number, verify with a one-time password (OTP), and submit the request. You may optionally add a reason.",
+            "Mobile app: open Profile or the side menu, choose Delete account, verify with OTP, and submit the request.",
+            "Email: write to support from your registered email or phone number stating that you want your account deleted. We may ask for OTP or other verification before processing.",
+            "End any active chat or call consultations before submitting. Incomplete requests or unverified identities may be delayed or declined until we can confirm the account owner."
+        ]
+    },
+    {
+        title: "4. Deleting specific data without closing the account",
+        paragraphs: [
+            "You may ask us to correct or remove certain profile or birth-chart details while keeping your account, where technically feasible and not needed to provide an ongoing service you still use.",
+            "Email us with the data you want removed (for example, a specific kundli profile). We will confirm what can be deleted versus what must remain for an active account (such as payment history for open disputes)."
+        ]
+    },
+    {
+        title: "5. What happens after you submit a request",
+        paragraphs: [
+            "Your account is temporarily deactivated. You will not be able to log in while the request is pending.",
+            "Temporary deactivation or “freezing” is not the final outcome. Once the request is approved, we permanently delete personal data associated with the account as described below.",
+            "Our team reviews the request (including identity verification and any open sessions or fraud checks). You may contact support before processing completes if you wish to cancel the request."
+        ]
+    },
+    {
+        title: "6. Data we delete",
+        paragraphs: [
+            "When account deletion is completed, we delete or irreversibly anonymise personal data we control that is linked to your account, including:",
+            "Account and profile information (name, mobile number, email, profile photo, preferences).",
+            "Birth and chart data (date, time, and place of birth; kundli and matchmaking inputs and results you generated).",
+            "Consultation-related content and metadata we store (chat/call history and session records associated with your user ID), subject to any limited retention noted in section 7.",
+            "Wallet balance and in-app promotional credits tied to the account.",
+            "Device and push-notification tokens linked to the account."
+        ]
+    },
+    {
+        title: "7. Data we may retain",
+        paragraphs: [
+            "We do not keep your account in a frozen state as a substitute for deletion. However, we may retain limited information where necessary for legal, tax, accounting, fraud prevention, security, or dispute-resolution purposes. Examples include payment gateway transaction references, invoices, refund records, and records of abuse or chargebacks.",
+            "Such retained data is restricted to what is reasonably needed, kept only for as long as required for that purpose or by applicable law, and is not used to market to you.",
+            "Aggregated or anonymised statistics that cannot reasonably identify you may be retained for analytics and product improvement.",
+            "Astrologers may retain limited consultation notes they created as independent service providers only where needed for their own compliance; we instruct processors and partners under our control to delete or anonymise personal data in line with this policy."
+        ]
+    },
+    {
+        title: "8. Timeline",
+        paragraphs: [
+            "We aim to acknowledge deletion requests within a few business days and to complete approved account deletions within a reasonable period, typically within thirty (30) days of a verified request, unless a longer period is required by law, an open dispute, or technical constraints.",
+            "Backup systems may take additional time to clear residual copies; those copies are isolated from production use and overwritten on the normal backup cycle."
+        ]
+    },
+    {
+        title: "9. Effects of deletion",
+        paragraphs: [
+            "After deletion is completed, you will lose access to your account, wallet balance, consultation history, and saved kundli data. This action cannot be undone.",
+            "To use Astro Pulse again, you must register a new account. Previous wallet balance and history will not be restored."
+        ]
+    },
+    {
+        title: "10. Contact and complaints",
+        paragraphs: [
+            `For data deletion requests, cancellations of a pending request, or privacy grievances, contact: ${LEGAL_CONTACT_EMAIL}.`,
+            "You may also use the Contact Us page on our website. We may update this policy from time to time; the “Last updated” date on this page reflects the current version."
         ]
     }
 ];
@@ -1002,12 +1148,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$legalPolic
 ;
 const metadata = {
     title: "Privacy Policy | Astro Pulse",
-    description: "How Astro Pulse collects, uses, and protects your personal and birth chart data."
+    description: "How Astro Pulse collects, uses, and protects your data, including how to delete your account and personal information."
 };
 function PrivacyPolicyPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$LegalPageLayout$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
         title: "Privacy Policy",
-        description: "How we handle your data when you consult astrologers on Astro Pulse.",
+        description: "How we handle your data when you consult astrologers on Astro Pulse — including account deletion.",
         lastUpdated: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$legalPolicies$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["LEGAL_LAST_UPDATED"],
         currentPath: "/privacy-policy",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$LegalSections$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["LegalSections"], {

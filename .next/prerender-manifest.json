@@ -554,6 +554,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/data-deletion-policy": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/data-deletion-policy",
+      "dataRoute": "/data-deletion-policy.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/delete-account": {
       "experimentalBypassFor": [
         {
@@ -831,8 +855,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "9e2b014d374aa593d25e23f11d5523b5",
-    "previewModeSigningKey": "dae90635a701422183c81f55c7bf26bc8bba2ba24b4904a9301133d6d783d82e",
-    "previewModeEncryptionKey": "0ab37bf54c2916d7582bbcc21fd27bbae779b6c9c30ef9ebc43f1c0244daa544"
+    "previewModeId": "0c0c6f96ff3542365d2ad37233590e74",
+    "previewModeSigningKey": "dae389d32c977e9cd1fe2f2dc0f83f2493cbd8abc8cfce60a2a9b13c045437bd",
+    "previewModeEncryptionKey": "15e1095be5d56d87813897830f5d537d659347150c6eb4cceac4e2fc75a16922"
   }
 }

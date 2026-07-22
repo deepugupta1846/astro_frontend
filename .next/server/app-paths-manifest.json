@@ -15,6 +15,7 @@
   "/blogs/page": "app/blogs/page.js",
   "/book-puja/page": "app/book-puja/page.js",
   "/contact-us/page": "app/contact-us/page.js",
+  "/data-deletion-policy/page": "app/data-deletion-policy/page.js",
   "/delete-account/page": "app/delete-account/page.js",
   "/download-app/page": "app/download-app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",

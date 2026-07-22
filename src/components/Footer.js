@@ -139,6 +139,12 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
+            <Link
+              href="/data-deletion-policy"
+              className="transition hover:text-white"
+            >
+              Data deletion
+            </Link>
             <Link href="/refund-policy" className="transition hover:text-white">
               Refund &amp; cancellation
             </Link>

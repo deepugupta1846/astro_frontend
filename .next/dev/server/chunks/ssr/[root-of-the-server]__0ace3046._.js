@@ -864,12 +864,21 @@ function Footer() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/data-deletion-policy",
+                                    className: "transition hover:text-white",
+                                    children: "Data deletion"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Footer.js",
+                                    lineNumber: 142,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/refund-policy",
                                     className: "transition hover:text-white",
                                     children: "Refund & cancellation"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 142,
+                                    lineNumber: 148,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -878,7 +887,7 @@ function Footer() {
                                     children: "Contact us"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 145,
+                                    lineNumber: 151,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -887,7 +896,7 @@ function Footer() {
                                     children: "Press & media"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 148,
+                                    lineNumber: 154,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -896,7 +905,7 @@ function Footer() {
                                     children: "Blog"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 151,
+                                    lineNumber: 157,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -905,7 +914,7 @@ function Footer() {
                                     children: "Delete account"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.js",
-                                    lineNumber: 154,
+                                    lineNumber: 160,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -923,7 +932,7 @@ function Footer() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.js",
-                            lineNumber: 158,
+                            lineNumber: 164,
                             columnNumber: 11
                         }, this)
                     ]
@@ -994,50 +1003,89 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$notebookAstro
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$gravatarAstrologerAvatar$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/gravatarAstrologerAvatar.js [app-rsc] (ecmascript)");
 ;
 ;
-const SPECIALTIES = [
-    "Vedic",
-    "Tarot",
-    "KP",
-    "Numerology",
-    "Palmistry",
-    "Lal Kitab",
-    "Remedies"
+const SPECIALTY_SETS = [
+    [
+        "Tarot",
+        "Life Coach",
+        "Numerology"
+    ],
+    [
+        "Vedic",
+        "Face Reading",
+        "Life Coach"
+    ],
+    [
+        "Vedic",
+        "Western",
+        "Tarot"
+    ],
+    [
+        "Numerology",
+        "Tarot",
+        "Face Reading"
+    ],
+    [
+        "Vedic",
+        "KP",
+        "Remedies"
+    ],
+    [
+        "Palmistry",
+        "Lal Kitab",
+        "Vedic"
+    ],
+    [
+        "Numerology",
+        "Vedic",
+        "Career"
+    ],
+    [
+        "Tarot",
+        "Psychic",
+        "Healing"
+    ]
 ];
-function formatConsultCount(n) {
-    if (n == null || Number.isNaN(n)) return "0";
-    if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-    if (n >= 10_000) return `${Math.round(n / 1000)}k`;
-    if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
-    return String(Math.round(n));
+const LANGUAGE_SETS = [
+    "Hindi",
+    "English, Hindi",
+    "English, Hindi, Punjabi",
+    "Hindi, Punjabi",
+    "English, Hindi, Bengali"
+];
+function formatOrders(n) {
+    if (n >= 50_000) return "50k+ orders";
+    if (n >= 10_000) return "10k+ orders";
+    if (n >= 1000) return `${Math.round(n / 1000)}k+ orders`;
+    return `${n}+ orders`;
 }
 /**
  * @param {typeof notebookAstrologers[0]} row
  * @param {number} i
  */ function mapNotebookEntry(row, i) {
-    const spec = SPECIALTIES[i % SPECIALTIES.length];
-    const loc = row.location && row.location !== "India" ? row.location : "Pan‑India";
-    const title = `${spec} · ${loc}`;
-    const expYears = 8 + i % 13;
-    const fee = 15 + i % 14;
-    const rating = Math.min(4.99, 4.7 + i * 17 % 30 * 0.01);
-    const totalConsults = 800 + i * 211 + i % 7 * 97;
+    const specialties = SPECIALTY_SETS[i % SPECIALTY_SETS.length];
+    const experienceYears = 3 + i % 12;
+    const fee = 28 + i % 17 * 3;
+    const rating = Math.min(4.99, 4.88 + i * 13 % 12 * 0.01);
+    const totalOrders = 10_000 + i * 1847 + i % 5 * 2100;
     const gender = row.gender === "female" ? "female" : "male";
     return {
         id: row.id,
-        name: row.name,
-        title,
-        exp: `${expYears}+ yrs`,
-        langs: "Hindi, English",
-        price: `₹${fee}/min`,
+        name: row.name.replace(/^Astro\s+/i, ""),
+        specialties: specialties.join(", "),
         rating,
-        chats: `${formatConsultCount(totalConsults)} consults`,
+        orders: formatOrders(totalOrders),
+        languages: LANGUAGE_SETS[i % LANGUAGE_SETS.length],
+        experienceYears,
+        experience: `${experienceYears} years`,
+        price: `₹${fee}/min`,
         image: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$gravatarAstrologerAvatar$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["gravatarAstrologerImageUrl"])({
             id: row.id,
             name: row.name,
             phone: row.phone,
             gender
         }),
-        online: i % 4 !== 2
+        online: i % 4 !== 2,
+        celebrity: i % 6 === 0 || rating >= 4.97
     };
 }
 function getNotebookAstrologersCards() {

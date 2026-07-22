@@ -1,1 +1,9 @@
-[00:00:01.325] Server  LOG     ✓ Ready in 891ms
+[00:01:07.525] Server  LOG     ✓ Ready in 60.4s
+[00:05:54.319] Server  LOG     ○ Compiling /refund-policy ...
+[00:10:28.443] Server  LOG     ○ Compiling / ...
+[00:10:45.744] Server  LOG     ✓ Finished filesystem cache database compaction in 10.8s
+[00:11:40.370] Server  LOG     ✓ Compiled in 302ms
+[00:11:43.428] Server  LOG     ✓ Compiled in 65ms
+[00:11:50.892] Server  LOG     ✓ Compiled in 65ms
+[00:11:54.966] Server  LOG     ✓ Compiled in 50ms
+[00:13:13.235] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

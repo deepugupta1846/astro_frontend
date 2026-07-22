@@ -128,6 +128,12 @@
       "namedRegex": "^/contact\\-us(?:/)?$"
     },
     {
+      "page": "/data-deletion-policy",
+      "regex": "^/data\\-deletion\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/data\\-deletion\\-policy(?:/)?$"
+    },
+    {
       "page": "/delete-account",
       "regex": "^/delete\\-account(?:/)?$",
       "routeKeys": {},

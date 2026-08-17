@@ -4,7 +4,7 @@
 type AppRoutes = never
 type PageRoutes = never
 type LayoutRoutes = "/" | "/admin" | "/sign-in"
-type RedirectRoutes = never
+type RedirectRoutes = "/app/download"
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
 
@@ -12,6 +12,7 @@ type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRo
 interface ParamMap {
   "/": {}
   "/admin": {}
+  "/app/download": {}
   "/sign-in": {}
 }
 

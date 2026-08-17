@@ -54,7 +54,7 @@ export default function SignInPage() {
       <header className="border-b border-border bg-surface/80 px-4 py-4 backdrop-blur">
         <div className="mx-auto flex max-w-lg items-center justify-between">
           <Link href="/" className="text-sm font-bold text-foreground">
-            ← Astro Pulse
+            ← Astro Plus
           </Link>
         </div>
       </header>

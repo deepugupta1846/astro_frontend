@@ -2,7 +2,7 @@ export const pressItems = [
   {
     id: "aifas-award",
     headline:
-      "Astro Pulse recognised at All India Federation of Astrologers' Societies award ceremony",
+      "Astro Plus recognised at All India Federation of Astrologers' Societies award ceremony",
     source: "AIFAS",
     date: "17 Dec 2024",
     image: "/showcase/img (5).jpg",
@@ -34,7 +34,7 @@ export const pressItems = [
   {
     id: "lpac-recognition",
     headline:
-      "Astro Pulse team at Legendary Peace Awards Council — building trust in digital astrology",
+      "Astro Plus team at Legendary Peace Awards Council — building trust in digital astrology",
     source: "LPAC",
     date: "19 Apr 2025",
     image: "/showcase/img (7).jpg",
@@ -43,7 +43,7 @@ export const pressItems = [
     id: "community-felicitation",
     headline:
       "Community outreach — felicitating partners and supporters at a public gathering",
-    source: "ASTRO PULSE",
+    source: "Astro Plus",
     date: "08 Mar 2025",
     image: "/showcase/img (3).jpg",
   },
@@ -74,9 +74,9 @@ export const galleryPhotos = [
   { src: "/showcase/img (3).jpg", alt: "Community felicitation gathering" },
   { src: "/showcase/img (4).jpg", alt: "Literary and cultural event" },
   { src: "/showcase/img (6).jpg", alt: "Dynamic Excellence Awards cultural showcase" },
-  { src: "/showcase/img2.jpg", alt: "Astro Pulse event highlight" },
-  { src: "/showcase/showcase (1).jpeg", alt: "Astro Pulse showcase" },
-  { src: "/showcase/showcase (2).jpeg", alt: "Astro Pulse showcase" },
-  { src: "/showcase/showcase (3).jpeg", alt: "Astro Pulse showcase" },
-  { src: "/showcase/showcase (4).jpeg", alt: "Astro Pulse showcase" },
+  { src: "/showcase/img2.jpg", alt: "Astro Plus event highlight" },
+  { src: "/showcase/showcase (1).jpeg", alt: "Astro Plus showcase" },
+  { src: "/showcase/showcase (2).jpeg", alt: "Astro Plus showcase" },
+  { src: "/showcase/showcase (3).jpeg", alt: "Astro Plus showcase" },
+  { src: "/showcase/showcase (4).jpeg", alt: "Astro Plus showcase" },
 ];

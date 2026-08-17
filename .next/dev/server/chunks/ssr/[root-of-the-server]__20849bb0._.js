@@ -46,8 +46,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$scri
 ;
 ;
 const metadata = {
-    title: "AstroPulse — Talk to Top Astrologers Online | Chat & Call",
-    description: "Consult verified astrologers 24/7 for Vedic charts, love, career, tarot, and remedies. Book chat or voice on Astro Pulse.",
+    title: "Astro Plus — Talk to Top Astrologers Online | Chat & Call",
+    description: "Consult verified astrologers 24/7 for Vedic charts, love, career, tarot, and remedies. Book chat or voice on Astro Plus.",
     icons: {
         icon: "/icon.png",
         apple: "/icon.png"

@@ -1,13 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./Reveal";
+import { APP_DOWNLOAD_PATH, PLAY_STORE_URL } from "@/lib/appLinks";
 
-const APP_STORE_URL =
-  process.env.NEXT_PUBLIC_APP_STORE_URL || "#";
-const PLAY_STORE_URL =
-  process.env.NEXT_PUBLIC_PLAY_STORE_URL || "#";
+const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || "#";
 
 function StoreBadge({ href, label, children }) {
   return (
@@ -55,6 +54,32 @@ function PlayIcon() {
 }
 
 export default function AppDownload({ showViewAllLink = false }) {
+  const [shareHint, setShareHint] = useState("");
+
+  async function handleShare() {
+    const url =
+      typeof window !== "undefined"
+        ? `${window.location.origin}${APP_DOWNLOAD_PATH}`
+        : APP_DOWNLOAD_PATH;
+    try {
+      if (typeof navigator !== "undefined" && navigator.share) {
+        await navigator.share({
+          title: "Download Astro Plus",
+          text: "Chat with verified astrologers on Astro Plus.",
+          url,
+        });
+        setShareHint("Link shared");
+      } else if (typeof navigator !== "undefined" && navigator.clipboard) {
+        await navigator.clipboard.writeText(url);
+        setShareHint("Link copied");
+      }
+    } catch (err) {
+      if (err?.name === "AbortError") return;
+      setShareHint("Copy failed — use /app/download");
+    }
+    window.setTimeout(() => setShareHint(""), 2500);
+  }
+
   return (
     <section
       id="download-app"
@@ -65,7 +90,7 @@ export default function AppDownload({ showViewAllLink = false }) {
           <div className="grid items-center gap-10 p-8 md:p-12 lg:grid-cols-2 lg:gap-6 lg:p-14">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-muted">
-                Astro Pulse for iOS &amp; Android
+                Astro Plus for iOS &amp; Android
               </p>
               <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-4xl lg:text-[2.65rem]">
                 India&apos;s trusted astrology app.
@@ -94,7 +119,28 @@ export default function AppDownload({ showViewAllLink = false }) {
                     <span className="block text-sm font-semibold">Google Play</span>
                   </span>
                 </StoreBadge>
+                <button
+                  type="button"
+                  onClick={handleShare}
+                  className="inline-flex items-center gap-2.5 rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-semibold text-foreground shadow-sm transition hover:border-primary/40 hover:text-primary"
+                >
+                  Share app
+                </button>
               </div>
+              <p className="mt-3 text-xs text-muted">
+                Share link:{" "}
+                <Link
+                  href={APP_DOWNLOAD_PATH}
+                  className="font-semibold text-primary hover:underline"
+                >
+                  /app/download
+                </Link>
+                {shareHint ? (
+                  <span className="ml-2 font-semibold text-foreground">
+                    {shareHint}
+                  </span>
+                ) : null}
+              </p>
 
               <div className="mt-10 flex flex-wrap gap-10">
                 <div>
@@ -130,7 +176,7 @@ export default function AppDownload({ showViewAllLink = false }) {
                   <div className="relative aspect-[9/19] overflow-hidden rounded-[2.25rem] bg-hero-deep">
                     <Image
                       src="/showcase/img1.jpg"
-                      alt="Astro Pulse app — talk to verified astrologers"
+                      alt="Astro Plus app — talk to verified astrologers"
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 280px, 320px"

@@ -45,7 +45,7 @@ export default function ExpertsAndStore() {
               <p>
                 Our certified astrology experts blend the ancient wisdom of Vedic
                 astrology with a modern understanding of life and emotions. Each
-                astrologer on Astro Pulse is carefully selected to ensure they
+                astrologer on Astro Plus is carefully selected to ensure they
                 truly know astrology and speak with kindness. They keep learning
                 through teamwork and regular training.
               </p>
@@ -64,7 +64,7 @@ export default function ExpertsAndStore() {
               <p>
                 Start with a short consultation to see how it works before
                 committing more. With honest pricing and a smooth app experience,
-                beginning your spiritual journey on Astro Pulse has never been
+                beginning your spiritual journey on Astro Plus has never been
                 easier.
               </p>
             </div>
@@ -73,7 +73,7 @@ export default function ExpertsAndStore() {
           <Reveal delay={0.08}>
             <div className="rounded-3xl border border-border bg-accent/80 p-6 shadow-sm md:p-8">
               <p className="text-center text-[11px] font-bold uppercase tracking-[0.22em] text-muted">
-                The Astro Pulse store
+                The Astro Plus store
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
                 {storeItems.map((item) => (

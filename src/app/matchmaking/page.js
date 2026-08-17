@@ -4,9 +4,9 @@ import KundliMatchForm from "../../components/KundliMatchForm";
 import Reveal from "../../components/Reveal";
 
 export const metadata = {
-  title: "Free Kundli Matching (Gun Milan) | Astro Pulse",
+  title: "Free Kundli Matching (Gun Milan) | Astro Plus",
   description:
-    "Match horoscopes online with Astro Pulse—Ashtakoot milan, mangal dosha, and detailed compatibility before marriage.",
+    "Match horoscopes online with Astro Plus—Ashtakoot milan, mangal dosha, and detailed compatibility before marriage.",
 };
 
 const points = [

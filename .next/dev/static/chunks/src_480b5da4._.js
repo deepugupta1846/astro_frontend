@@ -437,7 +437,7 @@ function SignInModal({ open, onClose }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-xs font-bold uppercase tracking-[0.22em] text-primary",
-                                        children: "Astro Pulse"
+                                        children: "Astro Plus"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/SignInModal.js",
                                         lineNumber: 154,
@@ -474,7 +474,7 @@ function SignInModal({ open, onClose }) {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "rounded-2xl border border-primary/25 bg-brand-muted/60 px-4 py-4 text-sm leading-relaxed text-foreground",
-                                                children: verifiedUser?.astrologerId ? "This number is already linked to an astrologer profile. Open the app to manage consultations." : "Registration started successfully. Download the Astro Pulse app to upload ID proof, set your fees, and go live."
+                                                children: verifiedUser?.astrologerId ? "This number is already linked to an astrologer profile. Open the app to manage consultations." : "Registration started successfully. Download the Astro Plus app to upload ID proof, set your fees, and go live."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/SignInModal.js",
                                                 lineNumber: 167,
@@ -928,11 +928,11 @@ const navLinks = [
 ];
 function HamburgerIcon(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
-    if ($[0] !== "46ed306100f6b805f8c6a998c9fb8dad27c7cf3ce41577e8322a5357571440e8") {
+    if ($[0] !== "a66eee4878260f5d39e3a5fd0a37ec28c56bba8d033967179f786a4b25b0df38") {
         for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "46ed306100f6b805f8c6a998c9fb8dad27c7cf3ce41577e8322a5357571440e8";
+        $[0] = "a66eee4878260f5d39e3a5fd0a37ec28c56bba8d033967179f786a4b25b0df38";
     }
     const { open } = t0;
     const t1 = `absolute left-0 top-1/2 block h-0.5 w-5 origin-center rounded-full bg-foreground transition-all duration-300 ease-out ${open ? "-translate-y-1/2 rotate-45" : "-translate-y-[6px]"}`;
@@ -1008,11 +1008,11 @@ _c = HamburgerIcon;
 function Header() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(44);
-    if ($[0] !== "46ed306100f6b805f8c6a998c9fb8dad27c7cf3ce41577e8322a5357571440e8") {
+    if ($[0] !== "a66eee4878260f5d39e3a5fd0a37ec28c56bba8d033967179f786a4b25b0df38") {
         for(let $i = 0; $i < 44; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "46ed306100f6b805f8c6a998c9fb8dad27c7cf3ce41577e8322a5357571440e8";
+        $[0] = "a66eee4878260f5d39e3a5fd0a37ec28c56bba8d033967179f786a4b25b0df38";
     }
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -1151,7 +1151,7 @@ function Header() {
                     className: "flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ring-2 ring-primary/35",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         src: "/icon.png",
-                        alt: "Astro Pulse",
+                        alt: "Astro Plus",
                         width: 36,
                         height: 36,
                         className: "object-contain p-0.5",
@@ -1168,11 +1168,11 @@ function Header() {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "hidden font-bold tracking-tight sm:inline",
-                    children: "Astro Pulse"
+                    children: "Astro Plus"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Header.js",
                     lineNumber: 213,
-                    columnNumber: 372
+                    columnNumber: 371
                 }, this)
             ]
         }, void 0, true, {
@@ -1755,11 +1755,11 @@ const spotlightExperts = [
 ];
 function Hero() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(33);
-    if ($[0] !== "f63913df2416a13987cef96926b045bf1ce0598df3464a74a36a9b7f41fd94f1") {
+    if ($[0] !== "b08d3d1b494ffcef0c631b50e150cc2b4e16a98ed9a943e48f9b567784423d5e") {
         for(let $i = 0; $i < 33; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "f63913df2416a13987cef96926b045bf1ce0598df3464a74a36a9b7f41fd94f1";
+        $[0] = "b08d3d1b494ffcef0c631b50e150cc2b4e16a98ed9a943e48f9b567784423d5e";
     }
     let t0;
     let t1;
@@ -1913,7 +1913,7 @@ function Hero() {
                 duration: 0.5,
                 delay: 0.1
             },
-            children: "Birth charts, love compatibility, career timing, remedies, and more—book a chat or call in seconds on Astro Pulse."
+            children: "Birth charts, love compatibility, career timing, remedies, and more—book a chat or call in seconds on Astro Plus."
         }, void 0, false, {
             fileName: "[project]/src/components/Hero.js",
             lineNumber: 114,
@@ -4063,18 +4063,18 @@ const steps = [
 ];
 function HowItWorks() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(3);
-    if ($[0] !== "c64ee1fdce6808dce68581c50948daf2233eee5a4998e534b25e747b72bf02e0") {
+    if ($[0] !== "b5517fdddeb0f504c1f21b02849096d0efd433b2c79a0e92d712e3a0f6e225bc") {
         for(let $i = 0; $i < 3; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "c64ee1fdce6808dce68581c50948daf2233eee5a4998e534b25e747b72bf02e0";
+        $[0] = "b5517fdddeb0f504c1f21b02849096d0efd433b2c79a0e92d712e3a0f6e225bc";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "section-title mb-14 md:mb-16",
-                children: "HOW Astro Pulse WORKS?"
+                children: "HOW Astro Plus WORKS?"
             }, void 0, false, {
                 fileName: "[project]/src/components/HowItWorks.js",
                 lineNumber: 29,
@@ -4198,11 +4198,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$
 ;
 function IconChart() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03") {
+    if ($[0] !== "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03";
+        $[0] = "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4258,11 +4258,11 @@ function IconChart() {
 _c = IconChart;
 function IconShield() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03") {
+    if ($[0] !== "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03";
+        $[0] = "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4308,11 +4308,11 @@ function IconShield() {
 _c1 = IconShield;
 function IconCalendar() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03") {
+    if ($[0] !== "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03";
+        $[0] = "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4370,11 +4370,11 @@ function IconCalendar() {
 _c2 = IconCalendar;
 function IconPeople() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03") {
+    if ($[0] !== "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03";
+        $[0] = "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4441,11 +4441,11 @@ function IconPeople() {
 _c3 = IconPeople;
 function IconStar() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03") {
+    if ($[0] !== "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03";
+        $[0] = "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4505,18 +4505,18 @@ const features = [
 ];
 function WhyChoose() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(4);
-    if ($[0] !== "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03") {
+    if ($[0] !== "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa") {
         for(let $i = 0; $i < 4; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "0f065645ce64e1f32e5df28639a70f517ceef1217fc9d2412a3421e3792a3c03";
+        $[0] = "3f85ba2f779ddc9a3851ecf9fafd31e1cbe33b8c7a0427895dec18d526707aaa";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "section-title mb-14 md:mb-16",
-                children: "WHY CHOOSE Astro Pulse"
+                children: "WHY CHOOSE Astro Plus"
             }, void 0, false, {
                 fileName: "[project]/src/components/WhyChoose.js",
                 lineNumber: 122,
@@ -4678,7 +4678,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$
 ;
 const testimonials = [
     {
-        text: "I used to check three sites for transits. Astro Pulse pulls my chart, dasha, and daily luck windows into one calm feed—it's become my morning ritual.",
+        text: "I used to check three sites for transits. Astro Plus pulls my chart, dasha, and daily luck windows into one calm feed—it's become my morning ritual.",
         name: "Ananya K.",
         location: "Bengaluru"
     },
@@ -4695,11 +4695,11 @@ const testimonials = [
 ];
 function TestimonialCard(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
-    if ($[0] !== "7582a4c838084f80f1a201331391ce686d86a07395c9a2bdbc3893e10cb8214e") {
+    if ($[0] !== "2b9c98c76681e7eeab7522bbe770657e6f465550e7cdf9dc3509dfa9cc5c8f6c") {
         for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "7582a4c838084f80f1a201331391ce686d86a07395c9a2bdbc3893e10cb8214e";
+        $[0] = "2b9c98c76681e7eeab7522bbe770657e6f465550e7cdf9dc3509dfa9cc5c8f6c";
     }
     const { t } = t0;
     let t1;
@@ -4777,11 +4777,11 @@ function TestimonialCard(t0) {
 _c = TestimonialCard;
 function Testimonials() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(4);
-    if ($[0] !== "7582a4c838084f80f1a201331391ce686d86a07395c9a2bdbc3893e10cb8214e") {
+    if ($[0] !== "2b9c98c76681e7eeab7522bbe770657e6f465550e7cdf9dc3509dfa9cc5c8f6c") {
         for(let $i = 0; $i < 4; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "7582a4c838084f80f1a201331391ce686d86a07395c9a2bdbc3893e10cb8214e";
+        $[0] = "2b9c98c76681e7eeab7522bbe770657e6f465550e7cdf9dc3509dfa9cc5c8f6c";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -4893,8 +4893,8 @@ var _s = __turbopack_context__.k.signature();
 ;
 const faqs = [
     {
-        q: "What is Astro Pulse?",
-        a: "Astro Pulse is your personal astrology hub—birth chart, dasha timelines, daily horoscopes, transits, and optional live astrologer sessions in one place."
+        q: "What is Astro Plus?",
+        a: "Astro Plus is your personal astrology hub—birth chart, dasha timelines, daily horoscopes, transits, and optional live astrologer sessions in one place."
     },
     {
         q: "How do I get my birth chart?",
@@ -4920,11 +4920,11 @@ const faqs = [
 function FAQs() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "04f13c28d95a57db540fbf519a09107f162946be023c377bdbc2d8098a2bf06c") {
+    if ($[0] !== "9338787a6cbb7fe239c364529dc0c04d5c4226ca539cb58b8e5bc33b0b45e93f") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "04f13c28d95a57db540fbf519a09107f162946be023c377bdbc2d8098a2bf06c";
+        $[0] = "9338787a6cbb7fe239c364529dc0c04d5c4226ca539cb58b8e5bc33b0b45e93f";
     }
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     let t0;
@@ -5134,11 +5134,11 @@ const storeItems = [
 ];
 function ExpertsAndStore() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(8);
-    if ($[0] !== "cef6612d9b2d2fec1c12827a107a878326c45eb2229890dbee305e7fe86229bd") {
+    if ($[0] !== "670793032c2b9c05bab938fcca9b65c9a887f0c4a3b188c5634b473a3dac48ca") {
         for(let $i = 0; $i < 8; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "cef6612d9b2d2fec1c12827a107a878326c45eb2229890dbee305e7fe86229bd";
+        $[0] = "670793032c2b9c05bab938fcca9b65c9a887f0c4a3b188c5634b473a3dac48ca";
     }
     let t0;
     let t1;
@@ -5175,7 +5175,7 @@ function ExpertsAndStore() {
                     className: "mt-6 space-y-4 text-sm leading-relaxed text-muted md:text-[15px]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: "Our certified astrology experts blend the ancient wisdom of Vedic astrology with a modern understanding of life and emotions. Each astrologer on Astro Pulse is carefully selected to ensure they truly know astrology and speak with kindness. They keep learning through teamwork and regular training."
+                            children: "Our certified astrology experts blend the ancient wisdom of Vedic astrology with a modern understanding of life and emotions. Each astrologer on Astro Plus is carefully selected to ensure they truly know astrology and speak with kindness. They keep learning through teamwork and regular training."
                         }, void 0, false, {
                             fileName: "[project]/src/components/ExpertsAndStore.js",
                             lineNumber: 44,
@@ -5186,21 +5186,21 @@ function ExpertsAndStore() {
                         }, void 0, false, {
                             fileName: "[project]/src/components/ExpertsAndStore.js",
                             lineNumber: 44,
-                            columnNumber: 412
+                            columnNumber: 411
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: "Your satisfaction is our top priority. We offer consultations to match your style and budget—simple chats, detailed reports, or quick answers. Predictions are based on deep study and real experience, not fear or hype."
                         }, void 0, false, {
                             fileName: "[project]/src/components/ExpertsAndStore.js",
                             lineNumber: 44,
-                            columnNumber: 675
+                            columnNumber: 674
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: "Start with a short consultation to see how it works before committing more. With honest pricing and a smooth app experience, beginning your spiritual journey on Astro Pulse has never been easier."
+                            children: "Start with a short consultation to see how it works before committing more. With honest pricing and a smooth app experience, beginning your spiritual journey on Astro Plus has never been easier."
                         }, void 0, false, {
                             fileName: "[project]/src/components/ExpertsAndStore.js",
                             lineNumber: 44,
-                            columnNumber: 899
+                            columnNumber: 898
                         }, this)
                     ]
                 }, void 0, true, {
@@ -5222,7 +5222,7 @@ function ExpertsAndStore() {
     if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             className: "text-center text-[11px] font-bold uppercase tracking-[0.22em] text-muted",
-            children: "The Astro Pulse store"
+            children: "The Astro Plus store"
         }, void 0, false, {
             fileName: "[project]/src/components/ExpertsAndStore.js",
             lineNumber: 51,
@@ -5409,11 +5409,11 @@ const APP_STORE_URL = __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
 const PLAY_STORE_URL = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_PLAY_STORE_URL || "#";
 function StoreBadge(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(7);
-    if ($[0] !== "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5") {
+    if ($[0] !== "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1") {
         for(let $i = 0; $i < 7; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5";
+        $[0] = "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1";
     }
     const { href, label, children } = t0;
     const t1 = href === "#" ? undefined : "_blank";
@@ -5446,11 +5446,11 @@ function StoreBadge(t0) {
 _c = StoreBadge;
 function AppleIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5") {
+    if ($[0] !== "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5";
+        $[0] = "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -5479,11 +5479,11 @@ function AppleIcon() {
 _c1 = AppleIcon;
 function PlayIcon() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5") {
+    if ($[0] !== "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5";
+        $[0] = "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -5539,11 +5539,11 @@ function PlayIcon() {
 _c2 = PlayIcon;
 function AppDownload(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(17);
-    if ($[0] !== "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5") {
+    if ($[0] !== "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1") {
         for(let $i = 0; $i < 17; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2b62418b5f3c3b56c0a6312a8bcff4015dbf91e5d7e01b3f2cb7f4dec5d2cbf5";
+        $[0] = "abcf457ed6d4e34b6dc8c4b46ced0a87473676b54185a2e8658eabee02dc0ac1";
     }
     const { showViewAllLink: t1 } = t0;
     const showViewAllLink = t1 === undefined ? false : t1;
@@ -5551,7 +5551,7 @@ function AppDownload(t0) {
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             className: "text-xs font-bold uppercase tracking-[0.28em] text-muted",
-            children: "Astro Pulse for iOS & Android"
+            children: "Astro Plus for iOS & Android"
         }, void 0, false, {
             fileName: "[project]/src/components/AppDownload.js",
             lineNumber: 86,
@@ -5861,7 +5861,7 @@ function AppDownload(t0) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: "/showcase/img1.jpg",
-                                        alt: "Astro Pulse app \u2014 talk to verified astrologers",
+                                        alt: "Astro Plus app \u2014 talk to verified astrologers",
                                         fill: true,
                                         className: "object-cover",
                                         sizes: "(max-width: 768px) 280px, 320px"
@@ -5876,7 +5876,7 @@ function AppDownload(t0) {
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AppDownload.js",
                                         lineNumber: 162,
-                                        columnNumber: 562
+                                        columnNumber: 561
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "absolute left-4 right-4 top-5 text-center text-xs font-bold uppercase tracking-wide text-white drop-shadow-md",
@@ -5884,14 +5884,14 @@ function AppDownload(t0) {
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AppDownload.js",
                                         lineNumber: 162,
-                                        columnNumber: 676
+                                        columnNumber: 675
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/40 to-transparent"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AppDownload.js",
                                         lineNumber: 162,
-                                        columnNumber: 834
+                                        columnNumber: 833
                                     }, this)
                                 ]
                             }, void 0, true, {
@@ -5905,7 +5905,7 @@ function AppDownload(t0) {
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AppDownload.js",
                                 lineNumber: 162,
-                                columnNumber: 945
+                                columnNumber: 944
                             }, this)
                         ]
                     }, void 0, true, {
@@ -5992,7 +5992,7 @@ __turbopack_context__.s([
 const pressItems = [
     {
         id: "aifas-award",
-        headline: "Astro Pulse recognised at All India Federation of Astrologers' Societies award ceremony",
+        headline: "Astro Plus recognised at All India Federation of Astrologers' Societies award ceremony",
         source: "AIFAS",
         date: "17 Dec 2024",
         image: "/showcase/img (5).jpg"
@@ -6020,7 +6020,7 @@ const pressItems = [
     },
     {
         id: "lpac-recognition",
-        headline: "Astro Pulse team at Legendary Peace Awards Council — building trust in digital astrology",
+        headline: "Astro Plus team at Legendary Peace Awards Council — building trust in digital astrology",
         source: "LPAC",
         date: "19 Apr 2025",
         image: "/showcase/img (7).jpg"
@@ -6028,7 +6028,7 @@ const pressItems = [
     {
         id: "community-felicitation",
         headline: "Community outreach — felicitating partners and supporters at a public gathering",
-        source: "ASTRO PULSE",
+        source: "Astro Plus",
         date: "08 Mar 2025",
         image: "/showcase/img (3).jpg"
     },
@@ -6082,23 +6082,23 @@ const galleryPhotos = [
     },
     {
         src: "/showcase/img2.jpg",
-        alt: "Astro Pulse event highlight"
+        alt: "Astro Plus event highlight"
     },
     {
         src: "/showcase/showcase (1).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     },
     {
         src: "/showcase/showcase (2).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     },
     {
         src: "/showcase/showcase (3).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     },
     {
         src: "/showcase/showcase (4).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     }
 ];
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -6130,11 +6130,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 function NewsCard(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(22);
-    if ($[0] !== "01b521a8cd72216cae0067fbf994e534b39c7140aaad6f3c002a21f610c2dd87") {
+    if ($[0] !== "1ab33980be4e35900d57ac6c65d881cbeabe82dd417e039869bc4e19629ee6bd") {
         for(let $i = 0; $i < 22; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "01b521a8cd72216cae0067fbf994e534b39c7140aaad6f3c002a21f610c2dd87";
+        $[0] = "1ab33980be4e35900d57ac6c65d881cbeabe82dd417e039869bc4e19629ee6bd";
     }
     const { item, compact: t1 } = t0;
     const compact = t1 === undefined ? true : t1;
@@ -6276,11 +6276,11 @@ function NewsCard(t0) {
 _c = NewsCard;
 function ScrollButton(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(7);
-    if ($[0] !== "01b521a8cd72216cae0067fbf994e534b39c7140aaad6f3c002a21f610c2dd87") {
+    if ($[0] !== "1ab33980be4e35900d57ac6c65d881cbeabe82dd417e039869bc4e19629ee6bd") {
         for(let $i = 0; $i < 7; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "01b521a8cd72216cae0067fbf994e534b39c7140aaad6f3c002a21f610c2dd87";
+        $[0] = "1ab33980be4e35900d57ac6c65d881cbeabe82dd417e039869bc4e19629ee6bd";
     }
     const { direction, onClick } = t0;
     const label = direction === "left" ? "Scroll left" : "Scroll right";
@@ -6327,11 +6327,11 @@ _c1 = ScrollButton;
 function PressMedia(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(28);
-    if ($[0] !== "01b521a8cd72216cae0067fbf994e534b39c7140aaad6f3c002a21f610c2dd87") {
+    if ($[0] !== "1ab33980be4e35900d57ac6c65d881cbeabe82dd417e039869bc4e19629ee6bd") {
         for(let $i = 0; $i < 28; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "01b521a8cd72216cae0067fbf994e534b39c7140aaad6f3c002a21f610c2dd87";
+        $[0] = "1ab33980be4e35900d57ac6c65d881cbeabe82dd417e039869bc4e19629ee6bd";
     }
     const { showViewAllLink: t1, limit } = t0;
     const showViewAllLink = t1 === undefined ? false : t1;
@@ -6382,7 +6382,7 @@ function PressMedia(t0) {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                         className: "mt-3 text-3xl font-extrabold tracking-tight text-foreground md:text-4xl",
-                        children: "Astro Pulse in the news"
+                        children: "Astro Plus in the news"
                     }, void 0, false, {
                         fileName: "[project]/src/components/PressMedia.js",
                         lineNumber: 172,
@@ -6609,15 +6609,15 @@ __turbopack_context__.s([
 const blogPosts = [
     {
         slug: "ai-trusted-astrology",
-        title: "How Astro Pulse Is Using AI to Become a Smarter, More Trusted Astrology Platform",
+        title: "How Astro Plus Is Using AI to Become a Smarter, More Trusted Astrology Platform",
         excerpt: "From kundli parsing to smarter astrologer matching — how technology is raising the bar for online consultations.",
         image: "/blogs/blog-ai-trusted-astrology.png",
         views: 83498,
         date: "12 May 2025",
         category: "Technology",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
-            "Online astrology has grown fast — but trust still matters more than trends. At Astro Pulse, we use AI to support astrologers, not replace them.",
+            "Online astrology has grown fast — but trust still matters more than trends. At Astro Plus, we use AI to support astrologers, not replace them.",
             "Our systems help parse birth details faster, flag common chart patterns, and route users to specialists who match their question — Vedic, tarot, numerology, or relationship guidance.",
             "Every prediction still comes from a verified human expert. AI handles the busywork so consultations stay personal, accurate, and affordable.",
             "The result: shorter wait times, clearer reports, and a platform millions rely on for daily horoscopes, kundli matching, and live chat."
@@ -6631,7 +6631,7 @@ const blogPosts = [
         views: 15840,
         date: "28 Apr 2025",
         category: "Planetary transit",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "When Mars transits Scorpio, energy runs deep. You may feel driven to compete, transform, or finally finish something you've postponed for months.",
             "This transit favours strategic action — not impulsive fights. Channel the fire into fitness, business goals, or research rather than unnecessary conflict.",
@@ -6647,27 +6647,27 @@ const blogPosts = [
         views: 11458,
         date: "15 Apr 2025",
         category: "Planetary transit",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Jupiter in Cancer blesses nourishment — literal and emotional. Many people feel drawn to commit, buy a home, or reconcile with family during this transit.",
             "If marriage is on your mind, check kundli compatibility beyond sun signs. Nadi, bhakoot, and mangal dosha matter for long-term harmony.",
             "Not ready for marriage? Jupiter still supports fertility plans, caring for elders, and building a savings cushion.",
-            "Book a matchmaking session on Astro Pulse to get a detailed milan report before you say yes."
+            "Book a matchmaking session on Astro Plus to get a detailed milan report before you say yes."
         ]
     },
     {
         slug: "ayurveda-astrology-remedies",
-        title: "Ancient Remedies Backed by Astro Pulse — Gemstones, Mantras & Daily Rituals",
+        title: "Ancient Remedies Backed by Astro Plus — Gemstones, Mantras & Daily Rituals",
         excerpt: "Vedic remedies work best when aligned to your chart. A practical guide to gemstones, fasting days, and lifestyle shifts.",
         image: "/blogs/blog-ayurveda-remedies.png",
         views: 77598,
         date: "02 Apr 2025",
         category: "Remedies",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Remedies are not one-size-fits-all. A stone that helps one chart can aggravate another — always consult an astrologer before wearing blue sapphire or coral.",
             "Simple daily habits often outperform expensive rituals: lighting a diya on your ruling planet's day, donating food on Saturdays, or chanting your Ishta devata mantra.",
-            "Astro Pulse astrologers recommend remedies after reading your lagna, dasha, and transits — not from generic lists online.",
+            "Astro Plus astrologers recommend remedies after reading your lagna, dasha, and transits — not from generic lists online.",
             "Explore certified gemstones and yantras through our store, with guidance on activation and safe use."
         ]
     },
@@ -6679,28 +6679,28 @@ const blogPosts = [
         views: 42120,
         date: "20 Mar 2025",
         category: "Guides",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Mercury retrograde is famous for email glitches, delayed flights, and exes reappearing. It's a review period, not a curse.",
             "Back up devices, double-check addresses, and avoid signing major contracts if you can wait. If you must sign, read every clause twice.",
             "Old projects resurface for a reason — finish them or release them consciously.",
-            "Talk to an astrologer on Astro Pulse to see how this retrograde hits your personal chart, not just your sun sign."
+            "Talk to an astrologer on Astro Plus to see how this retrograde hits your personal chart, not just your sun sign."
         ]
     },
     {
         slug: "choosing-right-astrologer",
-        title: "5 Signs You've Found the Right Astrologer on Astro Pulse",
+        title: "5 Signs You've Found the Right Astrologer on Astro Plus",
         excerpt: "Verified badges are just the start — here's how to pick an expert who truly fits your question and communication style.",
         image: "/blogs/blog-choosing-astrologer.png",
         views: 29340,
         date: "08 Mar 2025",
         category: "Guides",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Look for relevant specialisation — marriage, career, medical astrology, and tarot require different skill sets.",
             "Read ratings and recent reviews, not just star averages. Consistency matters more than one viral testimonial.",
             "A good astrologer asks clarifying questions about birth time and listens before predicting.",
-            "Start with a short chat session. Astro Pulse lets you try before committing to longer calls or detailed reports."
+            "Start with a short chat session. Astro Plus lets you try before committing to longer calls or detailed reports."
         ]
     },
     {
@@ -6711,7 +6711,7 @@ const blogPosts = [
         views: 18765,
         date: "14 Feb 2025",
         category: "Life stages",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Saturn return strips away what isn't built on solid ground — jobs, relationships, and identities included.",
             "Painful as it feels, this transit rewards discipline. Budgets, boundaries, and skill-building pay off for the next three decades.",
@@ -6727,11 +6727,11 @@ const blogPosts = [
         views: 65210,
         date: "25 Jan 2025",
         category: "Horoscope",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Generic horoscopes target 1/12th of the population. Your moon sign reflects emotions; your ascendant shapes daily events.",
             "Transits hit different houses for each chart — a lucky Jupiter day for Aries sun may stress a Libra lagna native.",
-            "Use the Astro Pulse app for personalised rashifal based on your full birth details, not just birthday.",
+            "Use the Astro Plus app for personalised rashifal based on your full birth details, not just birthday.",
             "When something big is at stake — marriage, surgery, investments — skip the newspaper column and book a live consultation."
         ]
     }

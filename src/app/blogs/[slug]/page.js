@@ -18,10 +18,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = getBlogBySlug(slug);
-  if (!post) return { title: "Blog | Astro Pulse" };
+  if (!post) return { title: "Blog | Astro Plus" };
 
   return {
-    title: `${post.title} | Astro Pulse`,
+    title: `${post.title} | Astro Plus`,
     description: post.excerpt,
   };
 }

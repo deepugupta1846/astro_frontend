@@ -7,9 +7,9 @@ import { contactChannels, contactTopics } from "@/content/contactUs";
 import { LEGAL_CONTACT_EMAIL } from "@/content/legalPolicies";
 
 export const metadata = {
-  title: "Contact Us | Astro Pulse",
+  title: "Contact Us | Astro Plus",
   description:
-    "Get in touch with Astro Pulse support for help with consultations, wallet, refunds, privacy, and account issues.",
+    "Get in touch with Astro Plus support for help with consultations, wallet, refunds, privacy, and account issues.",
 };
 
 export default function ContactUsPage() {

@@ -1,7 +1,7 @@
 import AdminChrome from "@/components/AdminChrome";
 
 export const metadata = {
-  title: "Admin — Astro Pulse",
+  title: "Admin — Astro Plus",
   description: "Manage users and astrologers",
 };
 

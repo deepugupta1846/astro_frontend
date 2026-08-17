@@ -8,9 +8,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "AstroPulse — Talk to Top Astrologers Online | Chat & Call",
+  title: "Astro Plus — Talk to Top Astrologers Online | Chat & Call",
   description:
-    "Consult verified astrologers 24/7 for Vedic charts, love, career, tarot, and remedies. Book chat or voice on Astro Pulse.",
+    "Consult verified astrologers 24/7 for Vedic charts, love, career, tarot, and remedies. Book chat or voice on Astro Plus.",
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",

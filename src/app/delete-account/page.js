@@ -6,9 +6,9 @@ import Reveal from "@/components/Reveal";
 import { LEGAL_CONTACT_EMAIL } from "@/content/legalPolicies";
 
 export const metadata = {
-  title: "Delete Account | Astro Pulse",
+  title: "Delete Account | Astro Plus",
   description:
-    "Request permanent deletion of your Astro Pulse account and personal data after OTP verification. Available on the web and in the mobile app.",
+    "Request permanent deletion of your Astro Plus account and personal data after OTP verification. Available on the web and in the mobile app.",
 };
 
 const warnings = [
@@ -37,7 +37,7 @@ export default function DeleteAccountPage() {
             Delete your account
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-center text-base font-medium text-white/85 md:text-lg">
-            Request permanent deletion of your Astro Pulse account and associated
+            Request permanent deletion of your Astro Plus account and associated
             personal data. No app login is required on this page — verify with
             OTP. You can also delete from Profile in the mobile app.
           </p>

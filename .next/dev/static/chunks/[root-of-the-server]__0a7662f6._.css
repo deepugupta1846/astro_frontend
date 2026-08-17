@@ -861,6 +861,10 @@
     margin-bottom: calc(var(--spacing) * 14);
   }
 
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+
   .box-border {
     box-sizing: border-box;
   }

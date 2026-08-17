@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 md:py-16">
         <div className="text-center">
           <p className="text-xs font-extrabold uppercase tracking-[0.35em] text-primary">
-            Astro Pulse
+            Astro Plus
           </p>
           <h3 className="mt-3 text-2xl font-extrabold tracking-tight md:text-3xl">
             INDIA&apos;S TRUSTED ASTROLOGY CONSULT PLATFORM
@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="mx-auto mt-6 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-white/10 ring-2 ring-primary/50 shadow-lg shadow-black/40">
             <Image
               src="/icon.png"
-              alt="Astro Pulse"
+              alt="Astro Plus"
               width={72}
               height={72}
               className="object-contain p-1.5"
@@ -162,7 +162,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-center text-xs text-white/45">
-            © {new Date().getFullYear()} Astro Pulse. All rights reserved.
+            © {new Date().getFullYear()} Astro Plus. All rights reserved.
           </p>
         </div>
       </div>

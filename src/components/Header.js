@@ -97,7 +97,7 @@ export default function Header() {
               <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ring-2 ring-primary/35">
                 <Image
                   src="/icon.png"
-                  alt="Astro Pulse"
+                  alt="Astro Plus"
                   width={36}
                   height={36}
                   className="object-contain p-0.5"
@@ -105,7 +105,7 @@ export default function Header() {
                 />
               </span>
               <span className="hidden font-bold tracking-tight sm:inline">
-                Astro Pulse
+                Astro Plus
               </span>
             </NavLink>
 

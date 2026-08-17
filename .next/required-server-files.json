@@ -318,7 +318,14 @@
     "turbopack": {
       "root": "F:\\AstroLoger\\astro-pulse-web"
     },
-    "distDirRoot": ".next"
+    "distDirRoot": ".next",
+    "_originalRedirects": [
+      {
+        "source": "/app/download",
+        "destination": "https://play.google.com/store/apps/details?id=com.astro.pulse",
+        "permanent": false
+      }
+    ]
   },
   "appDir": "F:\\AstroLoger\\astro-pulse-web",
   "relativeAppDir": "",

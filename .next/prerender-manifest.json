@@ -290,6 +290,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/app/download": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/app/download",
+      "dataRoute": "/app/download.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/blogs/ai-trusted-astrology": {
       "experimentalBypassFor": [
         {
@@ -855,8 +879,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "0c0c6f96ff3542365d2ad37233590e74",
-    "previewModeSigningKey": "dae389d32c977e9cd1fe2f2dc0f83f2493cbd8abc8cfce60a2a9b13c045437bd",
-    "previewModeEncryptionKey": "15e1095be5d56d87813897830f5d537d659347150c6eb4cceac4e2fc75a16922"
+    "previewModeId": "7f567db30dcb001de53a00a619a268de",
+    "previewModeSigningKey": "b858841b850635d0519f5473a38b15be31600097a54ed5fbf7d160ee1322d7d8",
+    "previewModeEncryptionKey": "84514c1c6be67e11cca1356451745fb22cefe420dbd3259dce8276d0449e7b2c"
   }
 }

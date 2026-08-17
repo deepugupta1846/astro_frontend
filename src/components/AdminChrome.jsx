@@ -85,7 +85,7 @@ export default function AdminChrome({ children }) {
               href="/"
               className="text-sm font-bold tracking-tight text-foreground"
             >
-              Astro Pulse
+              Astro Plus
             </Link>
             <p className="mt-1 text-xs text-muted">Admin</p>
           </div>

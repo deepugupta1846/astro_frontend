@@ -160,7 +160,7 @@ export default function SignInModal({ open, onClose }) {
 
               <div className="border-b border-border px-6 pb-5 pt-6">
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary">
-                  Astro Pulse
+                  Astro Plus
                 </p>
                 <h2
                   id="sign-in-modal-title"
@@ -187,7 +187,7 @@ export default function SignInModal({ open, onClose }) {
                     <div className="rounded-2xl border border-primary/25 bg-brand-muted/60 px-4 py-4 text-sm leading-relaxed text-foreground">
                       {verifiedUser?.astrologerId
                         ? "This number is already linked to an astrologer profile. Open the app to manage consultations."
-                        : "Registration started successfully. Download the Astro Pulse app to upload ID proof, set your fees, and go live."}
+                        : "Registration started successfully. Download the Astro Plus app to upload ID proof, set your fees, and go live."}
                     </div>
                     <Link
                       href="/download-app"

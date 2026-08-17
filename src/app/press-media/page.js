@@ -8,9 +8,9 @@ import { galleryPhotos, pressItems } from "@/content/pressMedia";
 import { LEGAL_CONTACT_EMAIL } from "@/content/legalPolicies";
 
 export const metadata = {
-  title: "Press & Media | Astro Pulse",
+  title: "Press & Media | Astro Plus",
   description:
-    "Astro Pulse press coverage, awards, events, and media gallery. Contact our team for press enquiries.",
+    "Astro Plus press coverage, awards, events, and media gallery. Contact our team for press enquiries.",
 };
 
 export default function PressMediaPage() {
@@ -28,7 +28,7 @@ export default function PressMediaPage() {
             Press &amp; media
           </p>
           <h1 className="mt-4 text-center text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">
-            Astro Pulse in the spotlight
+            Astro Plus in the spotlight
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/80 md:text-lg">
             Awards, community events, and recognition for bringing trusted
@@ -126,7 +126,7 @@ export default function PressMediaPage() {
               releases, email us and we&apos;ll respond within 2 business days.
             </p>
             <a
-              href={`mailto:${LEGAL_CONTACT_EMAIL}?subject=Press%20enquiry%20-%20Astro%20Pulse`}
+              href={`mailto:${LEGAL_CONTACT_EMAIL}?subject=Press%20enquiry%20-%20Astro%20Plus`}
               className="cta-btn mt-8 inline-flex items-center justify-center rounded-2xl px-8 py-3.5 text-base font-bold"
             >
               {LEGAL_CONTACT_EMAIL}

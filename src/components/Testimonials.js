@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 const testimonials = [
   {
-    text: "I used to check three sites for transits. Astro Pulse pulls my chart, dasha, and daily luck windows into one calm feed—it's become my morning ritual.",
+    text: "I used to check three sites for transits. Astro Plus pulls my chart, dasha, and daily luck windows into one calm feed—it's become my morning ritual.",
     name: "Ananya K.",
     location: "Bengaluru",
   },

@@ -27,7 +27,7 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-6xl px-4">
         <Reveal>
           <h2 className="section-title mb-14 md:mb-16">
-            HOW Astro Pulse WORKS?
+            HOW Astro Plus WORKS?
           </h2>
         </Reveal>
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">

@@ -479,7 +479,7 @@ function Footer() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-xs font-extrabold uppercase tracking-[0.35em] text-primary",
-                            children: "Astro Pulse"
+                            children: "Astro Plus"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Footer.js",
                             lineNumber: 9,
@@ -505,7 +505,7 @@ function Footer() {
                             className: "mx-auto mt-6 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-white/10 ring-2 ring-primary/50 shadow-lg shadow-black/40",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 src: "/icon.png",
-                                alt: "Astro Pulse",
+                                alt: "Astro Plus",
                                 width: 72,
                                 height: 72,
                                 className: "object-contain p-1.5"
@@ -928,7 +928,7 @@ function Footer() {
                             children: [
                                 "© ",
                                 new Date().getFullYear(),
-                                " Astro Pulse. All rights reserved."
+                                " Astro Plus. All rights reserved."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.js",

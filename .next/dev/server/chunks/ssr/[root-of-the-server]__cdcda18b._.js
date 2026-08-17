@@ -380,7 +380,7 @@ function SignInModal({ open, onClose }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-xs font-bold uppercase tracking-[0.22em] text-primary",
-                                        children: "Astro Pulse"
+                                        children: "Astro Plus"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/SignInModal.js",
                                         lineNumber: 162,
@@ -417,7 +417,7 @@ function SignInModal({ open, onClose }) {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "rounded-2xl border border-primary/25 bg-brand-muted/60 px-4 py-4 text-sm leading-relaxed text-foreground",
-                                                children: verifiedUser?.astrologerId ? "This number is already linked to an astrologer profile. Open the app to manage consultations." : "Registration started successfully. Download the Astro Pulse app to upload ID proof, set your fees, and go live."
+                                                children: verifiedUser?.astrologerId ? "This number is already linked to an astrologer profile. Open the app to manage consultations." : "Registration started successfully. Download the Astro Plus app to upload ID proof, set your fees, and go live."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/SignInModal.js",
                                                 lineNumber: 187,
@@ -958,7 +958,7 @@ function Header() {
                                             className: "flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ring-2 ring-primary/35",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                 src: "/icon.png",
-                                                alt: "Astro Pulse",
+                                                alt: "Astro Plus",
                                                 width: 36,
                                                 height: 36,
                                                 className: "object-contain p-0.5",
@@ -975,7 +975,7 @@ function Header() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "hidden font-bold tracking-tight sm:inline",
-                                            children: "Astro Pulse"
+                                            children: "Astro Plus"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Header.js",
                                             lineNumber: 107,
@@ -1436,7 +1436,7 @@ function Hero() {
                                             duration: 0.5,
                                             delay: 0.1
                                         },
-                                        children: "Birth charts, love compatibility, career timing, remedies, and more—book a chat or call in seconds on Astro Pulse."
+                                        children: "Birth charts, love compatibility, career timing, remedies, and more—book a chat or call in seconds on Astro Plus."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Hero.js",
                                         lineNumber: 77,
@@ -2837,7 +2837,7 @@ function HowItWorks() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                         className: "section-title mb-14 md:mb-16",
-                        children: "HOW Astro Pulse WORKS?"
+                        children: "HOW Astro Plus WORKS?"
                     }, void 0, false, {
                         fileName: "[project]/src/components/HowItWorks.js",
                         lineNumber: 29,
@@ -3172,7 +3172,7 @@ function WhyChoose() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                         className: "section-title mb-14 md:mb-16",
-                        children: "WHY CHOOSE Astro Pulse"
+                        children: "WHY CHOOSE Astro Plus"
                     }, void 0, false, {
                         fileName: "[project]/src/components/WhyChoose.js",
                         lineNumber: 156,
@@ -3293,7 +3293,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$
 ;
 const testimonials = [
     {
-        text: "I used to check three sites for transits. Astro Pulse pulls my chart, dasha, and daily luck windows into one calm feed—it's become my morning ritual.",
+        text: "I used to check three sites for transits. Astro Plus pulls my chart, dasha, and daily luck windows into one calm feed—it's become my morning ritual.",
         name: "Ananya K.",
         location: "Bengaluru"
     },
@@ -3424,8 +3424,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Reveal$
 ;
 const faqs = [
     {
-        q: "What is Astro Pulse?",
-        a: "Astro Pulse is your personal astrology hub—birth chart, dasha timelines, daily horoscopes, transits, and optional live astrologer sessions in one place."
+        q: "What is Astro Plus?",
+        a: "Astro Plus is your personal astrology hub—birth chart, dasha timelines, daily horoscopes, transits, and optional live astrologer sessions in one place."
     },
     {
         q: "How do I get my birth chart?",
@@ -3650,7 +3650,7 @@ function ExpertsAndStore() {
                                 className: "mt-6 space-y-4 text-sm leading-relaxed text-muted md:text-[15px]",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "Our certified astrology experts blend the ancient wisdom of Vedic astrology with a modern understanding of life and emotions. Each astrologer on Astro Pulse is carefully selected to ensure they truly know astrology and speak with kindness. They keep learning through teamwork and regular training."
+                                        children: "Our certified astrology experts blend the ancient wisdom of Vedic astrology with a modern understanding of life and emotions. Each astrologer on Astro Plus is carefully selected to ensure they truly know astrology and speak with kindness. They keep learning through teamwork and regular training."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ExpertsAndStore.js",
                                         lineNumber: 45,
@@ -3671,7 +3671,7 @@ function ExpertsAndStore() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "Start with a short consultation to see how it works before committing more. With honest pricing and a smooth app experience, beginning your spiritual journey on Astro Pulse has never been easier."
+                                        children: "Start with a short consultation to see how it works before committing more. With honest pricing and a smooth app experience, beginning your spiritual journey on Astro Plus has never been easier."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ExpertsAndStore.js",
                                         lineNumber: 64,
@@ -3696,7 +3696,7 @@ function ExpertsAndStore() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-center text-[11px] font-bold uppercase tracking-[0.22em] text-muted",
-                                    children: "The Astro Pulse store"
+                                    children: "The Astro Plus store"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ExpertsAndStore.js",
                                     lineNumber: 75,
@@ -3921,7 +3921,7 @@ function AppDownload({ showViewAllLink = false }) {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-xs font-bold uppercase tracking-[0.28em] text-muted",
-                                    children: "Astro Pulse for iOS & Android"
+                                    children: "Astro Plus for iOS & Android"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/AppDownload.js",
                                     lineNumber: 67,
@@ -4154,7 +4154,7 @@ function AppDownload({ showViewAllLink = false }) {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                         src: "/showcase/img1.jpg",
-                                                        alt: "Astro Pulse app — talk to verified astrologers",
+                                                        alt: "Astro Plus app — talk to verified astrologers",
                                                         fill: true,
                                                         className: "object-cover",
                                                         sizes: "(max-width: 768px) 280px, 320px"
@@ -4252,7 +4252,7 @@ __turbopack_context__.s([
 const pressItems = [
     {
         id: "aifas-award",
-        headline: "Astro Pulse recognised at All India Federation of Astrologers' Societies award ceremony",
+        headline: "Astro Plus recognised at All India Federation of Astrologers' Societies award ceremony",
         source: "AIFAS",
         date: "17 Dec 2024",
         image: "/showcase/img (5).jpg"
@@ -4280,7 +4280,7 @@ const pressItems = [
     },
     {
         id: "lpac-recognition",
-        headline: "Astro Pulse team at Legendary Peace Awards Council — building trust in digital astrology",
+        headline: "Astro Plus team at Legendary Peace Awards Council — building trust in digital astrology",
         source: "LPAC",
         date: "19 Apr 2025",
         image: "/showcase/img (7).jpg"
@@ -4288,7 +4288,7 @@ const pressItems = [
     {
         id: "community-felicitation",
         headline: "Community outreach — felicitating partners and supporters at a public gathering",
-        source: "ASTRO PULSE",
+        source: "Astro Plus",
         date: "08 Mar 2025",
         image: "/showcase/img (3).jpg"
     },
@@ -4342,23 +4342,23 @@ const galleryPhotos = [
     },
     {
         src: "/showcase/img2.jpg",
-        alt: "Astro Pulse event highlight"
+        alt: "Astro Plus event highlight"
     },
     {
         src: "/showcase/showcase (1).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     },
     {
         src: "/showcase/showcase (2).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     },
     {
         src: "/showcase/showcase (3).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     },
     {
         src: "/showcase/showcase (4).jpeg",
-        alt: "Astro Pulse showcase"
+        alt: "Astro Plus showcase"
     }
 ];
 }),
@@ -4508,7 +4508,7 @@ function PressMedia({ showViewAllLink = false, limit }) {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         className: "mt-3 text-3xl font-extrabold tracking-tight text-foreground md:text-4xl",
-                                        children: "Astro Pulse in the news"
+                                        children: "Astro Plus in the news"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/PressMedia.js",
                                         lineNumber: 83,
@@ -4632,15 +4632,15 @@ __turbopack_context__.s([
 const blogPosts = [
     {
         slug: "ai-trusted-astrology",
-        title: "How Astro Pulse Is Using AI to Become a Smarter, More Trusted Astrology Platform",
+        title: "How Astro Plus Is Using AI to Become a Smarter, More Trusted Astrology Platform",
         excerpt: "From kundli parsing to smarter astrologer matching — how technology is raising the bar for online consultations.",
         image: "/blogs/blog-ai-trusted-astrology.png",
         views: 83498,
         date: "12 May 2025",
         category: "Technology",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
-            "Online astrology has grown fast — but trust still matters more than trends. At Astro Pulse, we use AI to support astrologers, not replace them.",
+            "Online astrology has grown fast — but trust still matters more than trends. At Astro Plus, we use AI to support astrologers, not replace them.",
             "Our systems help parse birth details faster, flag common chart patterns, and route users to specialists who match their question — Vedic, tarot, numerology, or relationship guidance.",
             "Every prediction still comes from a verified human expert. AI handles the busywork so consultations stay personal, accurate, and affordable.",
             "The result: shorter wait times, clearer reports, and a platform millions rely on for daily horoscopes, kundli matching, and live chat."
@@ -4654,7 +4654,7 @@ const blogPosts = [
         views: 15840,
         date: "28 Apr 2025",
         category: "Planetary transit",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "When Mars transits Scorpio, energy runs deep. You may feel driven to compete, transform, or finally finish something you've postponed for months.",
             "This transit favours strategic action — not impulsive fights. Channel the fire into fitness, business goals, or research rather than unnecessary conflict.",
@@ -4670,27 +4670,27 @@ const blogPosts = [
         views: 11458,
         date: "15 Apr 2025",
         category: "Planetary transit",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Jupiter in Cancer blesses nourishment — literal and emotional. Many people feel drawn to commit, buy a home, or reconcile with family during this transit.",
             "If marriage is on your mind, check kundli compatibility beyond sun signs. Nadi, bhakoot, and mangal dosha matter for long-term harmony.",
             "Not ready for marriage? Jupiter still supports fertility plans, caring for elders, and building a savings cushion.",
-            "Book a matchmaking session on Astro Pulse to get a detailed milan report before you say yes."
+            "Book a matchmaking session on Astro Plus to get a detailed milan report before you say yes."
         ]
     },
     {
         slug: "ayurveda-astrology-remedies",
-        title: "Ancient Remedies Backed by Astro Pulse — Gemstones, Mantras & Daily Rituals",
+        title: "Ancient Remedies Backed by Astro Plus — Gemstones, Mantras & Daily Rituals",
         excerpt: "Vedic remedies work best when aligned to your chart. A practical guide to gemstones, fasting days, and lifestyle shifts.",
         image: "/blogs/blog-ayurveda-remedies.png",
         views: 77598,
         date: "02 Apr 2025",
         category: "Remedies",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Remedies are not one-size-fits-all. A stone that helps one chart can aggravate another — always consult an astrologer before wearing blue sapphire or coral.",
             "Simple daily habits often outperform expensive rituals: lighting a diya on your ruling planet's day, donating food on Saturdays, or chanting your Ishta devata mantra.",
-            "Astro Pulse astrologers recommend remedies after reading your lagna, dasha, and transits — not from generic lists online.",
+            "Astro Plus astrologers recommend remedies after reading your lagna, dasha, and transits — not from generic lists online.",
             "Explore certified gemstones and yantras through our store, with guidance on activation and safe use."
         ]
     },
@@ -4702,28 +4702,28 @@ const blogPosts = [
         views: 42120,
         date: "20 Mar 2025",
         category: "Guides",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Mercury retrograde is famous for email glitches, delayed flights, and exes reappearing. It's a review period, not a curse.",
             "Back up devices, double-check addresses, and avoid signing major contracts if you can wait. If you must sign, read every clause twice.",
             "Old projects resurface for a reason — finish them or release them consciously.",
-            "Talk to an astrologer on Astro Pulse to see how this retrograde hits your personal chart, not just your sun sign."
+            "Talk to an astrologer on Astro Plus to see how this retrograde hits your personal chart, not just your sun sign."
         ]
     },
     {
         slug: "choosing-right-astrologer",
-        title: "5 Signs You've Found the Right Astrologer on Astro Pulse",
+        title: "5 Signs You've Found the Right Astrologer on Astro Plus",
         excerpt: "Verified badges are just the start — here's how to pick an expert who truly fits your question and communication style.",
         image: "/blogs/blog-choosing-astrologer.png",
         views: 29340,
         date: "08 Mar 2025",
         category: "Guides",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Look for relevant specialisation — marriage, career, medical astrology, and tarot require different skill sets.",
             "Read ratings and recent reviews, not just star averages. Consistency matters more than one viral testimonial.",
             "A good astrologer asks clarifying questions about birth time and listens before predicting.",
-            "Start with a short chat session. Astro Pulse lets you try before committing to longer calls or detailed reports."
+            "Start with a short chat session. Astro Plus lets you try before committing to longer calls or detailed reports."
         ]
     },
     {
@@ -4734,7 +4734,7 @@ const blogPosts = [
         views: 18765,
         date: "14 Feb 2025",
         category: "Life stages",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Saturn return strips away what isn't built on solid ground — jobs, relationships, and identities included.",
             "Painful as it feels, this transit rewards discipline. Budgets, boundaries, and skill-building pay off for the next three decades.",
@@ -4750,11 +4750,11 @@ const blogPosts = [
         views: 65210,
         date: "25 Jan 2025",
         category: "Horoscope",
-        author: "Astro Pulse Editorial",
+        author: "Astro Plus Editorial",
         body: [
             "Generic horoscopes target 1/12th of the population. Your moon sign reflects emotions; your ascendant shapes daily events.",
             "Transits hit different houses for each chart — a lucky Jupiter day for Aries sun may stress a Libra lagna native.",
-            "Use the Astro Pulse app for personalised rashifal based on your full birth details, not just birthday.",
+            "Use the Astro Plus app for personalised rashifal based on your full birth details, not just birthday.",
             "When something big is at stake — marriage, surgery, investments — skip the newspaper column and book a live consultation."
         ]
     }

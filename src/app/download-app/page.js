@@ -4,9 +4,9 @@ import AppDownload from "@/components/AppDownload";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "Download App | Astro Pulse",
+  title: "Download App | Astro Plus",
   description:
-    "Download Astro Pulse for iOS and Android. Chat with verified astrologers, get daily horoscopes, free kundli, and muhurat alerts.",
+    "Download Astro Plus for iOS and Android. Chat with verified astrologers, get daily horoscopes, free kundli, and muhurat alerts.",
 };
 
 const features = [
@@ -57,7 +57,7 @@ export default function DownloadAppPage() {
             Mobile app
           </p>
           <h1 className="mt-4 text-center text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">
-            Download Astro Pulse
+            Download Astro Plus
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/80 md:text-lg">
             Take India&apos;s trusted astrology platform with you — consult experts,
@@ -75,7 +75,7 @@ export default function DownloadAppPage() {
               Everything in one app
             </p>
             <h2 className="mt-3 text-center text-2xl font-extrabold tracking-tight md:text-3xl">
-              Why download Astro Pulse?
+              Why download Astro Plus?
             </h2>
           </Reveal>
 

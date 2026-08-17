@@ -1,4 +1,4 @@
-/** Shared policy copy for Astro Pulse legal pages */
+/** Shared policy copy for Astro Plus legal pages */
 
 export const LEGAL_LAST_UPDATED = "22 July 2026";
 export const LEGAL_CONTACT_EMAIL = "support@astropulse.in";
@@ -7,7 +7,7 @@ export const termsSections = [
   {
     title: "1. Introduction",
     paragraphs: [
-      'Welcome to Astro Pulse ("we", "us", "our"). These Terms and Conditions ("Terms") govern your access to and use of our website, mobile applications, and astrology consultation services (collectively, the "Platform").',
+      'Welcome to Astro Plus ("we", "us", "our"). These Terms and Conditions ("Terms") govern your access to and use of our website, mobile applications, and astrology consultation services (collectively, the "Platform").',
       "By creating an account, topping up your wallet, booking a consultation, or otherwise using the Platform, you agree to these Terms. If you do not agree, please do not use our services.",
     ],
   },
@@ -21,7 +21,7 @@ export const termsSections = [
   {
     title: "3. Nature of services",
     paragraphs: [
-      "Astro Pulse connects users with independent astrologers and related services such as chat, voice calls, kundli generation, matchmaking, remedies, and puja bookings.",
+      "Astro Plus connects users with independent astrologers and related services such as chat, voice calls, kundli generation, matchmaking, remedies, and puja bookings.",
       "Astrology, tarot, numerology, and similar offerings are provided for guidance and entertainment. They are not a substitute for professional medical, legal, financial, or psychological advice. You should not make major life decisions based solely on consultations on the Platform.",
     ],
   },
@@ -50,14 +50,14 @@ export const termsSections = [
   {
     title: "7. Intellectual property",
     paragraphs: [
-      "The Astro Pulse brand, website design, software, and marketing materials are owned by us or our licensors. You receive a limited, non-exclusive licence to use the Platform for personal, non-commercial purposes.",
+      "The Astro Plus brand, website design, software, and marketing materials are owned by us or our licensors. You receive a limited, non-exclusive licence to use the Platform for personal, non-commercial purposes.",
       "You retain rights to content you submit, but grant us a licence to use it to operate the Platform (for example, storing birth details to generate charts).",
     ],
   },
   {
     title: "8. Limitation of liability",
     paragraphs: [
-      "To the maximum extent permitted by law, Astro Pulse and its affiliates are not liable for indirect, incidental, or consequential damages arising from use of the Platform or reliance on astrological guidance.",
+      "To the maximum extent permitted by law, Astro Plus and its affiliates are not liable for indirect, incidental, or consequential damages arising from use of the Platform or reliance on astrological guidance.",
       "Our total liability for any claim relating to a specific transaction is limited to the amount you paid for that transaction in the preceding thirty (30) days, except where liability cannot be limited under applicable law.",
     ],
   },
@@ -87,7 +87,7 @@ export const privacySections = [
   {
     title: "1. Overview",
     paragraphs: [
-      "Astro Pulse respects your privacy. This Privacy Policy explains what personal data we collect, why we collect it, how we use and share it, and the choices you have.",
+      "Astro Plus respects your privacy. This Privacy Policy explains what personal data we collect, why we collect it, how we use and share it, and the choices you have.",
       "This policy applies to visitors of our website, users of our mobile apps, and anyone who contacts us for support.",
     ],
   },
@@ -123,7 +123,7 @@ export const privacySections = [
     paragraphs: [
       "Astrologers receive information needed for your consultation (such as name, birth details, and chat history for that session).",
       "We use trusted processors for hosting, SMS/OTP, push notifications, payment collection, and analytics under contractual confidentiality obligations.",
-      "We may disclose information if required by law, court order, or to protect the rights, safety, and security of users and Astro Pulse.",
+      "We may disclose information if required by law, court order, or to protect the rights, safety, and security of users and Astro Plus.",
       "We do not sell your personal data to third-party advertisers.",
     ],
   },
@@ -150,8 +150,8 @@ export const privacySections = [
   {
     title: "9. Delete account",
     paragraphs: [
-      "If you create an Astro Pulse account, you can request permanent deletion of that account and associated personal data at any time. Full details are in our Data Deletion Policy (/data-deletion-policy).",
-      "How to request deletion: (1) On this website, open the Delete Account page at /delete-account and verify your registered mobile number with OTP; or (2) In the Astro Pulse mobile app, go to Profile or the side menu and choose Delete account, then complete OTP verification; or (3) Email support from your registered contact details.",
+      "If you create an Astro Plus account, you can request permanent deletion of that account and associated personal data at any time. Full details are in our Data Deletion Policy (/data-deletion-policy).",
+      "How to request deletion: (1) On this website, open the Delete Account page at /delete-account and verify your registered mobile number with OTP; or (2) In the Astro Plus mobile app, go to Profile or the side menu and choose Delete account, then complete OTP verification; or (3) Email support from your registered contact details.",
       "You may optionally share a reason for leaving. End any active consultations before submitting a request.",
       "After you submit a request, your account is temporarily deactivated and you cannot log in while the request is pending. Freezing or deactivation alone is not the final outcome: once approved, we permanently delete personal data tied to the account, including profile details, birth and kundli data, consultation history, chat/call metadata we control, and wallet balance.",
       "We may retain limited records where required by law or for legitimate purposes such as tax, payment disputes, fraud prevention, or security (for example, payment gateway transaction references). Aggregated or anonymised data that cannot identify you may also be retained. We will not keep your account in a frozen state as a substitute for deletion.",
@@ -189,14 +189,14 @@ export const dataDeletionSections = [
   {
     title: "1. Purpose",
     paragraphs: [
-      "This Data Deletion Policy explains how users of Astro Pulse can request deletion of their account and associated personal data, what we delete, what we may retain, and how long the process usually takes.",
-      "It applies to our website, mobile applications, and related Astro Pulse services. It should be read together with our Privacy Policy.",
+      "This Data Deletion Policy explains how users of Astro Plus can request deletion of their account and associated personal data, what we delete, what we may retain, and how long the process usually takes.",
+      "It applies to our website, mobile applications, and related Astro Plus services. It should be read together with our Privacy Policy.",
     ],
   },
   {
     title: "2. Who can request deletion",
     paragraphs: [
-      "Any registered user who created an account on Astro Pulse (for example, with a mobile number) may request deletion of that account and the personal data linked to it.",
+      "Any registered user who created an account on Astro Plus (for example, with a mobile number) may request deletion of that account and the personal data linked to it.",
       "If you believe a minor’s data was submitted, or you need help as a legal guardian or authorised representative, contact us at the email below with proof of authority where reasonably required.",
     ],
   },
@@ -255,7 +255,7 @@ export const dataDeletionSections = [
     title: "9. Effects of deletion",
     paragraphs: [
       "After deletion is completed, you will lose access to your account, wallet balance, consultation history, and saved kundli data. This action cannot be undone.",
-      "To use Astro Pulse again, you must register a new account. Previous wallet balance and history will not be restored.",
+      "To use Astro Plus again, you must register a new account. Previous wallet balance and history will not be restored.",
     ],
   },
   {
@@ -271,7 +271,7 @@ export const refundSections = [
   {
     title: "1. Scope",
     paragraphs: [
-      "This Refund & Cancellation Policy applies to wallet top-ups, paid astrology consultations (chat and call), puja bookings made through Astro Pulse, and related digital services.",
+      "This Refund & Cancellation Policy applies to wallet top-ups, paid astrology consultations (chat and call), puja bookings made through Astro Plus, and related digital services.",
       "Free features (such as preview matchmaking on the website where offered) are not charged and are not eligible for refunds.",
     ],
   },

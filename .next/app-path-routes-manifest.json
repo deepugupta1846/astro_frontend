@@ -11,6 +11,7 @@
   "/admin/remedies/page": "/admin/remedies",
   "/admin/users/page": "/admin/users",
   "/admin/withdrawals/page": "/admin/withdrawals",
+  "/app/download/page": "/app/download",
   "/blogs/[slug]/page": "/blogs/[slug]",
   "/blogs/page": "/blogs",
   "/book-puja/page": "/book-puja",

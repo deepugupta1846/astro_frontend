@@ -153,7 +153,7 @@ export default function WhyChoose() {
     <section id="why-us" className="bg-surface py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <Reveal>
-          <h2 className="section-title mb-14 md:mb-16">WHY CHOOSE Astro Pulse</h2>
+          <h2 className="section-title mb-14 md:mb-16">WHY CHOOSE Astro Plus</h2>
         </Reveal>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {features.map((f, i) => (

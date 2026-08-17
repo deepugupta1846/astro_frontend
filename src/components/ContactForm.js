@@ -22,7 +22,7 @@ export default function ContactForm() {
       message.trim(),
     ].join("\n");
     const mailto = `mailto:${LEGAL_CONTACT_EMAIL}?subject=${encodeURIComponent(
-      subject.trim() || "Astro Pulse — Contact enquiry"
+      subject.trim() || "Astro Plus — Contact enquiry"
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
     setSubmitted(true);

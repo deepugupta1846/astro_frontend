@@ -6,8 +6,8 @@ import Reveal from "./Reveal";
 
 const faqs = [
   {
-    q: "What is Astro Pulse?",
-    a: "Astro Pulse is your personal astrology hub—birth chart, dasha timelines, daily horoscopes, transits, and optional live astrologer sessions in one place.",
+    q: "What is Astro Plus?",
+    a: "Astro Plus is your personal astrology hub—birth chart, dasha timelines, daily horoscopes, transits, and optional live astrologer sessions in one place.",
   },
   {
     q: "How do I get my birth chart?",

@@ -19,7 +19,7 @@ export const contactChannels = [
   {
     title: "In-app help",
     description:
-      "Already using Astro Pulse? Open the app, go to Profile → Help & Support for live chat with our team.",
+      "Already using Astro Plus? Open the app, go to Profile → Help & Support for live chat with our team.",
     value: "Available in the mobile app",
     cta: null,
   },

@@ -81,7 +81,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               Birth charts, love compatibility, career timing, remedies, and
-              more—book a chat or call in seconds on Astro Pulse.
+              more—book a chat or call in seconds on Astro Plus.
             </motion.p>
 
             <motion.div

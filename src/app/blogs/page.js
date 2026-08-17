@@ -5,9 +5,9 @@ import Reveal from "@/components/Reveal";
 import { blogPosts } from "@/content/blogs";
 
 export const metadata = {
-  title: "Blog | Astro Pulse",
+  title: "Blog | Astro Plus",
   description:
-    "Astrology guides, planetary transits, remedies, and wellness insights from the Astro Pulse journal.",
+    "Astrology guides, planetary transits, remedies, and wellness insights from the Astro Plus journal.",
 };
 
 export default function BlogsPage() {

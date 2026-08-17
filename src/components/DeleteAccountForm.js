@@ -78,7 +78,7 @@ export default function DeleteAccountForm() {
       >
         <h2 className="text-xl font-bold text-foreground">Verify your phone</h2>
         <p className="mt-2 text-sm text-muted">
-          Enter the mobile number linked to your Astro Pulse account. We&apos;ll
+          Enter the mobile number linked to your Astro Plus account. We&apos;ll
           send a one-time password to confirm it&apos;s you.
         </p>
 

@@ -6,9 +6,9 @@ import {
 } from "@/content/legalPolicies";
 
 export const metadata = {
-  title: "Refund & Cancellation Policy | Astro Pulse",
+  title: "Refund & Cancellation Policy | Astro Plus",
   description:
-    "Refund and cancellation rules for wallet top-ups, consultations, and puja bookings on Astro Pulse.",
+    "Refund and cancellation rules for wallet top-ups, consultations, and puja bookings on Astro Plus.",
 };
 
 export default function RefundPolicyPage() {

@@ -81,7 +81,7 @@ export default function PressMedia({ showViewAllLink = false, limit }) {
                 Press &amp; media
               </p>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
-                Astro Pulse in the news
+                Astro Plus in the news
               </h2>
             </div>
             <div className="flex items-center gap-2">

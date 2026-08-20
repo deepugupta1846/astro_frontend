@@ -12,12 +12,6 @@
       "priority": true,
       "statusCode": 308,
       "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
-    },
-    {
-      "source": "/app/download",
-      "destination": "https://play.google.com/store/apps/details?id=com.astro.pulse",
-      "statusCode": 307,
-      "regex": "^(?!/_next)/app/download(?:/)?$"
     }
   ],
   "headers": [],
@@ -120,6 +114,12 @@
       "regex": "^/app/download(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/app/download(?:/)?$"
+    },
+    {
+      "page": "/app/partner/download",
+      "regex": "^/app/partner/download(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/partner/download(?:/)?$"
     },
     {
       "page": "/blogs",

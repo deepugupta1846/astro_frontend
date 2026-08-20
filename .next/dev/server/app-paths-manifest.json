@@ -1,3 +1,5 @@
 {
+  "/app/download/page": "app/app/download/page.js",
+  "/app/partner/download/page": "app/app/partner/download/page.js",
   "/page": "app/page.js"
 }

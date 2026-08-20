@@ -1,6 +1,8 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { getSiteOrigin } from "@/lib/appLinks";
+
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
@@ -8,9 +10,19 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL(getSiteOrigin()),
   title: "Astro Plus — Talk to Top Astrologers Online | Chat & Call",
   description:
     "Consult verified astrologers 24/7 for Vedic charts, love, career, tarot, and remedies. Book chat or voice on Astro Plus.",
+  openGraph: {
+    siteName: "Astro Plus",
+    type: "website",
+    images: [{ url: "/showcase/img1.jpg", alt: "Astro Plus — astrology app" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/showcase/img1.jpg"],
+  },
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",

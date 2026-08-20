@@ -1,3 +1,0 @@
-module.exports=[93695,(a,b,c)=>{b.exports=a.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},81967,a=>{a.n(a.i(29735))},43619,a=>{a.n(a.i(79962))},13718,a=>{a.n(a.i(85523))},18198,a=>{a.n(a.i(45518))},62212,a=>{a.n(a.i(66114))},4745,a=>{"use strict";a.i(70396);var b=a.i(73727);function c(){(0,b.redirect)("https://play.google.com/store/apps/details?id=com.astro.pulse")}a.s(["default",()=>c,"metadata",0,{title:"Download Astro Plus",description:"Get the Astro Plus app on Google Play — talk to verified astrologers on Android."}],4745)}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__aa32c2f6._.js.map

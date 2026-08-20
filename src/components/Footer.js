@@ -121,6 +121,14 @@ export default function Footer() {
                   Download app
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/app/partner/download"
+                  className="transition hover:text-white"
+                >
+                  Partner app (astrologers)
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

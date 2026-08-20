@@ -36,6 +36,9 @@
     "[project]/src/app/app/download/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],
+    "[project]/src/app/app/partner/download/page": [
+      "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
+    ],
     "[project]/src/app/blogs/[slug]/page": [
       "static/media/fba5a26ea33df6a3-s.p.1bbdebe6.woff2"
     ],

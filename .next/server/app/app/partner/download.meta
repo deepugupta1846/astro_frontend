@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/app/layout,_N_T_/app/partner/layout,_N_T_/app/partner/download/layout,_N_T_/app/partner/download/page,_N_T_/app/partner/download"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/app/partner/download/__PAGE__",
+    "/app/partner/download",
+    "/app/partner",
+    "/app",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -4,7 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./Reveal";
-import { APP_DOWNLOAD_PATH, PLAY_STORE_URL } from "@/lib/appLinks";
+import {
+  APP_DOWNLOAD_PATH,
+  APP_SHARE_DESCRIPTION,
+  APP_SHARE_IMAGE,
+  APP_SHARE_TITLE,
+  PLAY_STORE_URL,
+} from "@/lib/appLinks";
+import { shareAppLink } from "@/lib/shareAppLink";
 
 const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || "#";
 
@@ -37,18 +44,9 @@ function PlayIcon() {
         fill="#00D9FF"
         d="M3.6 2.4A1.2 1.2 0 0 0 2.4 3.6v16.8a1.2 1.2 0 0 0 1.2 1.2h.3l10.2-9.6-10.2-9.6h-.3z"
       />
-      <path
-        fill="#FFD500"
-        d="M14.1 11.4 4.5 3.9v16.2l9.6-8.5z"
-      />
-      <path
-        fill="#FF3A44"
-        d="M14.1 11.4 4.5 19.8l12.9-7.2-3.3-1.2z"
-      />
-      <path
-        fill="#00F076"
-        d="M17.4 10.2 4.5 3.9l9.6 7.5 3.3-1.2z"
-      />
+      <path fill="#FFD500" d="M14.1 11.4 4.5 3.9v16.2l9.6-8.5z" />
+      <path fill="#FF3A44" d="M14.1 11.4 4.5 19.8l12.9-7.2-3.3-1.2z" />
+      <path fill="#00F076" d="M17.4 10.2 4.5 3.9l9.6 7.5 3.3-1.2z" />
     </svg>
   );
 }
@@ -57,22 +55,15 @@ export default function AppDownload({ showViewAllLink = false }) {
   const [shareHint, setShareHint] = useState("");
 
   async function handleShare() {
-    const url =
-      typeof window !== "undefined"
-        ? `${window.location.origin}${APP_DOWNLOAD_PATH}`
-        : APP_DOWNLOAD_PATH;
     try {
-      if (typeof navigator !== "undefined" && navigator.share) {
-        await navigator.share({
-          title: "Download Astro Plus",
-          text: "Chat with verified astrologers on Astro Plus.",
-          url,
-        });
-        setShareHint("Link shared");
-      } else if (typeof navigator !== "undefined" && navigator.clipboard) {
-        await navigator.clipboard.writeText(url);
-        setShareHint("Link copied");
-      }
+      const hint = await shareAppLink({
+        origin: window.location.origin,
+        downloadPath: APP_DOWNLOAD_PATH,
+        shareImage: APP_SHARE_IMAGE,
+        title: APP_SHARE_TITLE,
+        description: APP_SHARE_DESCRIPTION,
+      });
+      setShareHint(hint);
     } catch (err) {
       if (err?.name === "AbortError") return;
       setShareHint("Copy failed — use /app/download");
@@ -175,7 +166,7 @@ export default function AppDownload({ showViewAllLink = false }) {
                 <div className="relative -rotate-6 rounded-[2.75rem] border-[10px] border-[#1a1a1a] bg-[#1a1a1a] p-1 shadow-2xl shadow-black/25 transition hover:-rotate-3">
                   <div className="relative aspect-[9/19] overflow-hidden rounded-[2.25rem] bg-hero-deep">
                     <Image
-                      src="/showcase/img1.jpg"
+                      src={APP_SHARE_IMAGE}
                       alt="Astro Plus app — talk to verified astrologers"
                       fill
                       className="object-cover"

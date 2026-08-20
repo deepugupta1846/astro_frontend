@@ -318,14 +318,7 @@ self.__SERVER_FILES_MANIFEST={
     "turbopack": {
       "root": "F:\\AstroLoger\\astro-pulse-web"
     },
-    "distDirRoot": ".next",
-    "_originalRedirects": [
-      {
-        "source": "/app/download",
-        "destination": "https://play.google.com/store/apps/details?id=com.astro.pulse",
-        "permanent": false
-      }
-    ]
+    "distDirRoot": ".next"
   },
   "appDir": "F:\\AstroLoger\\astro-pulse-web",
   "relativeAppDir": "",

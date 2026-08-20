@@ -12,6 +12,7 @@
   "/admin/users/page": "app/admin/users/page.js",
   "/admin/withdrawals/page": "app/admin/withdrawals/page.js",
   "/app/download/page": "app/app/download/page.js",
+  "/app/partner/download/page": "app/app/partner/download/page.js",
   "/blogs/[slug]/page": "app/blogs/[slug]/page.js",
   "/blogs/page": "app/blogs/page.js",
   "/book-puja/page": "app/book-puja/page.js",

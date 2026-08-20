@@ -4,6 +4,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { sendOtp, signupUser, verifyOtp } from "@/lib/userApi";
+import {
+  PARTNER_DOWNLOAD_PATH,
+  PARTNER_PLAY_STORE_URL,
+  PARTNER_SHARE_DESCRIPTION,
+  PARTNER_SHARE_IMAGE,
+  PARTNER_SHARE_TITLE,
+} from "@/lib/appLinks";
+import { shareAppLink } from "@/lib/shareAppLink";
 
 const inputClass =
   "w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground outline-none transition placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/25";
@@ -19,6 +27,7 @@ export default function SignInModal({ open, onClose }) {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const [verifiedUser, setVerifiedUser] = useState(null);
+  const [shareHint, setShareHint] = useState("");
 
   useEffect(() => {
     if (!open) return undefined;
@@ -48,6 +57,7 @@ export default function SignInModal({ open, onClose }) {
       setError("");
       setSuccess(false);
       setVerifiedUser(null);
+      setShareHint("");
       setLoading(false);
     }
   }, [open]);
@@ -108,6 +118,23 @@ export default function SignInModal({ open, onClose }) {
     } finally {
       setLoading(false);
     }
+  }
+
+  async function handleSharePartnerApp() {
+    try {
+      const hint = await shareAppLink({
+        origin: window.location.origin,
+        downloadPath: PARTNER_DOWNLOAD_PATH,
+        shareImage: PARTNER_SHARE_IMAGE,
+        title: PARTNER_SHARE_TITLE,
+        description: PARTNER_SHARE_DESCRIPTION,
+      });
+      setShareHint(hint);
+    } catch (err) {
+      if (err?.name === "AbortError") return;
+      setShareHint("Could not share — use /app/partner/download");
+    }
+    window.setTimeout(() => setShareHint(""), 2500);
   }
 
   return (
@@ -190,12 +217,43 @@ export default function SignInModal({ open, onClose }) {
                         : "Registration started successfully. Download the Astro Plus app to upload ID proof, set your fees, and go live."}
                     </div>
                     <Link
-                      href="/download-app"
+                      href={PARTNER_DOWNLOAD_PATH}
                       onClick={onClose}
                       className="cta-btn flex w-full items-center justify-center rounded-xl py-3 text-sm font-bold"
                     >
-                      Download the app
+                      Download partner app
                     </Link>
+                    <button
+                      type="button"
+                      onClick={handleSharePartnerApp}
+                      className="w-full rounded-xl border border-border py-3 text-sm font-semibold text-foreground transition hover:bg-accent"
+                    >
+                      Share partner app link
+                    </button>
+                    {shareHint ? (
+                      <p className="text-center text-xs font-medium text-primary">
+                        {shareHint}
+                      </p>
+                    ) : (
+                      <p className="text-center text-xs text-muted">
+                        Share link:{" "}
+                        <Link
+                          href={PARTNER_DOWNLOAD_PATH}
+                          className="font-semibold text-primary hover:underline"
+                          onClick={onClose}
+                        >
+                          /app/partner/download
+                        </Link>
+                      </p>
+                    )}
+                    <a
+                      href={PARTNER_PLAY_STORE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center text-xs font-medium text-muted underline-offset-2 hover:text-primary hover:underline"
+                    >
+                      Open on Google Play
+                    </a>
                     <button
                       type="button"
                       onClick={onClose}

@@ -24,16 +24,6 @@ function apiImageRemotePatterns() {
 const nextConfig = {
   reactCompiler: true,
   // output: "standalone",
-  async redirects() {
-    return [
-      {
-        source: "/app/download",
-        destination:
-          "https://play.google.com/store/apps/details?id=com.astro.pulse",
-        permanent: false,
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {
